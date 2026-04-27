@@ -1,0 +1,740 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Stories & Updates - YCBN | Youth Capacity Building Network</title>
+    <meta name="description" content="Read inspiring stories, view photos, and watch videos from YCBN's work in WASH and youth empowerment across Uganda.">
+
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800;900&family=Open+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'ycbn-blue': '#0ea5e9',
+                        'ycbn-blue-dark': '#0284c7',
+                        'ycbn-teal': '#14b8a6',
+                        'ycbn-teal-dark': '#0d9488',
+                        'ycbn-orange': '#f97316',
+                        'ycbn-orange-light': '#fb923c',
+                        'ycbn-dark': '#0f172a',
+                        'ycbn-gray': '#f1f5f9',
+                        'ycbn-text': '#64748b'
+                    },
+                    fontFamily: {
+                        'montserrat': ['Montserrat', 'sans-serif'],
+                        'opensans': ['Open Sans', 'sans-serif']
+                    }
+                }
+            }
+        }
+    </script>
+
+    <style>
+        * { font-family: 'Open Sans', sans-serif; }
+        h1, h2, h3, h4, h5, h6 { font-family: 'Montserrat', sans-serif; }
+
+        .top-bar {
+            background: linear-gradient(90deg, #0ea5e9 0%, #14b8a6 100%);
+            color: white;
+            font-size: 13px;
+        }
+
+        .main-nav {
+            background-color: rgba(255,255,255,0.98);
+            backdrop-filter: blur(10px);
+            box-shadow: 0 2px 20px rgba(0,0,0,0.08);
+        }
+
+        .nav-link {
+            position: relative;
+            font-family: 'Montserrat', sans-serif;
+            font-weight: 600;
+            text-transform: uppercase;
+            font-size: 13px;
+            letter-spacing: 0.5px;
+            color: #0f172a;
+            transition: color 0.3s ease;
+        }
+
+        .nav-link::after {
+            content: '';
+            position: absolute;
+            bottom: -5px;
+            left: 0;
+            width: 0;
+            height: 2px;
+            background: linear-gradient(90deg, #0ea5e9, #14b8a6);
+            transition: width 0.3s ease;
+        }
+
+        .nav-link:hover::after { width: 100%; }
+        .nav-link:hover { color: #0ea5e9; }
+        .nav-link.active { color: #0ea5e9; }
+        .nav-link.active::after { width: 100%; }
+
+        .sticky-header {
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            transition: all 0.3s ease;
+        }
+
+        .sticky-header.scrolled {
+            box-shadow: 0 4px 30px rgba(0,0,0,0.15);
+        }
+
+        .dropdown-menu {
+            background-color: white;
+            border-top: 3px solid #0ea5e9;
+            box-shadow: 0 10px 40px rgba(0,0,0,0.15);
+            border-radius: 0 0 8px 8px;
+        }
+
+        .dropdown-item {
+            color: #0f172a;
+            font-size: 13px;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            padding: 14px 24px;
+            border-bottom: 1px solid rgba(0,0,0,0.05);
+            transition: all 0.2s ease;
+        }
+
+        .dropdown-item:hover {
+            color: #0ea5e9;
+            background-color: #f8fafc;
+            padding-left: 30px;
+        }
+
+        .btn-ycbn {
+            background: linear-gradient(90deg, #0ea5e9, #14b8a6);
+            color: white;
+            padding: 14px 40px;
+            font-family: 'Montserrat', sans-serif;
+            font-weight: 700;
+            font-size: 14px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            border: none;
+            transition: all 0.3s ease;
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .btn-ycbn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 10px 30px rgba(14,165,233,0.3);
+        }
+
+        .section-title {
+            font-family: 'Montserrat', sans-serif;
+            font-weight: 700;
+            font-size: 32px;
+            color: #0f172a;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            position: relative;
+            padding-bottom: 20px;
+            display: inline-block;
+        }
+
+        .section-title::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 80px;
+            height: 4px;
+            background: linear-gradient(90deg, #0ea5e9, #14b8a6);
+        }
+
+        .section-title-center::after {
+            left: 50%;
+            transform: translateX(-50%);
+        }
+
+        .story-card {
+            background: white;
+            border-radius: 16px;
+            overflow: hidden;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.05);
+            transition: all 0.3s ease;
+        }
+
+        .story-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 20px 40px rgba(0,0,0,0.1);
+        }
+
+        .photo-item {
+            position: relative;
+            overflow: hidden;
+            border-radius: 12px;
+            cursor: pointer;
+        }
+
+        .photo-item img {
+            transition: transform 0.4s ease;
+        }
+
+        .photo-item:hover img {
+            transform: scale(1.05);
+        }
+
+        .photo-overlay {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            background: linear-gradient(to top, rgba(0,0,0,0.7), transparent);
+            padding: 20px;
+            opacity: 0;
+            transition: opacity 0.3s ease;
+        }
+
+        .photo-item:hover .photo-overlay {
+            opacity: 1;
+        }
+
+        .video-wrapper {
+            position: relative;
+            padding-bottom: 56.25%;
+            height: 0;
+            overflow: hidden;
+            border-radius: 12px;
+        }
+
+        .video-wrapper iframe {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+        }
+
+        .footer-main {
+            background-color: #0f172a;
+            background-image: 
+                radial-gradient(circle at 20% 50%, rgba(14,165,233,0.1) 0%, transparent 50%),
+                radial-gradient(circle at 80% 80%, rgba(20,184,166,0.1) 0%, transparent 50%);
+            color: white;
+        }
+
+        .footer-heading {
+            font-family: 'Montserrat', sans-serif;
+            font-weight: 700;
+            font-size: 16px;
+            text-transform: uppercase;
+            color: white;
+            margin-bottom: 25px;
+            letter-spacing: 1px;
+        }
+
+        .footer-link {
+            color: rgba(255,255,255,0.7);
+            transition: all 0.3s ease;
+            display: block;
+            padding: 8px 0;
+            font-size: 14px;
+        }
+
+        .footer-link:hover {
+            color: #0ea5e9;
+            padding-left: 10px;
+        }
+
+        .newsletter-section {
+            background: linear-gradient(90deg, #0f172a 0%, #1e293b 100%);
+            border-top: 1px solid rgba(255,255,255,0.1);
+        }
+
+        .mobile-menu {
+            background-color: #0f172a;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+    </style>
+</head>
+<body class="bg-ycbn-gray antialiased">
+
+    <!-- Top Bar (same as index) -->
+    <div class="top-bar py-3">
+        <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex flex-col md:flex-row justify-between items-center gap-2">
+                <div class="flex items-center gap-6">
+                    <span class="flex items-center gap-2 font-semibold">
+                        <i class="fas fa-hand-holding-water"></i>
+                        Safe Water for All
+                    </span>
+                    <a href="mailto:info@ycbn.org" class="flex items-center gap-2 hover:text-ycbn-orange transition-colors">
+                        <i class="fas fa-envelope"></i>
+                        info@ycbn.org
+                    </a>
+                </div>
+                <div class="flex items-center gap-4">
+                    <div class="flex gap-3">
+                        <a href="https://www.linkedin.com/company/tiny-bit-wiser/" target="_blank" class="w-8 h-8 rounded-full bg-white/20 flex items-center justify-center hover:bg-ycbn-orange transition-colors">
+                            <i class="fab fa-linkedin-in text-sm"></i>
+                        </a>
+                        <a href="https://www.facebook.com/profile.php?id=61579627535321" target="_blank" class="w-8 h-8 rounded-full bg-white/20 flex items-center justify-center hover:bg-ycbn-orange transition-colors">
+                            <i class="fab fa-facebook-f text-sm"></i>
+                        </a>
+                        <a href="https://www.tiktok.com/@youth.capacity.bu?_r=1&_t=ZS-94XlJAUNABM" target="_blank" class="w-8 h-8 rounded-full bg-white/20 flex items-center justify-center hover:bg-ycbn-orange transition-colors">
+                            <i class="fab fa-tiktok text-sm"></i>
+                        </a>
+                        <a href="https://instagram.com/" target="_blank" class="w-8 h-8 rounded-full bg-white/20 flex items-center justify-center hover:bg-ycbn-orange transition-colors">
+                            <i class="fab fa-instagram text-sm"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Navigation -->
+    <nav class="main-nav sticky-header" id="mainNav">
+        <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex items-center justify-between h-24">
+                <a href="index.html" class="flex-shrink-0 flex items-center gap-3">
+                    <div class="w-12 h-12 rounded-lg overflow-hidden flex items-center justify-center bg-white">
+                        <img src="resources/logo.jpeg" alt="YCBN Logo" class="w-full h-full object-contain">
+                    </div>
+                    <div>
+                        <div class="font-montserrat font-bold text-xl text-ycbn-dark leading-tight">YCBN</div>
+                    </div>
+                </a>
+
+                <!-- Desktop Menu -->
+                <div class="hidden lg:flex items-center gap-8">
+                    <a href="index.html" class="nav-link">Home</a>
+                    <div class="relative group">
+                        <a href="about.html" class="nav-link flex items-center gap-1">
+                            Who We Are
+                            <i class="fas fa-chevron-down text-xs"></i>
+                        </a>
+                        <div class="dropdown-menu absolute top-full left-0 w-64 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 pt-4">
+                            <div class="py-2">
+                                <a href="about.html#vision" class="dropdown-item block">Vision & Mission</a>
+                                <a href="about.html#values" class="dropdown-item block">Core Values</a>
+                                <a href="about.html#objectives" class="dropdown-item block">Objectives</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="relative group">
+                        <a href="programmes.html" class="nav-link flex items-center gap-1">
+                            What We Do
+                            <i class="fas fa-chevron-down text-xs"></i>
+                        </a>
+                        <div class="dropdown-menu absolute top-full left-0 w-72 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 pt-4">
+                            <div class="py-2">
+                                <a href="programmes.html#wash" class="dropdown-item block">WASH Infrastructure</a>
+                                <a href="programmes.html#innovation" class="dropdown-item block">Solid Waste Management</a>
+                                <a href="programmes.html#youth" class="dropdown-item block">Youth Empowerment</a>
+                            </div>
+                        </div>
+                    </div>
+                    <a href="work.html" class="nav-link">Our Impact</a>
+                    <a href="stories.html" class="nav-link active">News</a>
+                    <a href="contact.html" class="nav-link">Contact</a>
+                </div>
+
+                <a href="contact.html" class="hidden lg:inline-flex btn-ycbn">
+                    <span>Get Involved</span>
+                    <i class="fas fa-arrow-right"></i>
+                </a>
+
+                <button id="mobileMenuBtn" class="lg:hidden text-2xl text-ycbn-dark p-2">
+                    <i class="fas fa-bars"></i>
+                </button>
+            </div>
+        </div>
+
+        <div id="mobileMenu" class="mobile-menu hidden lg:hidden absolute top-full left-0 w-full">
+            <div class="container mx-auto px-4 py-6">
+                <a href="index.html" class="block py-3 text-white border-b border-gray-700 font-semibold">Home</a>
+                <a href="about.html" class="block py-3 text-white border-b border-gray-700 font-semibold">Who We Are</a>
+                <a href="programmes.html" class="block py-3 text-white border-b border-gray-700 font-semibold">What We Do</a>
+                <a href="work.html" class="block py-3 text-white border-b border-gray-700 font-semibold">Our Impact</a>
+                <a href="stories.html" class="block py-3 text-white border-b border-gray-700 font-semibold">News</a>
+                <a href="contact.html" class="block py-3 text-ycbn-blue font-bold">Contact Us</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="relative bg-ycbn-dark py-32 md:py-40 overflow-hidden">
+        <div class="absolute inset-0 bg-[url('https://images.unsplash.com/photo-1517486808906-6ca8b3f04846?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80')] bg-cover bg-center opacity-20"></div>
+        <div class="absolute inset-0 bg-gradient-to-r from-ycbn-dark via-ycbn-dark/80 to-transparent"></div>
+        <div class="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+            <div class="max-w-3xl">
+                <span class="inline-block px-4 py-2 bg-ycbn-blue/20 border border-ycbn-blue/40 rounded-full text-ycbn-blue text-sm font-semibold mb-6 tracking-wider uppercase">
+                    Stories & Updates
+                </span>
+                <h1 class="text-4xl md:text-6xl font-bold text-white mb-6 font-montserrat">News, Photos & Videos</h1>
+                <div class="w-24 h-1 bg-gradient-to-r from-ycbn-blue to-ycbn-teal mb-6"></div>
+                <p class="text-lg md:text-xl text-gray-300 leading-relaxed max-w-2xl">
+                    Catch up on the latest news, see our work through powerful photos, and watch stories of transformation from the communities we serve.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Featured News Section -->
+    <section class="py-24 bg-white">
+        <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="section-title section-title-center mb-4">Latest News</h2>
+                <p class="text-gray-600 max-w-2xl mx-auto">Stay updated with our latest projects, milestones, and community stories.</p>
+            </div>
+
+            <div class="grid md:grid-cols-3 gap-8">
+                <!-- News 1 -->
+                <div class="story-card">
+                    <img src="https://images.unsplash.com/photo-1593113598338-cd288e649f09?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&h=500&q=80" alt="New borehole" class="w-full h-56 object-cover">
+                    <div class="p-6">
+                        <div class="flex items-center gap-3 text-sm text-ycbn-text mb-3">
+                            <span><i class="far fa-calendar-alt mr-1"></i> March 15, 2026</span>
+                            <span><i class="far fa-folder-open mr-1"></i> WASH</span>
+                        </div>
+                        <h3 class="text-xl font-bold text-ycbn-dark mb-2">New Borehole Brings Clean Water to 1,500 Residents in Wakiso</h3>
+                        <p class="text-gray-600 mb-4">The newly drilled borehole has reduced waterborne diseases by 70% and cut walking distances from 5km to just 200m.</p>
+                        <a href="#" class="inline-flex items-center text-ycbn-blue font-semibold hover:text-ycbn-teal transition-colors">
+                            Read More <i class="fas fa-arrow-right ml-2"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- News 2 -->
+                <div class="story-card">
+                    <img src="https://images.unsplash.com/photo-1524178232363-1fb2b075b655?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&h=500&q=80" alt="Youth training" class="w-full h-56 object-cover">
+                    <div class="p-6">
+                        <div class="flex items-center gap-3 text-sm text-ycbn-text mb-3">
+                            <span><i class="far fa-calendar-alt mr-1"></i> March 8, 2026</span>
+                            <span><i class="far fa-folder-open mr-1"></i> Youth Empowerment</span>
+                        </div>
+                        <h3 class="text-xl font-bold text-ycbn-dark mb-2">100 Youth Graduate from Digital Skills Bootcamp</h3>
+                        <p class="text-gray-600 mb-4">The third cohort of our coding and AI training program celebrated graduation, with 80% already securing internships.</p>
+                        <a href="#" class="inline-flex items-center text-ycbn-blue font-semibold hover:text-ycbn-teal transition-colors">
+                            Read More <i class="fas fa-arrow-right ml-2"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- News 3 -->
+                <div class="story-card">
+                    <img src="https://images.unsplash.com/photo-1531206715517-5c0ba140b2b8?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&h=500&q=80" alt="School hygiene" class="w-full h-56 object-cover">
+                    <div class="p-6">
+                        <div class="flex items-center gap-3 text-sm text-ycbn-text mb-3">
+                            <span><i class="far fa-calendar-alt mr-1"></i> February 28, 2026</span>
+                            <span><i class="far fa-folder-open mr-1"></i> Education</span>
+                        </div>
+                        <h3 class="text-xl font-bold text-ycbn-dark mb-2">Menstrual Hygiene Kits Reach 500 Girls in 5 Schools</h3>
+                        <p class="text-gray-600 mb-4">Our MHM initiative provides dignity kits and private changing rooms, boosting school attendance by 35%.</p>
+                        <a href="#" class="inline-flex items-center text-ycbn-blue font-semibold hover:text-ycbn-teal transition-colors">
+                            Read More <i class="fas fa-arrow-right ml-2"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="text-center mt-12">
+                <a href="#" class="inline-flex items-center gap-2 text-ycbn-blue font-bold border-b-2 border-ycbn-blue pb-1 hover:gap-4 transition-all">
+                    View All News <i class="fas fa-arrow-right"></i>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Photo Gallery Section -->
+    <section class="py-24 bg-ycbn-gray">
+        <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="section-title section-title-center mb-4">Photo Gallery</h2>
+                <p class="text-gray-600 max-w-2xl mx-auto">Moments from our work - bringing safe water, dignity, and opportunity to communities across Uganda.</p>
+            </div>
+
+            <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
+                <!-- Photo 1 -->
+                <div class="photo-item">
+                    <img src="https://images.unsplash.com/photo-1593113598338-cd288e649f09?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&h=300&q=80" alt="Water point" class="w-full h-64 object-cover">
+                    <div class="photo-overlay">
+                        <p class="text-white text-sm font-semibold">Community celebrates new borehole</p>
+                    </div>
+                </div>
+                <!-- Photo 2 -->
+                <div class="photo-item">
+                    <img src="https://images.unsplash.com/photo-1524178232363-1fb2b075b655?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&h=300&q=80" alt="Youth training" class="w-full h-64 object-cover">
+                    <div class="photo-overlay">
+                        <p class="text-white text-sm font-semibold">Digital skills training session</p>
+                    </div>
+                </div>
+                <!-- Photo 3 -->
+                <div class="photo-item">
+                    <img src="https://images.unsplash.com/photo-1531206715517-5c0ba140b2b8?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&h=300&q=80" alt="School children" class="w-full h-64 object-cover">
+                    <div class="photo-overlay">
+                        <p class="text-white text-sm font-semibold">School hygiene education</p>
+                    </div>
+                </div>
+                <!-- Photo 4 -->
+                <div class="photo-item">
+                    <img src="https://images.unsplash.com/photo-1517048676732-d65bc937f952?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&h=300&q=80" alt="Innovation hub" class="w-full h-64 object-cover">
+                    <div class="photo-overlay">
+                        <p class="text-white text-sm font-semibold">Innovation hub in action</p>
+                    </div>
+                </div>
+                <!-- Photo 5 -->
+                <div class="photo-item">
+                    <img src="https://images.unsplash.com/photo-1544027993-37dbfe4431b4?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&h=300&q=80" alt="Volunteer" class="w-full h-64 object-cover">
+                    <div class="photo-overlay">
+                        <p class="text-white text-sm font-semibold">Volunteers distributing supplies</p>
+                    </div>
+                </div>
+                <!-- Photo 6 -->
+                <div class="photo-item">
+                    <img src="https://images.unsplash.com/photo-1524995997946-a1c2e315a42f?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&h=300&q=80" alt="Education" class="w-full h-64 object-cover">
+                    <div class="photo-overlay">
+                        <p class="text-white text-sm font-semibold">Classroom support program</p>
+                    </div>
+                </div>
+                <!-- Photo 7 -->
+                <div class="photo-item">
+                    <img src="https://images.unsplash.com/photo-1469571486292-0ba58a3f068b?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&h=300&q=80" alt="Community meeting" class="w-full h-64 object-cover">
+                    <div class="photo-overlay">
+                        <p class="text-white text-sm font-semibold">Community water committee training</p>
+                    </div>
+                </div>
+                <!-- Photo 8 -->
+                <div class="photo-item">
+                    <img src="https://images.unsplash.com/photo-1559027615-cd4628902d4a?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&h=300&q=80" alt="Sanitation facility" class="w-full h-64 object-cover">
+                    <div class="photo-overlay">
+                        <p class="text-white text-sm font-semibold">New sanitation block at school</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="text-center mt-10">
+                <a href="#" class="inline-flex items-center gap-2 text-ycbn-blue font-semibold hover:gap-4 transition-all">
+                    View Full Gallery <i class="fas fa-images ml-2"></i>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Video Gallery Section -->
+    <section class="py-24 bg-white">
+        <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="section-title section-title-center mb-4">Video Stories</h2>
+                <p class="text-gray-600 max-w-2xl mx-auto">Watch the impact of our work through these short stories from the field.</p>
+            </div>
+
+            <div class="grid md:grid-cols-2 gap-8">
+                <!-- Video 1 -->
+                <div class="story-card p-4">
+                    <div class="video-wrapper">
+                        <iframe src="https://www.youtube.com/embed/dQw4w9WgXcQ?si=placeholder1" title="Clean water project video" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                    </div>
+                    <div class="p-4">
+                        <h3 class="font-bold text-ycbn-dark text-lg mb-2">Clean Water Changes Everything</h3>
+                        <p class="text-gray-600 text-sm">A short documentary about how a borehole transformed life in Kyampisi village.</p>
+                    </div>
+                </div>
+
+                <!-- Video 2 -->
+                <div class="story-card p-4">
+                    <div class="video-wrapper">
+                        <iframe src="https://www.youtube.com/embed/dQw4w9WgXcQ?si=placeholder2" title="Youth digital skills" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                    </div>
+                    <div class="p-4">
+                        <h3 class="font-bold text-ycbn-dark text-lg mb-2">From Unemployed to Tech Entrepreneur</h3>
+                        <p class="text-gray-600 text-sm">Meet Sarah, who started her own agritech business after YCBN's training.</p>
+                    </div>
+                </div>
+
+                <!-- Video 3 -->
+                <div class="story-card p-4">
+                    <div class="video-wrapper">
+                        <iframe src="https://www.youtube.com/embed/dQw4w9WgXcQ?si=placeholder3" title="Menstrual health" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                    </div>
+                    <div class="p-4">
+                        <h3 class="font-bold text-ycbn-dark text-lg mb-2">Keeping Girls in School</h3>
+                        <p class="text-gray-600 text-sm">How our MHM program is breaking barriers and empowering young girls.</p>
+                    </div>
+                </div>
+
+                <!-- Video 4 -->
+                <div class="story-card p-4">
+                    <div class="video-wrapper">
+                        <iframe src="https://www.youtube.com/embed/dQw4w9WgXcQ?si=placeholder4" title="Innovation hub" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                    </div>
+                    <div class="p-4">
+                        <h3 class="font-bold text-ycbn-dark text-lg mb-2">Inside Our Innovation Hub</h3>
+                        <p class="text-gray-600 text-sm">Take a tour of our community innovation space where young minds create solutions.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="text-center mt-10">
+                <a href="#" class="inline-flex items-center gap-2 text-ycbn-blue font-semibold hover:gap-4 transition-all">
+                    More Videos on Our YouTube Channel <i class="fab fa-youtube ml-2"></i>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Call to Action -->
+    <section class="py-20 bg-gradient-to-r from-ycbn-blue to-ycbn-teal text-white">
+        <div class="container mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <h2 class="text-3xl md:text-4xl font-bold mb-4">Share Your Story</h2>
+            <p class="text-xl opacity-90 max-w-2xl mx-auto mb-8">Have you been impacted by our work? We'd love to hear your story and share it with the world.</p>
+            <a href="contact.html" class="inline-block bg-white text-ycbn-blue px-8 py-3 rounded-lg font-bold hover:bg-ycbn-dark hover:text-white transition-all shadow-lg">
+                Share Your Story
+            </a>
+        </div>
+    </section>
+
+    <!-- Newsletter Section (consistent) -->
+    <section class="newsletter-section py-20">
+        <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid lg:grid-cols-2 gap-16 items-center">
+                <div>
+                    <h2 class="font-montserrat font-bold text-3xl text-white mb-6">Get In Touch</h2>
+                    <p class="text-gray-400 mb-8">Ready to partner with us or want to learn more about our work? Reach out today.</p>
+                    <div class="space-y-6">
+                        <div class="flex items-start gap-4">
+                            <div class="w-12 h-12 rounded-full bg-white/10 flex items-center justify-center text-ycbn-blue flex-shrink-0"><i class="fas fa-location-dot"></i></div>
+                            <div>
+                                <h4 class="font-bold text-white mb-1">Address</h4>
+                                <p class="text-gray-400 text-sm">P.O Box 117751, Wakiso, Uganda</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start gap-4">
+                            <div class="w-12 h-12 rounded-full bg-white/10 flex items-center justify-center text-ycbn-teal flex-shrink-0"><i class="fas fa-envelope"></i></div>
+                            <div>
+                                <h4 class="font-bold text-white mb-1">Email</h4>
+                                <p class="text-gray-400 text-sm">info@ycbn.org</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="bg-white/5 backdrop-blur-sm p-8 rounded-2xl border border-white/10">
+                    <h3 class="font-montserrat font-bold text-xl text-white mb-6">Subscribe to Our Newsletter</h3>
+                    <p class="text-gray-400 text-sm mb-6">Stay updated with our latest projects, impact stories, and opportunities.</p>
+                    <form class="space-y-4">
+                        <div>
+                            <input type="text" placeholder="Your Name" class="w-full px-5 py-3 rounded-lg bg-white/10 border border-white/20 text-white placeholder-gray-400 focus:outline-none focus:border-ycbn-blue transition-colors">
+                        </div>
+                        <div>
+                            <input type="email" placeholder="Email Address" class="w-full px-5 py-3 rounded-lg bg-white/10 border border-white/20 text-white placeholder-gray-400 focus:outline-none focus:border-ycbn-blue transition-colors">
+                        </div>
+                        <button type="submit" class="w-full btn-ycbn justify-center">
+                            <span>Subscribe Now</span>
+                            <i class="fas fa-paper-plane"></i>
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer-main pt-20 pb-8">
+        <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid md:grid-cols-4 gap-12 mb-16">
+                <div class="md:col-span-1">
+                    <div class="flex items-center gap-3 mb-6">
+                        <div class="w-10 h-10 rounded-lg bg-gradient-to-br from-ycbn-blue to-ycbn-teal flex items-center justify-center text-white font-bold">Y</div>
+                        <div class="font-montserrat font-bold text-lg text-white">YCBN</div>
+                    </div>
+                    <p class="text-gray-400 text-sm leading-relaxed mb-6">
+                        Youth-led organization delivering sustainable WASH infrastructure and digital skills training to create resilient communities in Uganda.
+                    </p>
+                    <div class="flex gap-3">
+                        <a href="https://www.linkedin.com/company/tiny-bit-wiser/" target="_blank" class="w-9 h-9 rounded bg-white/10 flex items-center justify-center hover:bg-ycbn-blue transition-colors text-white"><i class="fab fa-linkedin-in text-sm"></i></a>
+                        <a href="https://www.facebook.com/profile.php?id=61579627535321" target="_blank" class="w-9 h-9 rounded bg-white/10 flex items-center justify-center hover:bg-ycbn-blue transition-colors text-white"><i class="fab fa-facebook-f text-sm"></i></a>
+                        <a href="https://www.tiktok.com/@youth.capacity.bu?_r=1&_t=ZS-94XlJAUNABM" target="_blank" class="w-9 h-9 rounded bg-white/10 flex items-center justify-center hover:bg-ycbn-blue transition-colors text-white"><i class="fab fa-tiktok text-sm"></i></a>
+                        <a href="https://instagram.com/" target="_blank" class="w-9 h-9 rounded bg-white/10 flex items-center justify-center hover:bg-ycbn-blue transition-colors text-white"><i class="fab fa-instagram text-sm"></i></a>
+                    </div>
+                </div>
+                <div>
+                    <h4 class="footer-heading">Quick Links</h4>
+                    <nav class="flex flex-col">
+                        <a href="about.html" class="footer-link">About Us</a>
+                        <a href="programmes.html" class="footer-link">Our Programmes</a>
+                        <a href="work.html" class="footer-link">Impact Stories</a>
+                        <a href="stories.html" class="footer-link">News & Updates</a>
+                        <a href="contact.html" class="footer-link">Contact</a>
+                    </nav>
+                </div>
+                <div>
+                    <h4 class="footer-heading">Programmes</h4>
+                    <nav class="flex flex-col">
+                        <a href="programmes.html#wash" class="footer-link">WASH Infrastructure</a>
+                        <a href="programmes.html#innovation" class="footer-link">Solid Waste Management</a>
+                        <a href="programmes.html#youth" class="footer-link">Digital Skills</a>
+                        <a href="programmes.html#youth" class="footer-link">Youth Empowerment</a>
+                    </nav>
+                </div>
+                <div>
+                    <h4 class="footer-heading">Legal & Compliance</h4>
+                    <div class="text-sm text-gray-400 space-y-3">
+                        <p class="pt-2 text-xs">Compliant with NGO Act 2016, WASH sector standards, and child protection requirements.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="border-t border-white/10 pt-8 flex flex-col md:flex-row justify-between items-center gap-4">
+                <p class="text-sm text-gray-500">© 2026 Youth Capacity Building Network (YCBN). All rights reserved.</p>
+                <div class="flex gap-6 text-sm text-gray-500">
+                    <a href="#" class="hover:text-white transition-colors">Privacy Policy</a>
+                    <a href="#" class="hover:text-white transition-colors">Terms of Service</a>
+                </div>
+                <button onclick="window.scrollTo({top: 0, behavior: 'smooth'})" class="w-10 h-10 rounded-full bg-white/10 flex items-center justify-center hover:bg-ycbn-blue transition-colors text-white">
+                    <i class="fas fa-chevron-up"></i>
+                </button>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Mobile menu toggle
+        const mobileMenuBtn = document.getElementById('mobileMenuBtn');
+        const mobileMenu = document.getElementById('mobileMenu');
+
+        mobileMenuBtn.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+            const icon = mobileMenuBtn.querySelector('i');
+            if (mobileMenu.classList.contains('hidden')) {
+                icon.classList.remove('fa-times');
+                icon.classList.add('fa-bars');
+            } else {
+                icon.classList.remove('fa-bars');
+                icon.classList.add('fa-times');
+            }
+        });
+
+        // Sticky header effect
+        const mainNav = document.getElementById('mainNav');
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 100) {
+                mainNav.classList.add('scrolled');
+            } else {
+                mainNav.classList.remove('scrolled');
+            }
+        });
+    </script>
+</body>
+</html>

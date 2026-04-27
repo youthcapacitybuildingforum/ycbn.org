@@ -1,0 +1,873 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Donate - YCBN | Support WASH & Youth Innovation</title>
+    <meta name="description" content="Support YCBN's mission to deliver clean water, sanitation, and digital skills training to communities across Uganda. Your donation changes lives.">
+
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800;900&family=Open+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'ycbn-blue': '#0ea5e9',
+                        'ycbn-blue-dark': '#0284c7',
+                        'ycbn-teal': '#14b8a6',
+                        'ycbn-teal-dark': '#0d9488',
+                        'ycbn-orange': '#f97316',
+                        'ycbn-orange-light': '#fb923c',
+                        'ycbn-dark': '#0f172a',
+                        'ycbn-gray': '#f1f5f9',
+                        'ycbn-text': '#64748b'
+                    },
+                    fontFamily: {
+                        'montserrat': ['Montserrat', 'sans-serif'],
+                        'opensans': ['Open Sans', 'sans-serif']
+                    }
+                }
+            }
+        }
+    </script>
+
+    <style>
+        * { font-family: 'Open Sans', sans-serif; }
+        h1, h2, h3, h4, h5, h6 { font-family: 'Montserrat', sans-serif; }
+
+        .top-bar {
+            background: linear-gradient(90deg, #0ea5e9 0%, #14b8a6 100%);
+            color: white;
+            font-size: 13px;
+        }
+
+        .main-nav {
+            background-color: rgba(255,255,255,0.98);
+            backdrop-filter: blur(10px);
+            box-shadow: 0 2px 20px rgba(0,0,0,0.08);
+        }
+
+        .nav-link {
+            position: relative;
+            font-family: 'Montserrat', sans-serif;
+            font-weight: 600;
+            text-transform: uppercase;
+            font-size: 13px;
+            letter-spacing: 0.5px;
+            color: #0f172a;
+            transition: color 0.3s ease;
+        }
+
+        .nav-link::after {
+            content: '';
+            position: absolute;
+            bottom: -5px;
+            left: 0;
+            width: 0;
+            height: 2px;
+            background: linear-gradient(90deg, #0ea5e9, #14b8a6);
+            transition: width 0.3s ease;
+        }
+
+        .nav-link:hover::after { width: 100%; }
+        .nav-link:hover { color: #0ea5e9; }
+        .nav-link.active { color: #0ea5e9; }
+        .nav-link.active::after { width: 100%; }
+
+        .sticky-header {
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            transition: all 0.3s ease;
+        }
+
+        .sticky-header.scrolled {
+            box-shadow: 0 4px 30px rgba(0,0,0,0.15);
+        }
+
+        .dropdown-menu {
+            background-color: white;
+            border-top: 3px solid #0ea5e9;
+            box-shadow: 0 10px 40px rgba(0,0,0,0.15);
+            border-radius: 0 0 8px 8px;
+        }
+
+        .dropdown-item {
+            color: #0f172a;
+            font-size: 13px;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            padding: 14px 24px;
+            border-bottom: 1px solid rgba(0,0,0,0.05);
+            transition: all 0.2s ease;
+        }
+
+        .dropdown-item:hover {
+            color: #0ea5e9;
+            background-color: #f8fafc;
+            padding-left: 30px;
+        }
+
+        .btn-ycbn {
+            background: linear-gradient(90deg, #0ea5e9, #14b8a6);
+            color: white;
+            padding: 14px 40px;
+            font-family: 'Montserrat', sans-serif;
+            font-weight: 700;
+            font-size: 14px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            border: none;
+            transition: all 0.3s ease;
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .btn-ycbn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 10px 30px rgba(14,165,233,0.3);
+        }
+
+        .btn-outline {
+            background-color: transparent;
+            color: #0ea5e9;
+            padding: 12px 32px;
+            font-family: 'Montserrat', sans-serif;
+            font-weight: 700;
+            font-size: 14px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            border: 2px solid #0ea5e9;
+            transition: all 0.3s ease;
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .btn-outline:hover {
+            background-color: #0ea5e9;
+            color: white;
+        }
+
+        .section-title {
+            font-family: 'Montserrat', sans-serif;
+            font-weight: 700;
+            font-size: 32px;
+            color: #0f172a;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            position: relative;
+            padding-bottom: 20px;
+            display: inline-block;
+        }
+
+        .section-title::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 80px;
+            height: 4px;
+            background: linear-gradient(90deg, #0ea5e9, #14b8a6);
+        }
+
+        .section-title-center::after {
+            left: 50%;
+            transform: translateX(-50%);
+        }
+
+        .donation-card {
+            background: white;
+            border-radius: 16px;
+            transition: all 0.3s ease;
+            cursor: pointer;
+            border: 2px solid #e5e7eb;
+        }
+
+        .donation-card:hover {
+            border-color: #0ea5e9;
+            transform: translateY(-3px);
+        }
+
+        .donation-card.selected {
+            border-color: #0ea5e9;
+            background: linear-gradient(135deg, rgba(14,165,233,0.05), rgba(20,184,166,0.05));
+        }
+
+        .payment-method {
+            transition: all 0.3s ease;
+            cursor: pointer;
+            border: 2px solid #e5e7eb;
+        }
+
+        .payment-method.selected {
+            border-color: #0ea5e9;
+            background-color: rgba(14,165,233,0.05);
+        }
+
+        .footer-main {
+            background-color: #0f172a;
+            background-image: 
+                radial-gradient(circle at 20% 50%, rgba(14,165,233,0.1) 0%, transparent 50%),
+                radial-gradient(circle at 80% 80%, rgba(20,184,166,0.1) 0%, transparent 50%);
+            color: white;
+        }
+
+        .footer-heading {
+            font-family: 'Montserrat', sans-serif;
+            font-weight: 700;
+            font-size: 16px;
+            text-transform: uppercase;
+            color: white;
+            margin-bottom: 25px;
+            letter-spacing: 1px;
+        }
+
+        .footer-link {
+            color: rgba(255,255,255,0.7);
+            transition: all 0.3s ease;
+            display: block;
+            padding: 8px 0;
+            font-size: 14px;
+        }
+
+        .footer-link:hover {
+            color: #0ea5e9;
+            padding-left: 10px;
+        }
+
+        .newsletter-section {
+            background: linear-gradient(90deg, #0f172a 0%, #1e293b 100%);
+            border-top: 1px solid rgba(255,255,255,0.1);
+        }
+
+        .mobile-menu {
+            background-color: #0f172a;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+    </style>
+</head>
+<body class="bg-ycbn-gray antialiased">
+
+    <!-- Top Bar -->
+    <div class="top-bar py-3">
+        <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex flex-col md:flex-row justify-between items-center gap-2">
+                <div class="flex items-center gap-6">
+                    <span class="flex items-center gap-2 font-semibold">
+                        <i class="fas fa-hand-holding-water"></i>
+                        Safe Water for All
+                    </span>
+                    <a href="mailto:info@ycbn.org" class="flex items-center gap-2 hover:text-ycbn-orange transition-colors">
+                        <i class="fas fa-envelope"></i>
+                        info@ycbn.org
+                    </a>
+                </div>
+                <div class="flex items-center gap-4">
+                    <div class="flex gap-3">
+                        <a href="https://www.linkedin.com/company/tiny-bit-wiser/" target="_blank" class="w-8 h-8 rounded-full bg-white/20 flex items-center justify-center hover:bg-ycbn-orange transition-colors">
+                            <i class="fab fa-linkedin-in text-sm"></i>
+                        </a>
+                        <a href="https://www.facebook.com/profile.php?id=61579627535321" target="_blank" class="w-8 h-8 rounded-full bg-white/20 flex items-center justify-center hover:bg-ycbn-orange transition-colors">
+                            <i class="fab fa-facebook-f text-sm"></i>
+                        </a>
+                        <a href="https://www.tiktok.com/@youth.capacity.bu?_r=1&_t=ZS-94XlJAUNABM" target="_blank" class="w-8 h-8 rounded-full bg-white/20 flex items-center justify-center hover:bg-ycbn-orange transition-colors">
+                            <i class="fab fa-tiktok text-sm"></i>
+                        </a>
+                        <a href="https://instagram.com/" target="_blank" class="w-8 h-8 rounded-full bg-white/20 flex items-center justify-center hover:bg-ycbn-orange transition-colors">
+                            <i class="fab fa-instagram text-sm"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Navigation -->
+    <nav class="main-nav sticky-header" id="mainNav">
+        <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex items-center justify-between h-24">
+                <a href="index.html" class="flex-shrink-0 flex items-center gap-3">
+                    <div class="w-12 h-12 rounded-lg overflow-hidden flex items-center justify-center bg-white">
+                        <img src="resources/logo.jpeg" alt="YCBN Logo" class="w-full h-full object-contain">
+                    </div>
+                    <div>
+                        <div class="font-montserrat font-bold text-xl text-ycbn-dark leading-tight">YCBN</div>
+                    </div>
+                </a>
+
+                <!-- Desktop Menu -->
+                <div class="hidden lg:flex items-center gap-8">
+                    <a href="index.html" class="nav-link">Home</a>
+                    <div class="relative group">
+                        <a href="about.html" class="nav-link flex items-center gap-1">
+                            Who We Are
+                            <i class="fas fa-chevron-down text-xs"></i>
+                        </a>
+                        <div class="dropdown-menu absolute top-full left-0 w-64 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 pt-4">
+                            <div class="py-2">
+                                <a href="about.html#vision" class="dropdown-item block">Vision & Mission</a>
+                                <a href="about.html#values" class="dropdown-item block">Core Values</a>
+                                <a href="about.html#objectives" class="dropdown-item block">Objectives</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="relative group">
+                        <a href="programmes.html" class="nav-link flex items-center gap-1">
+                            What We Do
+                            <i class="fas fa-chevron-down text-xs"></i>
+                        </a>
+                        <div class="dropdown-menu absolute top-full left-0 w-72 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 pt-4">
+                            <div class="py-2">
+                                <a href="programmes.html#wash" class="dropdown-item block">WASH Infrastructure</a>
+                                <a href="programmes.html#innovation" class="dropdown-item block">Solid Waste Management</a>
+                                <a href="programmes.html#youth" class="dropdown-item block">Youth Empowerment</a>
+                            </div>
+                        </div>
+                    </div>
+                    <a href="work.html" class="nav-link">Our Impact</a>
+                    <a href="stories.html" class="nav-link">News</a>
+                    <a href="contact.html" class="nav-link">Contact</a>
+                </div>
+
+                <a href="donate.html" class="hidden lg:inline-flex btn-ycbn">
+                    <span>GET INVOLVED</span>
+                    <i class="fas fa-heart"></i>
+                </a>
+
+                <button id="mobileMenuBtn" class="lg:hidden text-2xl text-ycbn-dark p-2">
+                    <i class="fas fa-bars"></i>
+                </button>
+            </div>
+        </div>
+
+        <div id="mobileMenu" class="mobile-menu hidden lg:hidden absolute top-full left-0 w-full">
+            <div class="container mx-auto px-4 py-6">
+                <a href="index.html" class="block py-3 text-white border-b border-gray-700 font-semibold">Home</a>
+                <a href="about.html" class="block py-3 text-white border-b border-gray-700 font-semibold">Who We Are</a>
+                <a href="programmes.html" class="block py-3 text-white border-b border-gray-700 font-semibold">What We Do</a>
+                <a href="work.html" class="block py-3 text-white border-b border-gray-700 font-semibold">Our Impact</a>
+                <a href="stories.html" class="block py-3 text-white border-b border-gray-700 font-semibold">News</a>
+                <a href="contact.html" class="block py-3 text-white border-b border-gray-700 font-semibold">Contact</a>
+                <a href="donate.html" class="block py-3 text-ycbn-blue font-bold">Donate</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="relative bg-ycbn-dark py-32 md:py-40 overflow-hidden">
+        <div class="absolute inset-0 bg-[url('https://images.unsplash.com/photo-1593113598338-cd288e649f09?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80')] bg-cover bg-center opacity-20"></div>
+        <div class="absolute inset-0 bg-gradient-to-r from-ycbn-dark via-ycbn-dark/80 to-transparent"></div>
+        <div class="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+            <div class="max-w-3xl">
+                <span class="inline-block px-4 py-2 bg-ycbn-blue/20 border border-ycbn-blue/40 rounded-full text-ycbn-blue text-sm font-semibold mb-6 tracking-wider uppercase">
+                    Make a Difference
+                </span>
+                <h1 class="text-4xl md:text-6xl font-bold text-white mb-6 font-montserrat">Support Our Mission</h1>
+                <div class="w-24 h-1 bg-gradient-to-r from-ycbn-blue to-ycbn-teal mb-6"></div>
+                <p class="text-lg md:text-xl text-gray-300 leading-relaxed max-w-2xl">
+                    Your donation helps us deliver clean water, dignified sanitation, and life-changing digital skills to communities across Uganda. Every contribution creates lasting impact.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Impact Summary -->
+    <section class="py-12 bg-white">
+        <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
+                <div>
+                    <div class="text-3xl md:text-4xl font-bold text-ycbn-blue mb-2">UGX 25K</div>
+                    <p class="text-gray-600 text-sm">Provides hygiene kits for 10 girls</p>
+                </div>
+                <div>
+                    <div class="text-3xl md:text-4xl font-bold text-ycbn-blue mb-2">UGX 100K</div>
+                    <p class="text-gray-600 text-sm">Trains 1 youth in digital skills</p>
+                </div>
+                <div>
+                    <div class="text-3xl md:text-4xl font-bold text-ycbn-blue mb-2">UGX 250K</div>
+                    <p class="text-gray-600 text-sm">Funds a school hygiene campaign</p>
+                </div>
+                <div>
+                    <div class="text-3xl md:text-4xl font-bold text-ycbn-blue mb-2">UGX 1.5M</div>
+                    <p class="text-gray-600 text-sm">Drills a borehole for 500+ people</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Donation Form Section -->
+    <section class="py-20 bg-ycbn-gray">
+        <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid lg:grid-cols-3 gap-8">
+                <!-- Donation Form Column -->
+                <div class="lg:col-span-2">
+                    <div class="bg-white rounded-2xl shadow-xl p-8">
+                        <h2 class="text-2xl font-bold text-ycbn-dark mb-6">Make Your Donation</h2>
+
+                        <!-- Amount Selection -->
+                        <div class="mb-8">
+                            <h3 class="text-lg font-semibold text-ycbn-dark mb-4">Choose Amount (UGX)</h3>
+                            <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
+                                <div class="donation-card p-4 text-center" data-amount="25000">
+                                    <div class="text-xl font-bold text-ycbn-dark">25,000</div>
+                                    <div class="text-xs text-gray-500">Hygiene kits</div>
+                                </div>
+                                <div class="donation-card p-4 text-center selected" data-amount="50000">
+                                    <div class="text-xl font-bold text-ycbn-dark">50,000</div>
+                                    <div class="text-xs text-gray-500">Borehole maintenance</div>
+                                </div>
+                                <div class="donation-card p-4 text-center" data-amount="100000">
+                                    <div class="text-xl font-bold text-ycbn-dark">100,000</div>
+                                    <div class="text-xs text-gray-500">Digital skills training</div>
+                                </div>
+                                <div class="donation-card p-4 text-center" data-amount="250000">
+                                    <div class="text-xl font-bold text-ycbn-dark">250,000</div>
+                                    <div class="text-xs text-gray-500">School hygiene campaign</div>
+                                </div>
+                            </div>
+                            <div class="mt-4">
+                                <label class="block text-sm font-medium text-gray-700 mb-2">Custom Amount (UGX)</label>
+                                <input type="number" id="customAmount" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:border-ycbn-blue" placeholder="Enter amount">
+                            </div>
+                        </div>
+
+                        <!-- Donation Type -->
+                        <div class="mb-8">
+                            <h3 class="text-lg font-semibold text-ycbn-dark mb-4">Donation Type</h3>
+                            <div class="flex gap-6">
+                                <label class="flex items-center">
+                                    <input type="radio" name="donationType" value="one-time" checked class="w-4 h-4 text-ycbn-blue">
+                                    <span class="ml-2 text-gray-700">One-time</span>
+                                </label>
+                                <label class="flex items-center">
+                                    <input type="radio" name="donationType" value="monthly" class="w-4 h-4 text-ycbn-blue">
+                                    <span class="ml-2 text-gray-700">Monthly</span>
+                                </label>
+                                <label class="flex items-center">
+                                    <input type="radio" name="donationType" value="yearly" class="w-4 h-4 text-ycbn-blue">
+                                    <span class="ml-2 text-gray-700">Yearly</span>
+                                </label>
+                            </div>
+                        </div>
+
+                        <!-- Personal Info -->
+                        <div class="mb-8">
+                            <h3 class="text-lg font-semibold text-ycbn-dark mb-4">Your Information</h3>
+                            <div class="grid md:grid-cols-2 gap-4">
+                                <div>
+                                    <label class="block text-sm font-medium text-gray-700 mb-2">First Name *</label>
+                                    <input type="text" id="firstName" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:border-ycbn-blue">
+                                </div>
+                                <div>
+                                    <label class="block text-sm font-medium text-gray-700 mb-2">Last Name *</label>
+                                    <input type="text" id="lastName" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:border-ycbn-blue">
+                                </div>
+                                <div class="md:col-span-2">
+                                    <label class="block text-sm font-medium text-gray-700 mb-2">Email Address *</label>
+                                    <input type="email" id="email" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:border-ycbn-blue">
+                                </div>
+                                <div class="md:col-span-2">
+                                    <label class="block text-sm font-medium text-gray-700 mb-2">Phone Number</label>
+                                    <input type="tel" id="phone" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:border-ycbn-blue">
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Payment Method -->
+                        <div class="mb-8">
+                            <h3 class="text-lg font-semibold text-ycbn-dark mb-4">Payment Method</h3>
+                            <div class="space-y-4">
+                                <div class="payment-method p-4 rounded-lg selected" data-method="card">
+                                    <label class="flex items-center cursor-pointer">
+                                        <input type="radio" name="paymentMethod" value="card" checked class="hidden">
+                                        <div class="w-5 h-5 border-2 border-gray-300 rounded-full mr-3 flex items-center justify-center">
+                                            <div class="w-2.5 h-2.5 bg-ycbn-blue rounded-full"></div>
+                                        </div>
+                                        <div class="flex-1">
+                                            <span class="font-semibold">Credit / Debit Card</span>
+                                            <div class="flex gap-2 mt-1">
+                                                <i class="fab fa-cc-visa text-blue-700"></i>
+                                                <i class="fab fa-cc-mastercard text-red-500"></i>
+                                                <i class="fab fa-cc-amex text-blue-500"></i>
+                                            </div>
+                                        </div>
+                                    </label>
+                                </div>
+                                <div class="payment-method p-4 rounded-lg" data-method="mobile">
+                                    <label class="flex items-center cursor-pointer">
+                                        <input type="radio" name="paymentMethod" value="mobile" class="hidden">
+                                        <div class="w-5 h-5 border-2 border-gray-300 rounded-full mr-3 flex items-center justify-center"></div>
+                                        <div class="flex-1">
+                                            <span class="font-semibold">Mobile Money (Airtel / MTN)</span>
+                                            <p class="text-sm text-gray-500">You'll receive payment instructions via SMS</p>
+                                        </div>
+                                    </label>
+                                </div>
+                                <div class="payment-method p-4 rounded-lg" data-method="bank">
+                                    <label class="flex items-center cursor-pointer">
+                                        <input type="radio" name="paymentMethod" value="bank" class="hidden">
+                                        <div class="w-5 h-5 border-2 border-gray-300 rounded-full mr-3 flex items-center justify-center"></div>
+                                        <div class="flex-1">
+                                            <span class="font-semibold">Bank Transfer</span>
+                                            <p class="text-sm text-gray-500">We'll provide account details after submission</p>
+                                        </div>
+                                    </label>
+                                </div>
+                            </div>
+
+                            <!-- Card Details (shown when card selected) -->
+                            <div id="cardDetails" class="mt-6 space-y-4">
+                                <div>
+                                    <label class="block text-sm font-medium text-gray-700 mb-2">Card Number</label>
+                                    <input type="text" id="cardNumber" placeholder="1234 5678 9012 3456" class="w-full px-4 py-3 border border-gray-300 rounded-lg">
+                                </div>
+                                <div class="grid grid-cols-2 gap-4">
+                                    <div>
+                                        <label class="block text-sm font-medium text-gray-700 mb-2">Expiry (MM/YY)</label>
+                                        <input type="text" id="expiry" placeholder="MM/YY" class="w-full px-4 py-3 border border-gray-300 rounded-lg">
+                                    </div>
+                                    <div>
+                                        <label class="block text-sm font-medium text-gray-700 mb-2">CVC</label>
+                                        <input type="text" id="cvc" placeholder="123" class="w-full px-4 py-3 border border-gray-300 rounded-lg">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Submit Button -->
+                        <button id="donateBtn" class="w-full btn-ycbn justify-center py-4 text-lg">
+                            <i class="fas fa-heart mr-2"></i>
+                            Donate Now
+                        </button>
+                        <div id="donationStatus" class="mt-4 text-center text-sm hidden"></div>
+                        <p class="text-center text-xs text-gray-500 mt-4">
+                            <i class="fas fa-lock mr-1"></i> Your donation is secure. 100% of funds go to our programs.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Impact Sidebar -->
+                <div class="lg:col-span-1">
+                    <div class="bg-white rounded-2xl shadow-xl p-8 sticky top-24">
+                        <h3 class="text-xl font-bold text-ycbn-dark mb-6">Your Impact</h3>
+                        <div class="bg-ycbn-gray rounded-lg p-6 mb-6">
+                            <p class="text-sm text-gray-600 mb-2">Your Donation</p>
+                            <p class="text-3xl font-bold text-ycbn-dark" id="selectedAmountDisplay">UGX 50,000</p>
+                            <p class="text-sm text-gray-500 mt-2" id="donationTypeDisplay">One-time donation</p>
+                        </div>
+                        <div class="space-y-4">
+                            <h4 class="font-semibold text-ycbn-dark">What this provides:</h4>
+                            <div class="flex items-start gap-3 p-3 bg-ycbn-gray rounded-lg">
+                                <i class="fas fa-tint text-ycbn-blue mt-1"></i>
+                                <p class="text-sm text-gray-600" id="impactText">Supports borehole maintenance for a community of 200 people</p>
+                            </div>
+                            <div class="flex items-start gap-3 p-3 bg-ycbn-gray rounded-lg">
+                                <i class="fas fa-chalkboard-user text-ycbn-teal mt-1"></i>
+                                <p class="text-sm text-gray-600">Your donation helps keep children in school through hygiene programs</p>
+                            </div>
+                            <div class="flex items-start gap-3 p-3 bg-ycbn-gray rounded-lg">
+                                <i class="fas fa-laptop-code text-ycbn-orange mt-1"></i>
+                                <p class="text-sm text-gray-600">Supports digital skills training for youth in underserved communities</p>
+                            </div>
+                        </div>
+                        <div class="mt-6 pt-6 border-t border-gray-200">
+                            <p class="text-xs text-gray-500">
+                                <i class="fas fa-receipt mr-1"></i> Tax-deductible receipt provided. Tax ID: 8003414616918
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Other Ways to Give -->
+    <section class="py-20 bg-white">
+        <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-12">
+                <h2 class="section-title section-title-center mb-4">Other Ways to Give</h2>
+                <p class="text-gray-600 max-w-2xl mx-auto">Choose the method that works best for you.</p>
+            </div>
+            <div class="grid md:grid-cols-3 gap-8 max-w-5xl mx-auto">
+                <div class="text-center p-6 border border-gray-200 rounded-2xl hover:shadow-lg transition-all">
+                    <div class="w-16 h-16 bg-ycbn-blue/10 rounded-full flex items-center justify-center mx-auto mb-4">
+                        <i class="fas fa-university text-2xl text-ycbn-blue"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-ycbn-dark mb-2">Bank Transfer</h3>
+                    <p class="text-gray-600 text-sm">Account: Youth Capacity Building Network</p>
+                    <p class="text-gray-600 text-sm">Centenary Bank, Wakiso Branch</p>
+                    <p class="text-gray-600 text-sm font-mono mt-2">Account: 1234567890</p>
+                </div>
+                <div class="text-center p-6 border border-gray-200 rounded-2xl hover:shadow-lg transition-all">
+                    <div class="w-16 h-16 bg-ycbn-teal/10 rounded-full flex items-center justify-center mx-auto mb-4">
+                        <i class="fas fa-mobile-alt text-2xl text-ycbn-teal"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-ycbn-dark mb-2">Mobile Money</h3>
+                    <p class="text-gray-600 text-sm">Airtel Money / MTN Mobile Money</p>
+                    <p class="text-gray-600 text-sm font-semibold mt-2">+256 700 000 000</p>
+                    <p class="text-gray-500 text-xs mt-1">Reference: DONATION</p>
+                </div>
+                <div class="text-center p-6 border border-gray-200 rounded-2xl hover:shadow-lg transition-all">
+                    <div class="w-16 h-16 bg-ycbn-orange/10 rounded-full flex items-center justify-center mx-auto mb-4">
+                        <i class="fas fa-box-open text-2xl text-ycbn-orange"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-ycbn-dark mb-2">In-Kind Donations</h3>
+                    <p class="text-gray-600 text-sm">School supplies, sanitary pads, laptops, or construction materials</p>
+                    <a href="contact.html" class="text-ycbn-blue font-semibold text-sm hover:underline mt-2 inline-block">Contact us to arrange</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonial -->
+    <section class="py-20 bg-gradient-to-r from-ycbn-blue to-ycbn-teal text-white">
+        <div class="container mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <i class="fas fa-quote-left text-4xl opacity-50 mb-6"></i>
+            <p class="text-2xl md:text-3xl font-light max-w-3xl mx-auto mb-8">
+                "Thanks to donors like you, our community now has clean water for the first time. Our children no longer suffer from waterborne diseases."
+            </p>
+            <p class="font-semibold">— Mary, Community Leader, Wakiso</p>
+        </div>
+    </section>
+
+    <!-- Newsletter Section -->
+    <section class="newsletter-section py-20">
+        <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid lg:grid-cols-2 gap-16 items-center">
+                <div>
+                    <h2 class="font-montserrat font-bold text-3xl text-white mb-6">Stay Connected</h2>
+                    <p class="text-gray-400 mb-8">Subscribe to our newsletter for updates on our WASH projects and youth empowerment programs.</p>
+                </div>
+                <div class="bg-white/5 backdrop-blur-sm p-8 rounded-2xl border border-white/10">
+                    <h3 class="font-montserrat font-bold text-xl text-white mb-6">Subscribe to Our Newsletter</h3>
+                    <form class="space-y-4">
+                        <div>
+                            <input type="text" placeholder="Your Name" class="w-full px-5 py-3 rounded-lg bg-white/10 border border-white/20 text-white placeholder-gray-400 focus:outline-none focus:border-ycbn-blue transition-colors">
+                        </div>
+                        <div>
+                            <input type="email" placeholder="Email Address" class="w-full px-5 py-3 rounded-lg bg-white/10 border border-white/20 text-white placeholder-gray-400 focus:outline-none focus:border-ycbn-blue transition-colors">
+                        </div>
+                        <button type="submit" class="w-full btn-ycbn justify-center">
+                            <span>Subscribe Now</span>
+                            <i class="fas fa-paper-plane"></i>
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer-main pt-20 pb-8">
+        <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid md:grid-cols-4 gap-12 mb-16">
+                <div class="md:col-span-1">
+                    <div class="flex items-center gap-3 mb-6">
+                        <div class="w-10 h-10 rounded-lg bg-gradient-to-br from-ycbn-blue to-ycbn-teal flex items-center justify-center text-white font-bold">Y</div>
+                        <div class="font-montserrat font-bold text-lg text-white">YCBN</div>
+                    </div>
+                    <p class="text-gray-400 text-sm leading-relaxed mb-6">
+                        Youth-led organization delivering sustainable WASH infrastructure and digital skills training to create resilient communities in Uganda.
+                    </p>
+                    <div class="flex gap-3">
+                        <a href="https://www.linkedin.com/company/tiny-bit-wiser/" target="_blank" class="w-9 h-9 rounded bg-white/10 flex items-center justify-center hover:bg-ycbn-blue transition-colors text-white"><i class="fab fa-linkedin-in text-sm"></i></a>
+                        <a href="https://www.facebook.com/profile.php?id=61579627535321" target="_blank" class="w-9 h-9 rounded bg-white/10 flex items-center justify-center hover:bg-ycbn-blue transition-colors text-white"><i class="fab fa-facebook-f text-sm"></i></a>
+                        <a href="https://www.tiktok.com/@youth.capacity.bu?_r=1&_t=ZS-94XlJAUNABM" target="_blank" class="w-9 h-9 rounded bg-white/10 flex items-center justify-center hover:bg-ycbn-blue transition-colors text-white"><i class="fab fa-tiktok text-sm"></i></a>
+                        <a href="https://instagram.com/" target="_blank" class="w-9 h-9 rounded bg-white/10 flex items-center justify-center hover:bg-ycbn-blue transition-colors text-white"><i class="fab fa-instagram text-sm"></i></a>
+                    </div>
+                </div>
+                <div>
+                    <h4 class="footer-heading">Quick Links</h4>
+                    <nav class="flex flex-col">
+                        <a href="about.html" class="footer-link">About Us</a>
+                        <a href="programmes.html" class="footer-link">Our Programmes</a>
+                        <a href="work.html" class="footer-link">Impact Stories</a>
+                        <a href="stories.html" class="footer-link">News & Updates</a>
+                        <a href="contact.html" class="footer-link">Contact</a>
+                    </nav>
+                </div>
+                <div>
+                    <h4 class="footer-heading">Programmes</h4>
+                    <nav class="flex flex-col">
+                        <a href="programmes.html#wash" class="footer-link">WASH Infrastructure</a>
+                        <a href="programmes.html#innovation" class="footer-link">Solid Waste Management</a>
+                        <a href="programmes.html#youth" class="footer-link">Digital Skills</a>
+                        <a href="programmes.html#youth" class="footer-link">Youth Empowerment</a>
+                    </nav>
+                </div>
+                <div>
+                    <h4 class="footer-heading">Legal & Compliance</h4>
+                    <div class="text-sm text-gray-400 space-y-3">
+                        <p class="pt-2 text-xs">Compliant with NGO Act 2016, WASH sector standards, and child protection requirements.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="border-t border-white/10 pt-8 flex flex-col md:flex-row justify-between items-center gap-4">
+                <p class="text-sm text-gray-500">© 2026 Youth Capacity Building Network (YCBN). All rights reserved.</p>
+                <div class="flex gap-6 text-sm text-gray-500">
+                    <a href="#" class="hover:text-white transition-colors">Privacy Policy</a>
+                    <a href="#" class="hover:text-white transition-colors">Terms of Service</a>
+                </div>
+                <button onclick="window.scrollTo({top: 0, behavior: 'smooth'})" class="w-10 h-10 rounded-full bg-white/10 flex items-center justify-center hover:bg-ycbn-blue transition-colors text-white">
+                    <i class="fas fa-chevron-up"></i>
+                </button>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Mobile menu toggle
+        const mobileMenuBtn = document.getElementById('mobileMenuBtn');
+        const mobileMenu = document.getElementById('mobileMenu');
+        mobileMenuBtn.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+            const icon = mobileMenuBtn.querySelector('i');
+            if (mobileMenu.classList.contains('hidden')) {
+                icon.classList.remove('fa-times');
+                icon.classList.add('fa-bars');
+            } else {
+                icon.classList.remove('fa-bars');
+                icon.classList.add('fa-times');
+            }
+        });
+
+        // Sticky header
+        const mainNav = document.getElementById('mainNav');
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 100) {
+                mainNav.classList.add('scrolled');
+            } else {
+                mainNav.classList.remove('scrolled');
+            }
+        });
+
+        // Donation amount selection
+        const donationCards = document.querySelectorAll('.donation-card');
+        const customAmountInput = document.getElementById('customAmount');
+        const selectedAmountDisplay = document.getElementById('selectedAmountDisplay');
+        const impactText = document.getElementById('impactText');
+
+        function formatUGX(amount) {
+            return 'UGX ' + parseInt(amount).toLocaleString();
+        }
+
+        function updateImpact(amount) {
+            const num = parseInt(amount);
+            if (num >= 250000) {
+                impactText.innerHTML = 'Funds a school hygiene campaign reaching 500+ students';
+            } else if (num >= 100000) {
+                impactText.innerHTML = 'Trains 1 youth in digital skills (AI fundamentals, coding)';
+            } else if (num >= 50000) {
+                impactText.innerHTML = 'Supports borehole maintenance for a community of 200 people';
+            } else if (num >= 25000) {
+                impactText.innerHTML = 'Provides hygiene kits for 10 girls, keeping them in school';
+            } else {
+                impactText.innerHTML = 'Helps deliver essential WASH services to communities in need';
+            }
+        }
+
+        donationCards.forEach(card => {
+            card.addEventListener('click', () => {
+                donationCards.forEach(c => c.classList.remove('selected'));
+                card.classList.add('selected');
+                customAmountInput.value = '';
+                const amount = card.getAttribute('data-amount');
+                selectedAmountDisplay.textContent = formatUGX(amount);
+                updateImpact(amount);
+            });
+        });
+
+        customAmountInput.addEventListener('input', (e) => {
+            donationCards.forEach(c => c.classList.remove('selected'));
+            if (e.target.value && parseInt(e.target.value) > 0) {
+                selectedAmountDisplay.textContent = formatUGX(e.target.value);
+                updateImpact(e.target.value);
+            } else {
+                selectedAmountDisplay.textContent = formatUGX(50000);
+                updateImpact(50000);
+            }
+        });
+
+        // Donation type display
+        const donationTypeRadios = document.querySelectorAll('input[name="donationType"]');
+        const donationTypeDisplay = document.getElementById('donationTypeDisplay');
+        donationTypeRadios.forEach(radio => {
+            radio.addEventListener('change', (e) => {
+                if (e.target.value === 'one-time') donationTypeDisplay.textContent = 'One-time donation';
+                else if (e.target.value === 'monthly') donationTypeDisplay.textContent = 'Monthly donation';
+                else donationTypeDisplay.textContent = 'Yearly donation';
+            });
+        });
+
+        // Payment method selection
+        const paymentMethods = document.querySelectorAll('.payment-method');
+        const cardDetails = document.getElementById('cardDetails');
+        paymentMethods.forEach(method => {
+            method.addEventListener('click', () => {
+                paymentMethods.forEach(m => m.classList.remove('selected'));
+                method.classList.add('selected');
+                const radio = method.querySelector('input[type="radio"]');
+                if (radio) radio.checked = true;
+                if (method.getAttribute('data-method') === 'card') {
+                    cardDetails.classList.remove('hidden');
+                } else {
+                    cardDetails.classList.add('hidden');
+                }
+            });
+        });
+
+        // Form submission
+        const donateBtn = document.getElementById('donateBtn');
+        const donationStatus = document.getElementById('donationStatus');
+
+        donateBtn.addEventListener('click', (e) => {
+            e.preventDefault();
+            const firstName = document.getElementById('firstName').value;
+            const lastName = document.getElementById('lastName').value;
+            const email = document.getElementById('email').value;
+
+            if (!firstName || !lastName || !email) {
+                donationStatus.classList.remove('hidden', 'text-green-600');
+                donationStatus.classList.add('text-red-600');
+                donationStatus.textContent = 'Please fill in your name and email address.';
+                return;
+            }
+
+            let amount = 50000;
+            const selectedCard = document.querySelector('.donation-card.selected');
+            if (selectedCard) amount = selectedCard.getAttribute('data-amount');
+            if (customAmountInput.value && parseInt(customAmountInput.value) > 0) amount = customAmountInput.value;
+
+            const donationType = document.querySelector('input[name="donationType"]:checked').value;
+            const paymentMethod = document.querySelector('input[name="paymentMethod"]:checked').value;
+
+            donationStatus.classList.remove('hidden', 'text-red-600');
+            donationStatus.classList.add('text-green-600');
+            donationStatus.innerHTML = `<i class="fas fa-check-circle mr-2"></i>Thank you for your ${donationType} donation of ${formatUGX(amount)}! You will receive a confirmation email shortly.`;
+
+            // Reset form (optional)
+            // document.getElementById('firstName').value = '';
+            // document.getElementById('lastName').value = '';
+            // document.getElementById('email').value = '';
+
+            setTimeout(() => {
+                donationStatus.classList.add('hidden');
+            }, 6000);
+        });
+    </script>
+</body>
+</html>

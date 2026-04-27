@@ -1,0 +1,1204 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>YCBN - Youth Capacity Building Network | WASH & Youth Innovation Uganda</title>
+    <meta name="description" content="Youth Capacity Building Network (YCBN) is a youth-led organization delivering sustainable WASH infrastructure and digital skills training in Uganda.">
+
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800;900&family=Open+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <!-- Swiper CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'ycbn-blue': '#0ea5e9',
+                        'ycbn-blue-dark': '#0284c7',
+                        'ycbn-teal': '#14b8a6',
+                        'ycbn-teal-dark': '#0d9488',
+                        'ycbn-orange': '#f97316',
+                        'ycbn-orange-light': '#fb923c',
+                        'ycbn-dark': '#0f172a',
+                        'ycbn-gray': '#f1f5f9',
+                        'ycbn-text': '#64748b'
+                    },
+                    fontFamily: {
+                        'montserrat': ['Montserrat', 'sans-serif'],
+                        'opensans': ['Open Sans', 'sans-serif']
+                    }
+                }
+            }
+        }
+    </script>
+
+    <style>
+        * { font-family: 'Open Sans', sans-serif; }
+        h1, h2, h3, h4, h5, h6 { font-family: 'Montserrat', sans-serif; }
+
+        .top-bar {
+            background: linear-gradient(90deg, #0ea5e9 0%, #14b8a6 100%);
+            color: white;
+            font-size: 13px;
+        }
+
+        .main-nav {
+            background-color: rgba(255,255,255,0.98);
+            backdrop-filter: blur(10px);
+            box-shadow: 0 2px 20px rgba(0,0,0,0.08);
+        }
+
+        .nav-link {
+            position: relative;
+            font-family: 'Montserrat', sans-serif;
+            font-weight: 600;
+            text-transform: uppercase;
+            font-size: 13px;
+            letter-spacing: 0.5px;
+            color: #0f172a;
+            transition: color 0.3s ease;
+        }
+
+        .nav-link::after {
+            content: '';
+            position: absolute;
+            bottom: -5px;
+            left: 0;
+            width: 0;
+            height: 2px;
+            background: linear-gradient(90deg, #0ea5e9, #14b8a6);
+            transition: width 0.3s ease;
+        }
+
+        .nav-link:hover::after { width: 100%; }
+        .nav-link:hover { color: #0ea5e9; }
+
+        .hero-swiper {
+            width: 100%;
+            height: 750px;
+        }
+
+        .hero-swiper .swiper-slide {
+            background-size: cover;
+            background-position: center;
+            display: flex;
+            align-items: center;
+        }
+
+        .hero-swiper .swiper-pagination-bullet {
+            width: 12px;
+            height: 12px;
+            background: white;
+            opacity: 0.5;
+        }
+
+        .hero-swiper .swiper-pagination-bullet-active {
+            opacity: 1;
+            background: #0ea5e9;
+        }
+
+        .slide-content-box {
+            background: rgba(15, 23, 42, 0.85);
+            padding: 50px;
+            max-width: 650px;
+            margin-left: 8%;
+            border-left: 5px solid #0ea5e9;
+        }
+
+        .slide-title {
+            font-family: 'Montserrat', sans-serif;
+            font-weight: 800;
+            font-size: 48px;
+            line-height: 1.1;
+            color: white;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .btn-ycbn {
+            background: linear-gradient(90deg, #0ea5e9, #14b8a6);
+            color: white;
+            padding: 14px 40px;
+            font-family: 'Montserrat', sans-serif;
+            font-weight: 700;
+            font-size: 14px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            border: none;
+            transition: all 0.3s ease;
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .btn-ycbn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 10px 30px rgba(14,165,233,0.3);
+        }
+
+        .btn-outline {
+            background-color: transparent;
+            color: white;
+            padding: 14px 40px;
+            font-family: 'Montserrat', sans-serif;
+            font-weight: 700;
+            font-size: 14px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            border: 2px solid white;
+            transition: all 0.3s ease;
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .btn-outline:hover {
+            background-color: white;
+            color: #0f172a;
+        }
+
+        .section-title {
+            font-family: 'Montserrat', sans-serif;
+            font-weight: 700;
+            font-size: 32px;
+            color: #0f172a;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            position: relative;
+            padding-bottom: 20px;
+            display: inline-block;
+        }
+
+        .section-title::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 80px;
+            height: 4px;
+            background: linear-gradient(90deg, #0ea5e9, #14b8a6);
+        }
+
+        .section-title-center::after {
+            left: 50%;
+            transform: translateX(-50%);
+        }
+
+        .icon-box {
+            padding: 35px;
+            background: white;
+            border-radius: 8px;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.05);
+            transition: all 0.3s ease;
+            border-bottom: 3px solid transparent;
+        }
+
+        .icon-box:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 40px rgba(0,0,0,0.1);
+            border-bottom-color: #0ea5e9;
+        }
+
+        .icon-circle {
+            width: 70px;
+            height: 70px;
+            border-radius: 50%;
+            background: linear-gradient(135deg, #0ea5e9, #14b8a6);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 28px;
+            margin-bottom: 20px;
+        }
+
+        .programme-card {
+            position: relative;
+            height: 450px;
+            overflow: hidden;
+            border-radius: 12px;
+            cursor: pointer;
+        }
+
+        .programme-card-bg {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-size: cover;
+            background-position: center;
+            transition: transform 0.6s ease;
+        }
+
+        .programme-card:hover .programme-card-bg {
+            transform: scale(1.1);
+        }
+
+        .programme-card-overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(to top, rgba(15,23,42,0.95) 0%, rgba(15,23,42,0.4) 100%);
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-end;
+            padding: 40px;
+            transition: all 0.4s ease;
+        }
+
+        .programme-card:hover .programme-card-overlay {
+            background: linear-gradient(to top, rgba(14,165,233,0.95) 0%, rgba(20,184,166,0.8) 100%);
+        }
+
+        .programme-title {
+            font-family: 'Montserrat', sans-serif;
+            font-weight: 700;
+            font-size: 24px;
+            color: white;
+            text-transform: uppercase;
+            margin-bottom: 10px;
+        }
+
+        .programme-desc {
+            color: rgba(255,255,255,0.9);
+            font-size: 14px;
+            line-height: 1.6;
+            opacity: 0;
+            transform: translateY(20px);
+            transition: all 0.4s ease 0.1s;
+        }
+
+        .programme-card:hover .programme-desc {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        .stats-section {
+            background: linear-gradient(135deg, #0ea5e9 0%, #14b8a6 100%);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .stats-section::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            left: -50%;
+            width: 200%;
+            height: 200%;
+            background: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23ffffff' fill-opacity='0.05'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+            opacity: 0.3;
+        }
+
+        .counter-number {
+            font-family: 'Montserrat', sans-serif;
+            font-weight: 800;
+            font-size: 56px;
+            line-height: 1;
+            color: white;
+        }
+
+        .news-card {
+            background: white;
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.08);
+            transition: all 0.3s ease;
+        }
+
+        .news-card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 20px 40px rgba(0,0,0,0.12);
+        }
+
+        .news-image {
+            height: 240px;
+            overflow: hidden;
+            position: relative;
+        }
+
+        .news-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.5s ease;
+        }
+
+        .news-card:hover .news-image img {
+            transform: scale(1.1);
+        }
+
+        .news-badge {
+            background: linear-gradient(90deg, #0ea5e9, #14b8a6);
+            color: white;
+            padding: 6px 18px;
+            font-size: 11px;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            position: absolute;
+            top: 20px;
+            left: 20px;
+            border-radius: 20px;
+        }
+
+        .footer-main {
+            background-color: #0f172a;
+            background-image: 
+                radial-gradient(circle at 20% 50%, rgba(14,165,233,0.1) 0%, transparent 50%),
+                radial-gradient(circle at 80% 80%, rgba(20,184,166,0.1) 0%, transparent 50%);
+            color: white;
+        }
+
+        .footer-heading {
+            font-family: 'Montserrat', sans-serif;
+            font-weight: 700;
+            font-size: 16px;
+            text-transform: uppercase;
+            color: white;
+            margin-bottom: 25px;
+            letter-spacing: 1px;
+        }
+
+        .footer-link {
+            color: rgba(255,255,255,0.7);
+            transition: all 0.3s ease;
+            display: block;
+            padding: 8px 0;
+            font-size: 14px;
+        }
+
+        .footer-link:hover {
+            color: #0ea5e9;
+            padding-left: 10px;
+        }
+
+        .newsletter-section {
+            background: linear-gradient(90deg, #0f172a 0%, #1e293b 100%);
+            border-top: 1px solid rgba(255,255,255,0.1);
+        }
+
+        .mobile-menu {
+            background-color: #0f172a;
+        }
+
+        .sticky-header {
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            transition: all 0.3s ease;
+        }
+
+        .sticky-header.scrolled {
+            box-shadow: 0 4px 30px rgba(0,0,0,0.15);
+        }
+
+        .dropdown-menu {
+            background-color: white;
+            border-top: 3px solid #0ea5e9;
+            box-shadow: 0 10px 40px rgba(0,0,0,0.15);
+            border-radius: 0 0 8px 8px;
+        }
+
+        .dropdown-item {
+            color: #0f172a;
+            font-size: 13px;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            padding: 14px 24px;
+            border-bottom: 1px solid rgba(0,0,0,0.05);
+            transition: all 0.2s ease;
+        }
+
+        .dropdown-item:hover {
+            color: #0ea5e9;
+            background-color: #f8fafc;
+            padding-left: 30px;
+        }
+
+        .value-card {
+            background: white;
+            padding: 30px;
+            border-radius: 12px;
+            text-align: center;
+            transition: all 0.3s ease;
+            border: 2px solid transparent;
+        }
+
+        .value-card:hover {
+            border-color: #0ea5e9;
+            transform: translateY(-5px);
+        }
+
+        .value-icon {
+            width: 60px;
+            height: 60px;
+            background: linear-gradient(135deg, #0ea5e9, #14b8a6);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 20px;
+            color: white;
+            font-size: 24px;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        /* Mobile slider fixes */
+@media (max-width: 768px) {
+
+    .hero-swiper {
+        height: 520px;
+    }
+
+    .slide-content-box {
+        padding: 25px;
+        margin-left: 0;
+        max-width: 100%;
+    }
+
+    .slide-title {
+        font-size: 28px;
+        line-height: 1.2;
+    }
+
+    .slide-content-box p {
+        font-size: 15px;
+    }
+
+    .btn-ycbn,
+    .btn-outline {
+        padding: 10px 20px;
+        font-size: 12px;
+    }
+
+    .swiper-button-next,
+    .swiper-button-prev {
+        display: none;
+    }
+}
+
+/* Extra small phones */
+@media (max-width: 480px) {
+
+    .hero-swiper {
+        height: 480px;
+    }
+
+    .slide-title {
+        font-size: 24px;
+    }
+
+    .slide-content-box {
+        padding: 20px;
+    }
+}
+
+    </style>
+</head>
+<body class="bg-ycbn-gray antialiased">
+
+    <!-- Top Bar -->
+    <div class="top-bar py-3">
+        <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex flex-col md:flex-row justify-between items-center gap-2">
+                <div class="flex items-center gap-6">
+                    <span class="flex items-center gap-2 font-semibold">
+                        <i class="fas fa-hand-holding-water"></i>
+                        Sustainable WASH for All
+                    </span>
+                    <a href="mailto:info@ycbn.org" class="flex items-center gap-2 hover:text-ycbn-orange transition-colors">
+                        <i class="fas fa-envelope"></i>
+                        info@ycbn.org
+                    </a>
+                </div>
+                <div class="flex items-center gap-4">
+    <div class="flex gap-3">
+        <!-- LinkedIn -->
+        <a href="https://www.linkedin.com/company/tiny-bit-wiser/" target="_blank" class="w-8 h-8 rounded-full bg-white/20 flex items-center justify-center hover:bg-ycbn-orange transition-colors">
+            <i class="fab fa-linkedin-in text-sm"></i>
+        </a>
+
+        <!-- Facebook -->
+        <a href="https://www.facebook.com/profile.php?id=61579627535321" target="_blank" class="w-8 h-8 rounded-full bg-white/20 flex items-center justify-center hover:bg-ycbn-orange transition-colors">
+            <i class="fab fa-facebook-f text-sm"></i>
+        </a>
+
+        <!-- TikTok -->
+        <a href="https://www.tiktok.com/@youth.capacity.bu?_r=1&_t=ZS-94XlJAUNABM" target="_blank" class="w-8 h-8 rounded-full bg-white/20 flex items-center justify-center hover:bg-ycbn-orange transition-colors">
+            <i class="fab fa-tiktok text-sm"></i>
+        </a>
+
+        <!-- Instagram -->
+        <a href="https://instagram.com/" target="_blank" class="w-8 h-8 rounded-full bg-white/20 flex items-center justify-center hover:bg-ycbn-orange transition-colors">
+            <i class="fab fa-instagram text-sm"></i>
+        </a>
+    </div>
+</div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Main Navigation -->
+    <nav class="main-nav sticky-header" id="mainNav">
+        <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex items-center justify-between h-24">
+                <!-- Logo -->
+<a href="index.html" class="flex-shrink-0 flex items-center gap-3">
+    
+    <!-- Logo Image -->
+    <div class="w-12 h-12 rounded-lg overflow-hidden flex items-center justify-center bg-white">
+        <img src="resources/logo.jpeg" alt="YCBN Logo" class="w-full h-full object-contain">
+    </div>
+
+    <!-- Text -->
+    <div>
+        <div class="font-montserrat font-bold text-xl text-ycbn-dark leading-tight">YCBN</div>
+    </div>
+
+</a>
+
+                <!-- Desktop Menu -->
+                <div class="hidden lg:flex items-center gap-8">
+                    <a href="index.html" class="nav-link text-ycbn-blue">Home</a>
+                    <div class="relative group">
+                        <a href="about.html" class="nav-link flex items-center gap-1">
+                            Who We Are
+                            <i class="fas fa-chevron-down text-xs"></i>
+                        </a>
+                        <div class="dropdown-menu absolute top-full left-0 w-64 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 pt-4">
+                            <div class="py-2">
+                                <a href="about.html" class="dropdown-item block">Vision & Mission</a>
+                                <a href="about.html" class="dropdown-item block">Core Values</a>
+                                <a href="about.html" class="dropdown-item block">Objectives</a>
+                                <a href="team.html" class="dropdown-item block">Our Team</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="relative group">
+                        <a href="programmes.html" class="nav-link flex items-center gap-1">
+                            What We Do
+                            <i class="fas fa-chevron-down text-xs"></i>
+                        </a>
+                        <div class="dropdown-menu absolute top-full left-0 w-72 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 pt-4">
+                            <div class="py-2">
+                                <a href="#wash" class="dropdown-item block">Wash Infrastructure Development</a>
+                                <a href="#innovation" class="dropdown-item block">Solid Waste Management </a>
+                                <a href="#education" class="dropdown-item block">Youth Empowerment</a>
+                            </div>
+                        </div>
+                    </div>
+                    <a href="work.html" class="nav-link">Our Impact</a>
+                    <a href="stories.html" class="nav-link">News</a>
+                    <a href="contact.html" class="nav-link">Contact</a>
+                </div>
+
+                <!-- CTA Button -->
+                <a href="contact.html" class="hidden lg:inline-flex btn-ycbn">
+                    <span>Get Involved</span>
+                    <i class="fas fa-arrow-right"></i>
+                </a>
+
+                <!-- Mobile Menu Button -->
+                <button id="mobileMenuBtn" class="lg:hidden text-2xl text-ycbn-dark p-2">
+                    <i class="fas fa-bars"></i>
+                </button>
+            </div>
+        </div>
+
+        <!-- Mobile Menu -->
+        <div id="mobileMenu" class="mobile-menu hidden lg:hidden absolute top-full left-0 w-full">
+            <div class="container mx-auto px-4 py-6">
+                <a href="index.html" class="block py-3 text-white border-b border-gray-700 font-semibold">Home</a>
+                <a href="about.html" class="block py-3 text-white border-b border-gray-700 font-semibold">Who We Are</a>
+                <a href="programmes.html" class="block py-3 text-white border-b border-gray-700 font-semibold">What We Do</a>
+                <a href="work.html" class="block py-3 text-white border-b border-gray-700 font-semibold">Our Impact</a>
+                <a href="stories.html" class="block py-3 text-white border-b border-gray-700 font-semibold">News</a>
+                <a href="contact.html" class="block py-3 text-ycbn-blue font-bold">Contact Us</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Slider -->
+    <section class="relative" id="home">
+        <div class="swiper hero-swiper">
+            <div class="swiper-wrapper">
+                <!-- Slide 1: WASH Focus -->
+                <div class="swiper-slide" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url('./resources/borehole.png');">
+                    <div class="container mx-auto px-4">
+                        <div class="slide-content-box">
+                        <div class="text-ycbn-teal font-bold text-sm uppercase tracking-widest mb-4">Community Support</div>
+                            <p class="text-gray-300 mt-6 text-lg leading-relaxed">Building sustainable WASH infrastructure for underserved communities across Uganda.</p>
+                            <div class="mt-8 flex flex-wrap gap-4">
+                                <a href="#wash" class="btn-ycbn">
+                                    <span>Our Work</span>
+                                    <i class="fas fa-arrow-right"></i>
+                                </a>
+                                <a href="#about" class="btn-outline">Learn More</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Slide 2: Youth Innovation -->
+                <div class="swiper-slide" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url('https://kimi-web-img.moonshot.cn/img/images.squarespace-cdn.com/90099e5628fac794c6d382dca7ba0779357dcc59.JPG');">
+                    <div class="container mx-auto px-4">
+                        <div class="slide-content-box">
+                            <div class="text-ycbn-teal font-bold text-sm uppercase tracking-widest mb-4">Youth-Led Innovation</div>
+                            <p class="text-gray-300 mt-6 text-lg leading-relaxed">Equipping young people with digital skills, AI fundamentals, and entrepreneurship training.</p>
+                            <div class="mt-8">
+                                <a href="#innovation" class="btn-ycbn">
+                                    <span>Explore Programmes</span>
+                                    <i class="fas fa-arrow-right"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Slide 3: School Hygiene -->
+                <div class="swiper-slide" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url('https://kimi-web-img.moonshot.cn/img/www.goalglobal.org/36e5653700cdd80d5f69de44b232b4aca8cbd9ae.jpg');">
+                    <div class="container mx-auto px-4">
+                        <div class="slide-content-box">
+                            <div class="text-ycbn-teal font-bold text-sm uppercase tracking-widest mb-4">Education Support</div>
+                            <p class="text-gray-300 mt-6 text-lg leading-relaxed">Empowering girls in communities through menstrual hygiene management and support</p>
+                            <div class="mt-8">
+                                <a href="#education" class="btn-ycbn">
+                                    <span>Our Impact</span>
+                                    <i class="fas fa-arrow-right"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="swiper-pagination"></div>
+            <div class="swiper-button-next !text-white !w-14 !h-14 bg-black/30 hover:bg-ycbn-blue transition-colors rounded-full backdrop-blur-sm"></div>
+            <div class="swiper-button-prev !text-white !w-14 !h-14 bg-black/30 hover:bg-ycbn-blue transition-colors rounded-full backdrop-blur-sm"></div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section class="py-24 bg-white" id="about">
+        <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid lg:grid-cols-2 gap-16 items-center">
+                <div>
+                    <h2 class="section-title mb-8">Who We Are</h2>
+                    <div class="prose prose-lg text-gray-600 leading-relaxed space-y-6">
+                        <p class="text-xl font-semibold text-ycbn-dark">
+                            Youth Capacity Building Network (YCBN) is a youth-led development organization established to address critical gaps in Water, Sanitation and Hygiene (WASH) and youth-driven innovation in Uganda.
+                        </p>
+                        <p>
+                            We integrate sustainable infrastructure development with digital skills training and entrepreneurship support to create resilient communities and economically empowered youth. Our focus is on underserved rural and peri-urban communities, with a strategic emphasis on schools and vulnerable populations.
+                        </p>
+                    </div>
+
+                    
+                </div>
+
+                <div class="grid sm:grid-cols-2 gap-6">
+                    <div class="icon-box">
+                        <div class="icon-circle"><i class="fas fa-droplet"></i></div>
+                        <h3 class="font-montserrat font-bold text-lg text-ycbn-dark mb-2">Safe Water Access</h3>
+                        <p class="text-gray-600 text-sm">Drilling and rehabilitating boreholes and community wells for clean water.</p>
+                    </div>
+                    <div class="icon-box">
+                        <div class="icon-circle"><i class="fas fa-toilet"></i></div>
+                        <h3 class="font-montserrat font-bold text-lg text-ycbn-dark mb-2">Solid Waste Management</h3>
+                        <p class="text-gray-600 text-sm">We empower communities to manage waste sustainably, promoting a cleaner environment, healthier living, and economic opportunities through responsible waste practices.</p>
+                    </div>
+                    <div class="icon-box">
+                        <div class="icon-circle"><i class="fas fa-laptop-code"></i></div>
+                        <h3 class="font-montserrat font-bold text-lg text-ycbn-dark mb-2">Digital Skills</h3>
+                        <p class="text-gray-600 text-sm">AI fundamentals, coding, agritech, and fintech training for youth.</p>
+                    </div>
+                    <div class="icon-box">
+                        <div class="icon-circle"><i class="fas fa-lightbulb"></i></div>
+                        <h3 class="font-montserrat font-bold text-lg text-ycbn-dark mb-2">Innovation Hubs</h3>
+                        <p class="text-gray-600 text-sm">Community innovation spaces and startup incubation support.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Vision & Mission -->
+    <section class="py-24 bg-ycbn-gray" id="vision">
+        <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid md:grid-cols-2 gap-12">
+                <div class="bg-white p-10 rounded-2xl shadow-lg border-l-4 border-ycbn-blue">
+                    <div class="flex items-center gap-4 mb-6">
+                        <div class="w-14 h-14 rounded-full bg-ycbn-blue/10 flex items-center justify-center text-ycbn-blue text-2xl"><i class="fas fa-eye"></i></div>
+                        <h3 class="font-montserrat font-bold text-2xl text-ycbn-dark uppercase">Our Vision</h3>
+                    </div>
+                    <p class="text-gray-600 text-lg leading-relaxed italic">
+                        "A Uganda where every community has access to safe water, dignified sanitation, resilient infrastructure, and youth-driven innovations that accelerate sustainable development."
+                    </p>
+                </div>
+
+                <div class="bg-white p-10 rounded-2xl shadow-lg border-l-4 border-ycbn-teal">
+                    <div class="flex items-center gap-4 mb-6">
+                        <div class="w-14 h-14 rounded-full bg-ycbn-teal/10 flex items-center justify-center text-ycbn-teal text-2xl"><i class="fas fa-bullseye"></i></div>
+                        <h3 class="font-montserrat font-bold text-2xl text-ycbn-dark uppercase">Our Mission</h3>
+                    </div>
+                    <p class="text-gray-600 text-lg leading-relaxed">
+                        To improve quality of life by delivering sustainable WASH infrastructure, strengthening educational environments, advancing hygiene and menstrual health systems, and equipping youth with emerging technologies to solve local challenges.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Core Values -->
+    <section class="py-24 bg-white" id="values">
+        <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="section-title section-title-center mb-4">Our Core Values</h2>
+                <p class="text-gray-600 max-w-2xl mx-auto">The principles that guide every action we take and every community we serve.</p>
+            </div>
+
+            <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-8">
+                <div class="value-card">
+                    <div class="value-icon"><i class="fas fa-shield-halved"></i></div>
+                    <h3 class="font-montserrat font-bold text-lg text-ycbn-dark mb-3">Integrity & Transparency</h3>
+                    <p class="text-gray-600 text-sm">Operating with honesty and openness in all our dealings and financial management.</p>
+                </div>
+                <div class="value-card">
+                    <div class="value-icon"><i class="fas fa-users"></i></div>
+                    <h3 class="font-montserrat font-bold text-lg text-ycbn-dark mb-3">Community Ownership</h3>
+                    <p class="text-gray-600 text-sm">Ensuring communities lead and sustain the solutions we implement together.</p>
+                </div>
+                <div class="value-card">
+                    <div class="value-icon"><i class="fas fa-leaf"></i></div>
+                    <h3 class="font-montserrat font-bold text-lg text-ycbn-dark mb-3">Sustainability</h3>
+                    <p class="text-gray-600 text-sm">Building long-lasting solutions that continue to benefit communities for generations.</p>
+                </div>
+                <div class="value-card">
+                    <div class="value-icon"><i class="fas fa-rocket"></i></div>
+                    <h3 class="font-montserrat font-bold text-lg text-ycbn-dark mb-3">Innovation</h3>
+                    <p class="text-gray-600 text-sm">Embracing creative approaches and emerging technologies to solve local challenges.</p>
+                </div>
+                <div class="value-card">
+                    <div class="value-icon"><i class="fas fa-hands-holding-circle"></i></div>
+                    <h3 class="font-montserrat font-bold text-lg text-ycbn-dark mb-3">Inclusion & Equity</h3>
+                    <p class="text-gray-600 text-sm">Ensuring no one is left behind, with special focus on vulnerable populations.</p>
+                </div>
+                <div class="value-card">
+                    <div class="value-icon"><i class="fas fa-clipboard-check"></i></div>
+                    <h3 class="font-montserrat font-bold text-lg text-ycbn-dark mb-3">Accountability</h3>
+                    <p class="text-gray-600 text-sm">Taking responsibility for our actions and delivering on our commitments.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Objectives -->
+    <section class="py-24 bg-ycbn-dark text-white relative overflow-hidden" id="objectives">
+        <div class="absolute inset-0 opacity-10">
+            <svg width="100%" height="100%">
+                <pattern id="grid" width="40" height="40" patternUnits="userSpaceOnUse">
+                    <path d="M 40 0 L 0 0 0 40" fill="none" stroke="white" stroke-width="1"/>
+                </pattern>
+                <rect width="100%" height="100%" fill="url(#grid)" />
+            </svg>
+        </div>
+
+        <div class="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+            <div class="text-center mb-16">
+                <h2 class="font-montserrat font-bold text-3xl uppercase mb-4">Our Strategic Objectives</h2>
+                <div class="w-24 h-1 bg-gradient-to-r from-ycbn-blue to-ycbn-teal mx-auto"></div>
+            </div>
+
+            <div class="grid md:grid-cols-2 gap-8">
+                <div class="flex gap-6 items-start p-6 rounded-xl bg-white/5 backdrop-blur-sm border border-white/10 hover:bg-white/10 transition-colors">
+                    <div class="w-12 h-12 rounded-full bg-ycbn-blue flex items-center justify-center font-bold text-xl flex-shrink-0">1</div>
+                    <div>
+                        <h3 class="font-montserrat font-bold text-lg mb-2">Sustainable WASH Infrastructure</h3>
+                        <p class="text-gray-400 text-sm leading-relaxed">To deliver sustainable, inclusive WASH infrastructure that guarantees safe water and dignified sanitation for underserved communities.</p>
+                    </div>
+                </div>
+                <div class="flex gap-6 items-start p-6 rounded-xl bg-white/5 backdrop-blur-sm border border-white/10 hover:bg-white/10 transition-colors">
+                    <div class="w-12 h-12 rounded-full bg-ycbn-teal flex items-center justify-center font-bold text-xl flex-shrink-0">2</div>
+                    <div>
+                        <h3 class="font-montserrat font-bold text-lg mb-2">Community Hygiene Systems</h3>
+                        <p class="text-gray-400 text-sm leading-relaxed">Institutionalize comprehensive community hygiene and menstrual health systems that improve health, dignity, and educational outcomes.</p>
+                    </div>
+                </div>
+                <div class="flex gap-6 items-start p-6 rounded-xl bg-white/5 backdrop-blur-sm border border-white/10 hover:bg-white/10 transition-colors">
+                    <div class="w-12 h-12 rounded-full bg-ycbn-orange flex items-center justify-center font-bold text-xl flex-shrink-0">3</div>
+                    <div>
+                        <h3 class="font-montserrat font-bold text-lg mb-2">Youth Workforce Development</h3>
+                        <p class="text-gray-400 text-sm leading-relaxed">To build a highly skilled, innovation-driven youth workforce equipped for employment and entrepreneurship.</p>
+                    </div>
+                </div>
+                <div class="flex gap-6 items-start p-6 rounded-xl bg-white/5 backdrop-blur-sm border border-white/10 hover:bg-white/10 transition-colors">
+                    <div class="w-12 h-12 rounded-full bg-purple-500 flex items-center justify-center font-bold text-xl flex-shrink-0">4</div>
+                    <div>
+                        <h3 class="font-montserrat font-bold text-lg mb-2">Technology Solutions</h3>
+                        <p class="text-gray-400 text-sm leading-relaxed">Catalyse scalable, youth-led technological solutions that transform local social and environmental challenges into sustainable enterprises.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Programmes Section -->
+    <section class="py-24 bg-ycbn-gray" id="programmes">
+        <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="section-title section-title-center mb-4">Our Thematic Areas</h2>
+                <p class="text-gray-600 max-w-2xl mx-auto">We focus on two core pillars that drive sustainable community transformation.</p>
+            </div>
+
+            <div class="grid lg:grid-cols-2 gap-8">
+                <div class="programme-card" id="wash">
+                    <div class="programme-card-bg" style="background-image: url('resources/borehole.png');"></div>
+                    <div class="programme-card-overlay">
+                        <div class="w-14 h-14 rounded-full bg-white/20 flex items-center justify-center mb-4">
+                            <i class="fas fa-hand-holding-droplet text-2xl text-white"></i>
+                        </div>
+                        <h3 class="programme-title">WASH and Innovation</h3>
+                        <p class="programme-desc">Sustainable WASH interventions designed to improve public health outcomes, school attendance, and community resilience.</p>
+                        <div class="mt-6 flex flex-wrap gap-2">
+                            <span class="px-3 py-1 bg-white/20 rounded-full text-xs text-white">Extending clean water access</span>
+                            <span class="px-3 py-1 bg-white/20 rounded-full text-xs text-white">Community Sanitation</span>
+                            <span class="px-3 py-1 bg-white/20 rounded-full text-xs text-white">MHM Support</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="programme-card" id="innovation">
+                    <div class="programme-card-bg" style="background-image: url('https://kimi-web-img.moonshot.cn/img/youthinnovationhub.org/effbcf4389a51866183485523f75038b3f2b3b13.jpg');"></div>
+                    <div class="programme-card-overlay">
+                        <div class="w-14 h-14 rounded-full bg-white/20 flex items-center justify-center mb-4">
+                            <i class="fas fa-microchip text-2xl text-white"></i>
+                        </div>
+                        <h3 class="programme-title">Innovation, Technology<br>& Youth Empowerment</h3>
+                        <p class="programme-desc">Digital transformation and skills training to equip young people with practical, market-relevant competencies.</p>
+                        <div class="mt-6 flex flex-wrap gap-2">
+                            <span class="px-3 py-1 bg-white/20 rounded-full text-xs text-white">AI & Coding</span>
+                            <span class="px-3 py-1 bg-white/20 rounded-full text-xs text-white">Innovation Hubs</span>
+                            <span class="px-3 py-1 bg-white/20 rounded-full text-xs text-white">Start-up Support</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Impact Stats -->
+    <section class="stats-section py-24" id="impact">
+        <div class="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+            <div class="text-center mb-16">
+                <h2 class="font-montserrat font-bold text-3xl text-white uppercase mb-4">Our Growing Impact</h2>
+                <p class="text-white/80">Since our establishment in 2025</p>
+            </div>
+
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
+                <div class="p-6">
+                    <div class="counter-number mb-2" data-target="15">0</div>
+                    <p class="text-sm uppercase tracking-wider text-white/90 font-semibold">Communities Served</p>
+                </div>
+                <div class="p-6">
+                    <div class="counter-number mb-2" data-target="8">0</div>
+                    <p class="text-sm uppercase tracking-wider text-white/90 font-semibold">Boreholes Drilled</p>
+                </div>
+                <div class="p-6">
+                    <div class="counter-number mb-2" data-target="500">0</div>
+                    <p class="text-sm uppercase tracking-wider text-white/90 font-semibold">Youth Trained</p>
+                </div>
+                <div class="p-6">
+                    <div class="counter-number mb-2" data-target="12">0</div>
+                    <p class="text-sm uppercase tracking-wider text-white/90 font-semibold">Schools Supported</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- News Section -->
+    <section class="py-24 bg-white" id="news">
+        <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex flex-col md:flex-row justify-between items-end mb-12">
+                <div>
+                    <h2 class="section-title mb-4">Latest Updates</h2>
+                    <p class="text-gray-600 max-w-xl">Stories from the field, project milestones, and community successes.</p>
+                </div>
+                <a href="#" class="mt-4 md:mt-0 inline-flex items-center gap-2 text-ycbn-blue font-bold hover:gap-4 transition-all">
+                    View All News <i class="fas fa-arrow-right"></i>
+                </a>
+            </div>
+
+            <div class="grid md:grid-cols-3 gap-8">
+                <article class="news-card relative">
+                    <div class="news-image relative">
+                        <img src="resources/borehole.png" alt="Water Project">
+                        <span class="news-badge">Project Launch</span>
+                    </div>
+                    <div class="p-6">
+                        <div class="text-xs text-gray-400 mb-2">January 15, 2026</div>
+                        <h3 class="font-montserrat font-bold text-lg text-ycbn-dark mb-4 line-clamp-2 hover:text-ycbn-blue transition-colors cursor-pointer">
+                            New Borehole Brings Clean Water to 3 Rural Communities in Wakiso
+                        </h3>
+                        <p class="text-gray-600 text-sm mb-4 line-clamp-3">
+                            YCBN successfully drilled and commissioned a new borehole serving over 1,500 residents, reducing water-borne diseases by 60%.
+                        </p>
+                        <a href="#" class="text-ycbn-blue text-sm font-bold hover:underline">Read More</a>
+                    </div>
+                </article>
+
+                <article class="news-card relative">
+                    <div class="news-image relative">
+                        <img src="resources/supporting.jpeg" alt="MHM Support">
+                        <span class="news-badge">Education</span>
+                    </div>
+                    <div class="p-6">
+                        <div class="text-xs text-gray-400 mb-2">January 8, 2026</div>
+                        <h3 class="font-montserrat font-bold text-lg text-ycbn-dark mb-4 line-clamp-2 hover:text-ycbn-blue transition-colors cursor-pointer">
+                            Menstrual Hygiene Kits Distributed to 500 School Girls
+                        </h3>
+                        <p class="text-gray-600 text-sm mb-4 line-clamp-3">
+                            Our MHM programme reached five primary schools, providing dignity kits and establishing private changing facilities.
+                        </p>
+                        <a href="#" class="text-ycbn-blue text-sm font-bold hover:underline">Read More</a>
+                    </div>
+                </article>
+
+                <article class="news-card relative">
+                    <div class="news-image relative">
+                        <img src="https://kimi-web-img.moonshot.cn/img/images.squarespace-cdn.com/90099e5628fac794c6d382dca7ba0779357dcc59.JPG" alt="Digital Training">
+                        <span class="news-badge">Innovation</span>
+                    </div>
+                    <div class="p-6">
+                        <div class="text-xs text-gray-400 mb-2">December 20, 2025</div>
+                        <h3 class="font-montserrat font-bold text-lg text-ycbn-dark mb-4 line-clamp-2 hover:text-ycbn-blue transition-colors cursor-pointer">
+                            First Cohort Completes Digital Skills Training Programme
+                        </h3>
+                        <p class="text-gray-600 text-sm mb-4 line-clamp-3">
+                            50 youth graduated from our 3-month AI fundamentals and coding bootcamp, with 70% already securing internships.
+                        </p>
+                        <a href="#" class="text-ycbn-blue text-sm font-bold hover:underline">Read More</a>
+                    </div>
+                </article>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact / Newsletter -->
+    <section class="newsletter-section py-20" id="contact">
+        <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid lg:grid-cols-2 gap-16 items-center">
+                <div>
+                    <h2 class="font-montserrat font-bold text-3xl text-white mb-6">Get In Touch</h2>
+                    <p class="text-gray-400 mb-8">Ready to partner with us or want to learn more about our work? Reach out today.</p>
+
+                    <div class="space-y-6">
+                        <div class="flex items-start gap-4">
+                            <div class="w-12 h-12 rounded-full bg-white/10 flex items-center justify-center text-ycbn-blue flex-shrink-0"><i class="fas fa-location-dot"></i></div>
+                            <div>
+                                <h4 class="font-bold text-white mb-1">Address</h4>
+                                <p class="text-gray-400 text-sm">P.O Box 117751, Wakiso, Uganda</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start gap-4">
+                            <div class="w-12 h-12 rounded-full bg-white/10 flex items-center justify-center text-ycbn-teal flex-shrink-0"><i class="fas fa-envelope"></i></div>
+                            <div>
+                                <h4 class="font-bold text-white mb-1">Email</h4>
+                                <p class="text-gray-400 text-sm">info@ycbn.org</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="bg-white/5 backdrop-blur-sm p-8 rounded-2xl border border-white/10">
+                    <h3 class="font-montserrat font-bold text-xl text-white mb-6">Subscribe to Our Newsletter</h3>
+                    <p class="text-gray-400 text-sm mb-6">Stay updated with our latest projects, impact stories, and opportunities.</p>
+
+                    <form class="space-y-4">
+                        <div>
+                            <input type="text" placeholder="Your Name" class="w-full px-5 py-3 rounded-lg bg-white/10 border border-white/20 text-white placeholder-gray-400 focus:outline-none focus:border-ycbn-blue transition-colors">
+                        </div>
+                        <div>
+                            <input type="email" placeholder="Email Address" class="w-full px-5 py-3 rounded-lg bg-white/10 border border-white/20 text-white placeholder-gray-400 focus:outline-none focus:border-ycbn-blue transition-colors">
+                        </div>
+                        <button type="submit" class="w-full btn-ycbn justify-center">
+                            <span>Subscribe Now</span>
+                            <i class="fas fa-paper-plane"></i>
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer-main pt-20 pb-8">
+        <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid md:grid-cols-4 gap-12 mb-16">
+                <div class="md:col-span-1">
+                    <div class="flex items-center gap-3 mb-6">
+                        <div class="w-10 h-10 rounded-lg bg-gradient-to-br from-ycbn-blue to-ycbn-teal flex items-center justify-center text-white font-bold">Y</div>
+                        <div class="font-montserrat font-bold text-lg text-white">YCBN</div>
+                    </div>
+                    <p class="text-gray-400 text-sm leading-relaxed mb-6">
+                        Youth-led organization delivering sustainable WASH infrastructure and digital skills training to create resilient communities in Uganda.
+                    </p>
+                    <div class="flex gap-3">
+                        <a href="https://www.linkedin.com/company/tiny-bit-wiser/" target="_blank" class="w-9 h-9 rounded bg-white/10 flex items-center justify-center hover:bg-ycbn-blue transition-colors text-white"><i class="fab fa-linkedin-in text-sm"></i></a>
+                        <a href="https://www.facebook.com/profile.php?id=61579627535321" target="_blank" class="w-9 h-9 rounded bg-white/10 flex items-center justify-center hover:bg-ycbn-blue transition-colors text-white"><i class="fab fa-facebook-f text-sm"></i></a>
+                        <a href="https://www.tiktok.com/@youth.capacity.bu?_r=1&_t=ZS-94XlJAUNABM" target="_blank" class="w-9 h-9 rounded bg-white/10 flex items-center justify-center hover:bg-ycbn-blue transition-colors text-white"><i class="fab fa-tiktok text-sm"></i></a>
+                        <a href="https://instagram.com/" target="_blank" class="w-9 h-9 rounded bg-white/10 flex items-center justify-center hover:bg-ycbn-blue transition-colors text-white"><i class="fab fa-instagram text-sm"></i></a>
+                    </div>
+                </div>
+
+                <div>
+                    <h4 class="footer-heading">Quick Links</h4>
+                    <nav class="flex flex-col">
+                        <a href="#about" class="footer-link">About Us</a>
+                        <a href="#programmes" class="footer-link">Our Programmes</a>
+                        <a href="#impact" class="footer-link">Impact Stories</a>
+                        <a href="#news" class="footer-link">News & Updates</a>
+                        <a href="#contact" class="footer-link">Contact</a>
+                    </nav>
+                </div>
+
+                <div>
+                    <h4 class="footer-heading">Programmes</h4>
+                    <nav class="flex flex-col">
+                        <a href="#wash" class="footer-link">WASH Infrastructure</a>
+                        <a href="#education" class="footer-link">School Hygiene</a>
+                        <a href="#innovation" class="footer-link">Digital Skills</a>
+                        <a href="#youth" class="footer-link">Youth Empowerment</a>
+                    </nav>
+                </div>
+
+                <div>
+                    <h4 class="footer-heading">Legal & Compliance</h4>
+                    <div class="text-sm text-gray-400 space-y-3">
+                        <p class="pt-2 text-xs">Compliant with NGO Act 2016, WASH sector standards, and child protection requirements.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="border-t border-white/10 pt-8 flex flex-col md:flex-row justify-between items-center gap-4">
+                <p class="text-sm text-gray-500">© 2026 Youth Capacity Building Network (YCBN). All rights reserved.</p>
+                <div class="flex gap-6 text-sm text-gray-500">
+                    <a href="#" class="hover:text-white transition-colors">Privacy Policy</a>
+                    <a href="#" class="hover:text-white transition-colors">Terms of Service</a>
+                </div>
+                <button onclick="window.scrollTo({top: 0, behavior: 'smooth'})" class="w-10 h-10 rounded-full bg-white/10 flex items-center justify-center hover:bg-ycbn-blue transition-colors text-white">
+                    <i class="fas fa-chevron-up"></i>
+                </button>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Swiper JS -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
+    <script>
+        // Initialize Swiper
+        const swiper = new Swiper('.hero-swiper', {
+            loop: true,
+            autoplay: {
+                delay: 6000,
+                disableOnInteraction: false,
+            },
+            pagination: {
+                el: '.swiper-pagination',
+                clickable: true,
+            },
+            navigation: {
+                nextEl: '.swiper-button-next',
+                prevEl: '.swiper-button-prev',
+            },
+            effect: 'fade',
+            fadeEffect: {
+                crossFade: true
+            },
+            speed: 1000,
+        });
+
+        // Mobile menu toggle
+        const mobileMenuBtn = document.getElementById('mobileMenuBtn');
+        const mobileMenu = document.getElementById('mobileMenu');
+
+        mobileMenuBtn.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+            const icon = mobileMenuBtn.querySelector('i');
+            if (mobileMenu.classList.contains('hidden')) {
+                icon.classList.remove('fa-times');
+                icon.classList.add('fa-bars');
+            } else {
+                icon.classList.remove('fa-bars');
+                icon.classList.add('fa-times');
+            }
+        });
+
+        // Sticky header effect
+        const mainNav = document.getElementById('mainNav');
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 100) {
+                mainNav.classList.add('scrolled');
+            } else {
+                mainNav.classList.remove('scrolled');
+            }
+        });
+
+        // Counter animation
+        const counters = document.querySelectorAll('.counter-number');
+        const speed = 200;
+
+        const animateCounter = (counter) => {
+            const target = parseInt(counter.getAttribute('data-target'));
+            const increment = target / speed;
+            let current = 0;
+
+            const updateCount = () => {
+                current += increment;
+                if (current < target) {
+                    counter.innerText = Math.ceil(current);
+                    requestAnimationFrame(updateCount);
+                } else {
+                    counter.innerText = target + '+';
+                }
+            };
+            updateCount();
+        };
+
+        const observerOptions = {
+            threshold: 0.5
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    animateCounter(entry.target);
+                    observer.unobserve(entry.target);
+                }
+            });
+        }, observerOptions);
+
+        counters.forEach(counter => observer.observe(counter));
+    </script>
+</body>
+</html>
