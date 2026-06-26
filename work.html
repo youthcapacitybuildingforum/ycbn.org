@@ -267,6 +267,20 @@
         html {
             scroll-behavior: smooth;
         }
+
+        /* PDF Card Styles */
+        .pdf-card {
+            transition: all 0.3s ease;
+        }
+        .pdf-card:hover {
+            transform: translateY(-4px);
+        }
+        .pdf-card .pdf-icon {
+            transition: transform 0.3s ease;
+        }
+        .pdf-card:hover .pdf-icon {
+            transform: scale(1.1);
+        }
     </style>
 </head>
 <body class="bg-ycbn-gray antialiased">
@@ -286,28 +300,25 @@
                     </a>
                 </div>
                 <div class="flex items-center gap-4">
-    <div class="flex gap-3">
-        <!-- LinkedIn -->
-        <a href="https://www.linkedin.com/company/tiny-bit-wiser/" target="_blank" class="w-8 h-8 rounded-full bg-white/20 flex items-center justify-center hover:bg-ycbn-orange transition-colors">
-            <i class="fab fa-linkedin-in text-sm"></i>
-        </a>
-
-        <!-- Facebook -->
-        <a href="https://www.facebook.com/profile.php?id=61579627535321" target="_blank" class="w-8 h-8 rounded-full bg-white/20 flex items-center justify-center hover:bg-ycbn-orange transition-colors">
-            <i class="fab fa-facebook-f text-sm"></i>
-        </a>
-
-        <!-- TikTok -->
-        <a href="https://www.tiktok.com/@youth.capacity.bu?_r=1&_t=ZS-94XlJAUNABM" target="_blank" class="w-8 h-8 rounded-full bg-white/20 flex items-center justify-center hover:bg-ycbn-orange transition-colors">
-            <i class="fab fa-tiktok text-sm"></i>
-        </a>
-
-        <!-- Instagram -->
-        <a href="https://instagram.com/" target="_blank" class="w-8 h-8 rounded-full bg-white/20 flex items-center justify-center hover:bg-ycbn-orange transition-colors">
-            <i class="fab fa-instagram text-sm"></i>
-        </a>
-    </div>
-</div>
+                    <div class="flex gap-3">
+                        <!-- LinkedIn -->
+                        <a href="https://www.linkedin.com/company/tiny-bit-wiser/" target="_blank" class="w-8 h-8 rounded-full bg-white/20 flex items-center justify-center hover:bg-ycbn-orange transition-colors">
+                            <i class="fab fa-linkedin-in text-sm"></i>
+                        </a>
+                        <!-- Facebook -->
+                        <a href="https://www.facebook.com/profile.php?id=61579627535321" target="_blank" class="w-8 h-8 rounded-full bg-white/20 flex items-center justify-center hover:bg-ycbn-orange transition-colors">
+                            <i class="fab fa-facebook-f text-sm"></i>
+                        </a>
+                        <!-- TikTok -->
+                        <a href="https://www.tiktok.com/@youth.capacity.bu?_r=1&_t=ZS-94XlJAUNABM" target="_blank" class="w-8 h-8 rounded-full bg-white/20 flex items-center justify-center hover:bg-ycbn-orange transition-colors">
+                            <i class="fab fa-tiktok text-sm"></i>
+                        </a>
+                        <!-- Instagram -->
+                        <a href="https://instagram.com/" target="_blank" class="w-8 h-8 rounded-full bg-white/20 flex items-center justify-center hover:bg-ycbn-orange transition-colors">
+                            <i class="fab fa-instagram text-sm"></i>
+                        </a>
+                    </div>
+                </div>
             </div>
         </div>
     </div>
@@ -496,6 +507,106 @@
         </div>
     </section>
 
+    <!-- ============================================================ -->
+    <!-- PDF RESOURCES SECTION - OPTION 1: DIRECT DOWNLOAD & VIEW BUTTONS -->
+    <!-- ============================================================ -->
+    <section class="py-24 bg-ycbn-gray">
+        <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="section-title section-title-center mb-4">Our Reports & Resources</h2>
+                <p class="text-gray-600 max-w-2xl mx-auto">Access our detailed activity reports and official documentation from recent events.</p>
+            </div>
+
+            <div class="grid md:grid-cols-2 gap-8 max-w-4xl mx-auto">
+                <!-- PDF 1: Menstrual Hygiene Day -->
+                <div class="pdf-card bg-white rounded-2xl shadow-lg overflow-hidden border border-gray-100">
+                    <div class="p-8">
+                        <div class="flex items-start gap-5 mb-5">
+                            <div class="pdf-icon w-16 h-16 rounded-xl bg-ycbn-blue/10 flex items-center justify-center text-ycbn-blue flex-shrink-0">
+                                <i class="fas fa-file-pdf text-3xl"></i>
+                            </div>
+                            <div>
+                                <h3 class="font-bold text-ycbn-dark text-lg leading-tight">Menstrual Hygiene Day</h3>
+                                <div class="flex items-center gap-3 mt-1">
+                                    <span class="inline-flex items-center text-sm text-gray-500">
+                                        <i class="far fa-calendar-alt mr-1.5 text-xs"></i>
+                                        May 2026
+                                    </span>
+                                    <span class="inline-flex items-center text-sm text-gray-500">
+                                        <i class="far fa-file mr-1.5 text-xs"></i>
+                                        7 Pages
+                                    </span>
+                                </div>
+                            </div>
+                        </div>
+                        <p class="text-gray-600 text-sm leading-relaxed mb-6">
+                            Post International Menstrual Health and Hygiene Management Day Celebrations report. Covers activities, achievements, and lessons learned from the Kira Secondary School event.
+                        </p>
+                        <div class="flex flex-col sm:flex-row gap-3">
+                            <a href="resources/menstrual_hygiene_day_2026.pdf" 
+                               target="_blank" 
+                               class="flex-1 btn-ycbn justify-center text-center rounded-lg py-3.5 px-4 text-sm">
+                                <i class="fas fa-eye mr-2"></i> View PDF
+                            </a>
+                            <a href="resources/menstrual_hygiene_day_2026.pdf" 
+                               download 
+                               class="px-6 py-3.5 rounded-lg border-2 border-ycbn-blue text-ycbn-blue hover:bg-ycbn-blue hover:text-white transition-all font-semibold text-sm flex items-center justify-center gap-2 whitespace-nowrap">
+                                <i class="fas fa-download"></i> Download
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- PDF 2: International Women's Day -->
+                <div class="pdf-card bg-white rounded-2xl shadow-lg overflow-hidden border border-gray-100">
+                    <div class="p-8">
+                        <div class="flex items-start gap-5 mb-5">
+                            <div class="pdf-icon w-16 h-16 rounded-xl bg-ycbn-orange/10 flex items-center justify-center text-ycbn-orange flex-shrink-0">
+                                <i class="fas fa-file-pdf text-3xl"></i>
+                            </div>
+                            <div>
+                                <h3 class="font-bold text-ycbn-dark text-lg leading-tight">International Women's Day</h3>
+                                <div class="flex items-center gap-3 mt-1">
+                                    <span class="inline-flex items-center text-sm text-gray-500">
+                                        <i class="far fa-calendar-alt mr-1.5 text-xs"></i>
+                                        March 2026
+                                    </span>
+                                    <span class="inline-flex items-center text-sm text-gray-500">
+                                        <i class="far fa-file mr-1.5 text-xs"></i>
+                                        7 Pages
+                                    </span>
+                                </div>
+                            </div>
+                        </div>
+                        <p class="text-gray-600 text-sm leading-relaxed mb-6">
+                            Pre-International Women's Day Celebrations report. Highlights from the outreach at Princess Diana High School, including menstrual health education and mentorship sessions.
+                        </p>
+                        <div class="flex flex-col sm:flex-row gap-3">
+                            <a href="resources/iwd_report_2026.pdf" 
+                               target="_blank" 
+                               class="flex-1 btn-ycbn justify-center text-center rounded-lg py-3.5 px-4 text-sm">
+                                <i class="fas fa-eye mr-2"></i> View PDF
+                            </a>
+                            <a href="resources/iwd_report_2026.pdf" 
+                               download 
+                               class="px-6 py-3.5 rounded-lg border-2 border-ycbn-blue text-ycbn-blue hover:bg-ycbn-blue hover:text-white transition-all font-semibold text-sm flex items-center justify-center gap-2 whitespace-nowrap">
+                                <i class="fas fa-download"></i> Download
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Additional Info -->
+            <div class="text-center mt-12">
+                <p class="text-sm text-gray-500 max-w-2xl mx-auto">
+                    <i class="fas fa-info-circle text-ycbn-blue mr-2"></i>
+                    All reports are in PDF format. Click "View PDF" to open in a new tab or "Download" to save to your device.
+                </p>
+            </div>
+        </div>
+    </section>
+
     <!-- Call to Action Section -->
     <section class="py-24 bg-gradient-to-r from-ycbn-blue to-ycbn-teal text-white">
         <div class="container mx-auto px-4 sm:px-6 lg:px-8 text-center">
@@ -566,12 +677,10 @@
             <div class="grid md:grid-cols-4 gap-12 mb-16">
                 <div class="md:col-span-1">
                     <!-- Logo -->
-    
-    <!-- Logo Image -->
-    <div class="w-12 h-12 rounded-lg overflow-hidden flex items-center justify-center bg-white">
-        <img src="resources/logo.jpeg" alt="YCBN Logo" class="w-full h-full object-contain">
-    </div>
-                    <p class="text-gray-400 text-sm leading-relaxed mb-6">
+                    <div class="w-12 h-12 rounded-lg overflow-hidden flex items-center justify-center bg-white">
+                        <img src="resources/logo.jpeg" alt="YCBN Logo" class="w-full h-full object-contain">
+                    </div>
+                    <p class="text-gray-400 text-sm leading-relaxed mb-6 mt-4">
                         Youth-led organization delivering sustainable WASH infrastructure and digital skills training to create resilient communities in Uganda.
                     </p>
                     <div class="flex gap-3">
