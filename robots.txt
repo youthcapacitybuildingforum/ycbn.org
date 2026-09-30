@@ -1,0 +1,9 @@
+﻿User-agent: *
+Allow: /
+
+# YCBN - Youth Capacity Building Network
+# No important pages are blocked. PDF resources are crawlable.
+Allow: /resources/
+Allow: /programs/
+
+Sitemap: https://ycbn.org/sitemap.xml

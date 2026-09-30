@@ -1,10 +1,24 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Our Impact - YCBN | Youth Capacity Building Network</title>
     <meta name="description" content="Discover the impact YCBN is making through sustainable WASH infrastructure and youth empowerment programs in Uganda. Real stories of change.">
+    <link rel="canonical" href="https://ycbn.org/work.html">
+    <!-- Open Graph / Social Media Meta Tags -->
+    <meta property="og:title" content="Our Impact | Youth Capacity Building Network (YCBN)">
+    <meta property="og:description" content="Discover the impact YCBN is making through sustainable WASH infrastructure and youth-led development in Uganda.">
+    <meta property="og:image" content="https://ycbn.org/resources/logo.jpeg">
+    <meta property="og:url" content="https://ycbn.org/work.html">
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="Youth Capacity Building Network (YCBN)">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Our Impact | Youth Capacity Building Network (YCBN)">
+    <meta name="twitter:description" content="Discover the impact YCBN is making through sustainable WASH infrastructure and youth-led development in Uganda.">
+    <meta name="twitter:image" content="https://ycbn.org/resources/logo.jpeg">
+
+    <link rel="icon" href="resources/logo.jpeg" type="image/jpeg">
 
     <!-- Tailwind CSS -->
     <script src="https://cdn.tailwindcss.com"></script>
@@ -13,7 +27,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800;900&family=Open+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
 
     <!-- Font Awesome -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
 
     <script>
         tailwind.config = {
@@ -283,17 +297,29 @@
             transform: scale(1.1);
         }
     </style>
+    <link rel="stylesheet" href="resources/css/ycbn.css">
+    <!-- SCHEMA.ORG STRUCTURED DATA - BREADCRUMB -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+            {"@type": "ListItem", "position": 1, "name": "Home", "item": "https://ycbn.org/"},
+            {"@type": "ListItem", "position": 2, "name": "Our Impact", "item": "https://ycbn.org/work.html"}
+        ]
+    }
+    </script>
+
 </head>
 <body class="bg-ycbn-gray antialiased">
-
-    <!-- Top Bar -->
+<!-- Top Bar -->
     <div class="top-bar py-3">
         <div class="container mx-auto px-4 sm:px-6 lg:px-8">
             <div class="flex flex-col md:flex-row justify-between items-center gap-2">
                 <div class="flex items-center gap-6">
                     <span class="flex items-center gap-2 font-semibold">
                         <i class="fas fa-hand-holding-water"></i>
-                        Safe Water for All
+                        Sustainable WASH for All
                     </span>
                     <a href="mailto:info@ycbn.org" class="flex items-center gap-2 hover:text-ycbn-orange transition-colors">
                         <i class="fas fa-envelope"></i>
@@ -302,18 +328,12 @@
                 </div>
                 <div class="flex items-center gap-4">
                     <div class="flex gap-3">
-                        <a href="https://www.linkedin.com/company/tiny-bit-wiser/" target="_blank" class="w-8 h-8 rounded-full bg-white/20 flex items-center justify-center hover:bg-ycbn-orange transition-colors">
-                            <i class="fab fa-linkedin-in text-sm"></i>
-                        </a>
-                        <a href="https://www.facebook.com/profile.php?id=61579627535321" target="_blank" class="w-8 h-8 rounded-full bg-white/20 flex items-center justify-center hover:bg-ycbn-orange transition-colors">
-                            <i class="fab fa-facebook-f text-sm"></i>
-                        </a>
-                        <a href="https://www.tiktok.com/@youth.capacity.bu?_r=1&_t=ZS-94XlJAUNABM" target="_blank" class="w-8 h-8 rounded-full bg-white/20 flex items-center justify-center hover:bg-ycbn-orange transition-colors">
-                            <i class="fab fa-tiktok text-sm"></i>
-                        </a>
-                        <a href="https://instagram.com/" target="_blank" class="w-8 h-8 rounded-full bg-white/20 flex items-center justify-center hover:bg-ycbn-orange transition-colors">
-                            <i class="fab fa-instagram text-sm"></i>
-                        </a>
+                        <a href="https://www.facebook.com/profile.php?id=61579627535321" target="_blank" rel="noopener noreferrer" class="w-8 h-8 rounded-full bg-white/20 flex items-center justify-center hover:bg-ycbn-orange transition-colors" aria-label="YCBN on Facebook"><i class="fab fa-facebook-f text-sm"></i></a>
+                        <a href="https://www.linkedin.com/company/tiny-bit-wiser/" target="_blank" rel="noopener noreferrer" class="w-8 h-8 rounded-full bg-white/20 flex items-center justify-center hover:bg-ycbn-orange transition-colors" aria-label="YCBN on LinkedIn"><i class="fab fa-linkedin-in text-sm"></i></a>
+                        <a href="https://www.instagram.com/youthcapacitybuildingnetwork" target="_blank" rel="noopener noreferrer" class="w-8 h-8 rounded-full bg-white/20 flex items-center justify-center hover:bg-ycbn-orange transition-colors" aria-label="YCBN on Instagram"><i class="fab fa-instagram text-sm"></i></a>
+                        <a href="https://x.com/YCBNetwork" target="_blank" rel="noopener noreferrer" class="w-8 h-8 rounded-full bg-white/20 flex items-center justify-center hover:bg-ycbn-orange transition-colors" aria-label="YCBN on X"><i class="fab fa-x-twitter text-sm"></i></a>
+                        <a href="https://youtube.com/@youthcapacitybuildingnetwork" target="_blank" rel="noopener noreferrer" class="w-8 h-8 rounded-full bg-white/20 flex items-center justify-center hover:bg-ycbn-orange transition-colors" aria-label="YCBN on YouTube"><i class="fab fa-youtube text-sm"></i></a>
+                        <a href="https://www.tiktok.com/@youth.capacity.bu" target="_blank" rel="noopener noreferrer" class="w-8 h-8 rounded-full bg-white/20 flex items-center justify-center hover:bg-ycbn-orange transition-colors" aria-label="YCBN on TikTok"><i class="fab fa-tiktok text-sm"></i></a>
                     </div>
                 </div>
             </div>
@@ -326,15 +346,14 @@
             <div class="flex items-center justify-between h-24">
                 <a href="index.html" class="flex-shrink-0 flex items-center gap-3">
                     <div class="w-12 h-12 rounded-lg overflow-hidden flex items-center justify-center bg-white">
-                        <img src="resources/logo.jpeg" alt="YCBN Logo" class="w-full h-full object-contain">
+                        <img src="resources/logo.jpeg" alt="Youth Capacity Building Network Logo" class="w-full h-full object-contain">
                     </div>
                     <div>
-                        <div class="font-montserrat font-bold text-xl text-ycbn-dark leading-tight">YCBN</div>
+                        <div class="font-montserrat font-bold text-lg text-ycbn-dark leading-tight">Youth Capacity<br>Building Network</div>
                     </div>
                 </a>
 
-                <!-- Desktop Menu -->
-                <div class="hidden lg:flex items-center gap-8">
+                <div class="hidden xl:flex items-center gap-5 2xl:gap-8">
                     <a href="index.html" class="nav-link">Home</a>
                     <div class="relative group">
                         <a href="about.html" class="nav-link flex items-center gap-1">
@@ -343,9 +362,10 @@
                         </a>
                         <div class="dropdown-menu absolute top-full left-0 w-64 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 pt-4">
                             <div class="py-2">
-                                <a href="about.html#vision" class="dropdown-item block">Vision & Mission</a>
+                                <a href="about.html" class="dropdown-item block">Vision &amp; Mission</a>
                                 <a href="about.html#values" class="dropdown-item block">Core Values</a>
                                 <a href="about.html#objectives" class="dropdown-item block">Objectives</a>
+                                <a href="team.html" class="dropdown-item block">Our Team</a>
                             </div>
                         </div>
                     </div>
@@ -356,44 +376,53 @@
                         </a>
                         <div class="dropdown-menu absolute top-full left-0 w-72 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 pt-4">
                             <div class="py-2">
-                                <a href="programmes.html#wash" class="dropdown-item block">WASH Infrastructure</a>
-                                <a href="programmes.html#innovation" class="dropdown-item block">Solid Waste Management</a>
-                                <a href="programmes.html#youth" class="dropdown-item block">Youth Empowerment</a>
+                                <a href="programs/wash/index.html" class="dropdown-item block">WASH</a>
+                                <a href="programs/digital-skills/index.html" class="dropdown-item block">Digital Skills</a>
+                                <a href="programs/innovation/index.html" class="dropdown-item block">Innovation &amp; Entrepreneurship</a>
+                                <a href="programs/environment/index.html" class="dropdown-item block">Environment &amp; Waste</a>
+                                <a href="programs/youth-empowerment/index.html" class="dropdown-item block">Youth Empowerment</a>
                             </div>
                         </div>
                     </div>
-                    <a href="work.html" class="nav-link active">Our Impact</a>
+                    <a href="work.html" class="nav-link text-ycbn-blue">Our Work</a>
                     <a href="stories.html" class="nav-link">News</a>
+                    <a href="volunteer.html" class="nav-link">Volunteer</a>
+                    <a href="partnerships.html" class="nav-link">Partners</a>
+                    <a href="donate.html" class="nav-link">Support</a>
                     <a href="contact.html" class="nav-link">Contact</a>
                 </div>
 
-                <a href="contact.html" class="hidden lg:inline-flex btn-ycbn">
+                <a href="contact.html" class="hidden xl:inline-flex btn-ycbn">
                     <span>Get Involved</span>
                     <i class="fas fa-arrow-right"></i>
                 </a>
 
-                <button id="mobileMenuBtn" class="lg:hidden text-2xl text-ycbn-dark p-2">
+                <button id="mobileMenuBtn" class="xl:hidden text-2xl text-ycbn-dark p-2">
                     <i class="fas fa-bars"></i>
                 </button>
             </div>
         </div>
 
-        <div id="mobileMenu" class="mobile-menu hidden lg:hidden absolute top-full left-0 w-full">
+        <div id="mobileMenu" class="mobile-menu hidden xl:hidden absolute top-full left-0 w-full">
             <div class="container mx-auto px-4 py-6">
                 <a href="index.html" class="block py-3 text-white border-b border-gray-700 font-semibold">Home</a>
                 <a href="about.html" class="block py-3 text-white border-b border-gray-700 font-semibold">Who We Are</a>
                 <a href="programmes.html" class="block py-3 text-white border-b border-gray-700 font-semibold">What We Do</a>
-                <a href="work.html" class="block py-3 text-white border-b border-gray-700 font-semibold">Our Impact</a>
+                <a href="work.html" class="block py-3 text-white border-b border-gray-700 font-semibold">Our Work</a>
                 <a href="team.html" class="block py-3 text-white border-b border-gray-700 font-semibold">Our Team</a>
                 <a href="stories.html" class="block py-3 text-white border-b border-gray-700 font-semibold">News</a>
+                <a href="volunteer.html" class="block py-3 text-white border-b border-gray-700 font-semibold">Volunteer</a>
+                <a href="partnerships.html" class="block py-3 text-white border-b border-gray-700 font-semibold">Partnerships</a>
+                <a href="donate.html" class="block py-3 text-white border-b border-gray-700 font-semibold">Support</a>
                 <a href="contact.html" class="block py-3 text-ycbn-blue font-bold">Contact Us</a>
             </div>
         </div>
     </nav>
 
+
     <!-- Hero Section -->
     <section class="relative bg-ycbn-dark py-32 md:py-40 overflow-hidden">
-        <div class="absolute inset-0 bg-[url('resources/tech.jpeg')] bg-cover bg-center opacity-50"></div>
+        <div class="absolute inset-0 bg-[url('resources/new-1.jpeg')] bg-cover bg-center opacity-50"></div>
         <div class="absolute inset-0 bg-gradient-to-r from-ycbn-dark via-ycbn-dark/80 to-transparent"></div>
         <div class="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
             <div class="max-w-3xl">
@@ -418,86 +447,405 @@
             </div>
             <div class="grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
                 <div class="p-6">
-                    <div class="counter-number mb-2" data-target="15">0</div>
-                    <p class="text-sm uppercase tracking-wider text-white/90 font-semibold">Communities Served</p>
+                    <div class="counter-number mb-2" data-target="100" data-suffix="+">100+</div>
+                    <p class="text-sm uppercase tracking-wider text-white/90 font-semibold">Water, Sanitation &amp; Hygiene</p>
                 </div>
                 <div class="p-6">
-                    <div class="counter-number mb-2" data-target="8">0</div>
-                    <p class="text-sm uppercase tracking-wider text-white/90 font-semibold">Boreholes Drilled</p>
+                    <div class="counter-number mb-2" data-target="10" data-suffix="">10</div>
+                    <p class="text-sm uppercase tracking-wider text-white/90 font-semibold">Digital Skills</p>
                 </div>
                 <div class="p-6">
-                    <div class="counter-number mb-2" data-target="500">0</div>
-                    <p class="text-sm uppercase tracking-wider text-white/90 font-semibold">Youth Trained</p>
+                    <div class="counter-number mb-2" data-target="200" data-suffix="+">200+</div>
+                    <p class="text-sm uppercase tracking-wider text-white/90 font-semibold">Youth Empowerment</p>
                 </div>
                 <div class="p-6">
-                    <div class="counter-number mb-2" data-target="12">0</div>
-                    <p class="text-sm uppercase tracking-wider text-white/90 font-semibold">Schools Supported</p>
+                    <div class="counter-number mb-2">2025</div>
+                    <p class="text-sm uppercase tracking-wider text-white/90 font-semibold">Established</p>
                 </div>
             </div>
             <div class="text-center mt-12">
-                <p class="text-white/90 text-lg max-w-2xl mx-auto">Every number represents a life changed. Together, we're building a brighter future for Uganda.</p>
+                <p class="text-white/90 text-lg max-w-2xl mx-auto">We publish verified information and real reports. Specific impact figures will be shared once official records confirm them.</p>
             </div>
         </div>
     </section>
 
-    <!-- Stories Grid -->
+    <!-- Documented Activities -->
     <section class="py-24 bg-white">
         <div class="container mx-auto px-4 sm:px-6 lg:px-8">
             <div class="text-center mb-16">
-                <h2 class="section-title section-title-center mb-4">Inspiring Stories of Change</h2>
-                <p class="text-gray-600 max-w-2xl mx-auto">Real people, real impact. Meet the communities and youth transforming their lives with YCBN.</p>
+                <h2 class="section-title section-title-center mb-4">Documented Activities &amp; Updates</h2>
+                <p class="text-gray-600 max-w-2xl mx-auto">Recent activities, events and engagements that YCBN has organised or participated in. These are based on published flyers and reports available on this page.</p>
             </div>
 
             <div class="grid md:grid-cols-2 gap-8">
-                <!-- Story 1 -->
+                <!-- Update 24: WASH for Infection Prevention & AMR Action Initiative -->
                 <div class="story-card">
-                    <img src="resources/2.jpeg" alt="Clean water access" class="w-full h-64 object-cover" onerror="this.src='data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 width=%22400%22 height=%22300%22%3E%3Crect fill=%22%23f1f5f9%22 width=%22400%22 height=%22300%22/%3E%3Ctext x=%2250%25%22 y=%2250%25%22 text-anchor=%22middle%22 dy=%22.3em%22 fill=%22%2364748b%22 font-family=%22sans-serif%22 font-size=%2220%22%3EWASH Success%3C/text%3E%3C/svg%3E'">
+                    <img src="resources/MUG.jpg" alt="WASH for Infection Prevention and AMR Action Initiative flyer - YCBN in conjunction with MUG Foundation" class="w-full h-64 object-cover">
                     <div class="p-8">
-                        <div class="text-ycbn-blue text-sm font-semibold mb-2">WASH Success Story</div>
-                        <h3 class="text-2xl font-bold text-ycbn-dark mb-3">Clean Water Changes Everything</h3>
-                        <p class="text-gray-600 mb-4">When we drilled a borehole in Kyampisi village, 1,200 residents no longer had to walk 5km for water. Waterborne diseases dropped by 70%, and children returned to school.</p>
-                        <a href="#" class="inline-flex items-center text-ycbn-blue font-semibold hover:text-ycbn-teal transition-colors">
-                            Read Full Story <i class="fas fa-arrow-right ml-2"></i>
+                        <div class="text-ycbn-blue text-sm font-semibold mb-2">October 16, 2026 &bull; Upcoming WASH Event &bull; Kasengejje Primary School, Wakiso</div>
+                        <h3 class="text-2xl font-bold text-ycbn-dark mb-3">WASH for Infection Prevention &amp; AMR Action Initiative</h3>
+                        <p class="text-gray-600 mb-4">In conjunction with the <strong>MUG Foundation</strong>, YCBN will host the <em>WASH for Infection Prevention &amp; AMR Action Initiative</em> at <strong>Kasengejje Primary School, Wakiso</strong>, delivering practical WASH skills, hygiene education, and handwashing facility support to learners and the school community.</p>
+                        <p class="text-gray-600 mb-4">The initiative champions a simple formula for healthier communities - <strong>Clean Water, Safe Hands, Fewer Infections, and Less AMR Risk</strong> - positioning WASH as the first line of defense against antimicrobial resistance.</p>
+                        <div class="flex flex-wrap gap-x-5 gap-y-3">
+                            <a href="resources/MUG.jpg" target="_blank" rel="noopener" class="inline-flex items-center text-ycbn-blue font-semibold hover:text-ycbn-teal transition-colors">
+                                View Event Flyer <i class="fas fa-image ml-2"></i>
+                            </a>
+                            <a href="programs/wash/index.html" class="inline-flex items-center text-ycbn-teal font-semibold hover:text-ycbn-blue transition-colors">
+                                Explore WASH <i class="fas fa-arrow-right ml-2"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Update 23: Leadership Ethics Outreach at St. Charles Lwanga Secondary School -->
+                <div class="story-card">
+                    <img src="resources/Kibiri.jpeg" alt="YCBN leadership ethics outreach with student leaders at St. Charles Lwanga Secondary School in Kibiri" class="w-full h-64 object-cover">
+                    <div class="p-8">
+                        <div class="text-ycbn-teal text-sm font-semibold mb-2">Youth Development &bull; School Outreach &bull; Kibiri</div>
+                        <h3 class="text-2xl font-bold text-ycbn-dark mb-3">Nurturing Generational Leaders: YCBN's Leadership Ethics Outreach</h3>
+                        <p class="text-gray-600 mb-4">YCBN conducted a capacity-development visit to St. Charles Lwanga Secondary School in Kibiri, bringing student leaders and prefects together to discuss leadership ethics, responsibility, and effective student governance.</p>
+                        <p class="text-gray-600 mb-4">The YCBN delegation comprised <strong>Mr. Mulwanyi Robert</strong>, Vice Chairperson, Board of Directors; <strong>Mr. Mwanje Frank Abdallah</strong>, Executive Director; and <strong>Mr. Kigozi Simon</strong>, Public Relations Officer.</p>
+                        <a href="resources/Kibiri.jpeg" target="_blank" rel="noopener" class="inline-flex items-center text-ycbn-blue font-semibold hover:text-ycbn-teal transition-colors">View Outreach Photo <i class="fas fa-image ml-2"></i></a>
+                    </div>
+                </div>
+
+                <!-- Update 22: Unlocking Wealth Within Continental Dialogue -->
+                <div class="story-card">
+                    <img src="resources/Era.jpeg" alt="Unlocking Wealth Within Continental Dialogue flyer on resource mobilization for African NGOs" class="w-full h-64 object-cover">
+                    <div class="p-8">
+                        <div class="text-ycbn-blue text-sm font-semibold mb-2">September 20, 2026 &bull; Continental Dialogue &bull; Google Meet</div>
+                        <h3 class="text-2xl font-bold text-ycbn-dark mb-3">Unlocking Wealth Within: A New Era of Resource Mobilization for African NGOs</h3>
+                        <p class="text-gray-600 mb-4">YCBN's upcoming dialogue will explore sustainable resource mobilization, local funding models, and modern frameworks to help African NGOs unlock internal potential and scale their impact.</p>
+                        <p class="text-gray-600 mb-4">Guest speaker <strong>Julius Gamy</strong>, NGO Fundraising Strategist from Liberia, will join host <strong>Simon Peter Kigozi</strong>, YCBN Public Relations Officer, on Sunday, September 20, 2026, from 9:00 PM to 10:00 PM EAT.</p>
+                        <div class="flex flex-wrap gap-x-5 gap-y-3">
+                            <a href="https://meet.google.com/vbu-tzjo-byk" target="_blank" rel="noopener" class="inline-flex items-center text-ycbn-blue font-semibold hover:text-ycbn-teal transition-colors">Join on Google Meet <i class="fas fa-video ml-2"></i></a>
+                            <a href="resources/Era.jpeg" target="_blank" rel="noopener" class="inline-flex items-center text-ycbn-teal font-semibold hover:text-ycbn-blue transition-colors">View Event Flyer <i class="fas fa-image ml-2"></i></a>
+                        </div>
+                        <p class="text-gray-500 text-sm mt-4">Passcode: vbu-tzjo-byk</p>
+                    </div>
+                </div>
+
+                <!-- Update 21: Unite for Girls Outreach -->
+                <div class="story-card">
+                    <img src="resources/UNT.jpeg" alt="Unite for Girls collaborative outreach flyer hosted by Raising Teenagers Uganda in Namayumba" class="w-full h-64 object-cover">
+                    <div class="p-8">
+                        <div class="text-ycbn-pink text-sm font-semibold mb-2">October 7, 2026 &bull; Upcoming Outreach &bull; Namayumba, Wakiso</div>
+                        <h3 class="text-2xl font-bold text-ycbn-dark mb-3">Unite for Girls: Empowering Communities Ahead of the International Day of the Girl Child</h3>
+                        <p class="text-gray-600 mb-4">YCBN will join member organizations of the <strong>Wezesha Girls Network Uganda</strong> for a community outreach hosted by <strong>Raising Teenagers Uganda (RTU)</strong> from <strong>10:00 AM to 1:00 PM</strong> in Namayumba Sub-County, Wakiso District, ahead of the October 11 International Day of the Girl Child.</p>
+                        <p class="text-gray-600 mb-4">The coalition includes Greater Impact Africa, TAM Youth Foundation, Transcend Africa Foundation, Health Promotion &amp; Rights Watch - Uganda, Extend A Life Initiative Uganda, Brave Movement, Dream Teens Uganda, Glow Up Pads, TWEFU, Youth Chaperon Uganda, and Amity for Humanity Initiative - Uganda.</p>
+                        <p class="text-gray-600 mb-4">The initiative will distribute scholastic materials, provide sanitary pads and menstrual hygiene education, and deliver mentorship and sensitization sessions under the rallying cry, <em>"When girls unite, communities transform."</em></p>
+                        <a href="resources/UNT.jpeg" target="_blank" rel="noopener" class="inline-flex items-center text-ycbn-blue font-semibold hover:text-ycbn-teal transition-colors">View Event Flyer <i class="fas fa-image ml-2"></i></a>
+                    </div>
+                </div>
+
+                <!-- Update 20: Advancing Girls' Rights through SRHR Advocacy and Storytelling -->
+                <div class="story-card">
+                    <img src="resources/Pap.jpg" alt="SRHR advocacy and storytelling engagement at Lishi Resort Hotel in Kyanja" class="w-full h-64 object-cover">
+                    <div class="p-8">
+                        <div class="text-ycbn-pink text-sm font-semibold mb-2">August 13, 2026 &bull; SRHR Advocacy &bull; Lishi Resort Hotel, Kyanja</div>
+                        <h3 class="text-2xl font-bold text-ycbn-dark mb-3">Advancing Girls' Rights through SRHR Advocacy and Storytelling</h3>
+                        <p class="text-gray-600 mb-4">YCBN participated in a high-impact grassroots advocacy engagement hosted by member organizations of the <strong>Wezesha Girls Network</strong>. Executive Director <strong>Mr. Frank Mwanje</strong> represented YCBN alongside youth leaders, advocates, and civil society stakeholders.</p>
+                        <p class="text-gray-600 mb-4">The Lishi Resort engagement focused on girls' rights, storytelling, accurate SRHR information, and strategic partnerships with Youth Chaperon Uganda and Amity for Humanity to strengthen support systems for young people.</p>
+                        <a href="resources/Pap.jpg" target="_blank" rel="noopener" class="inline-flex items-center text-ycbn-blue font-semibold hover:text-ycbn-teal transition-colors">View Engagement Photo <i class="fas fa-image ml-2"></i></a>
+                    </div>
+                </div>
+
+                <!-- Update 19: Community Ownership and Behavioral Change for Improved WASH -->
+                <div class="story-card">
+                    <img src="resources/Ownership.jpg" alt="Community Ownership and Behavioral Change for Improved WASH in Africa international discussion flyer" class="w-full h-64 object-cover">
+                    <div class="p-8">
+                        <div class="text-ycbn-teal text-sm font-semibold mb-2">June 21, 2026 &bull; International WASH Dialogue &bull; Google Meet</div>
+                        <h3 class="text-2xl font-bold text-ycbn-dark mb-3">Community Ownership and Behavioral Change for Improved WASH in Africa</h3>
+                        <p class="text-gray-600 mb-4">YCBN hosted an international Google Meet discussion sharing practical approaches, community-led strategies, and behavioral insights for creating sustainable water, sanitation, and hygiene solutions across African communities.</p>
+                        <p class="text-gray-600 mb-4">Hosted by Public Relations Officer <strong>Simon Peter Kigozi</strong> (Uganda), the session featured keynote speaker <strong>Josephine Temitope Igbekeloluwa</strong>, Founder of Betalife Initiative (Lagos, Nigeria).</p>
+                        <div class="flex flex-wrap gap-x-5 gap-y-3">
+                            <a href="resources/Ownership.jpg" target="_blank" rel="noopener" class="inline-flex items-center text-ycbn-blue font-semibold hover:text-ycbn-teal transition-colors">View Discussion Flyer <i class="fas fa-image ml-2"></i></a>
+                            <a href="programs/wash/index.html" class="inline-flex items-center text-ycbn-teal font-semibold hover:text-ycbn-blue transition-colors">Explore WASH <i class="fas fa-arrow-right ml-2"></i></a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Update 16: CEHURD Leadership Engagement -->
+                <div class="story-card">
+                    <img src="resources/19.jpeg" alt="YCBN courtesy visit to CEHURD Deputy Executive Director Ms. Nakibuuka Noor Musisi in Gayaza" class="w-full h-64 object-cover">
+                    <div class="p-8">
+                        <div class="text-ycbn-teal text-sm font-semibold mb-2">March 24, 2026 &bull; Partnership Engagement &bull; Gayaza</div>
+                        <h3 class="text-2xl font-bold text-ycbn-dark mb-3">Strategic Partnership: YCBN Visits CEHURD Leadership</h3>
+                        <p class="text-gray-600 mb-4">YCBN paid a courtesy visit to <strong>Ms. Nakibuuka Noor Musisi</strong>, Deputy Executive Director of the Center for Health, Human Rights and Development (CEHURD), in Gayaza. The engagement laid a strong foundation for joint grant fundraising, collaborative initiatives, and awareness campaigns around <strong>SRHR</strong> and <strong>Menstrual Hygiene Management</strong>.</p>
+                        <p class="text-gray-600 mb-4">Special commendation goes to YCBN staff member <strong>Mr. Siraje</strong> for initiating this vital meeting.</p>
+                        <div class="flex flex-wrap gap-x-5 gap-y-3">
+                            <a href="resources/19.jpeg" target="_blank" rel="noopener" class="inline-flex items-center text-ycbn-blue font-semibold hover:text-ycbn-teal transition-colors">
+                                View Engagement Photo <i class="fas fa-image ml-2"></i>
+                            </a>
+                            <a href="resources/ycbn_cehurd_engagement_2026.pdf" target="_blank" rel="noopener" class="inline-flex items-center text-ycbn-teal font-semibold hover:text-ycbn-blue transition-colors">
+                                View Report <i class="fas fa-file-pdf ml-2"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Update 18: Hand Washing Training and Materials Campaign -->
+                <div class="story-card">
+                    <img src="resources/Calls.jpg" alt="Call for Partners flyer for YCBN's Hand Washing Training and Material Distribution Campaign" class="w-full h-64 object-cover">
+                    <div class="p-8">
+                        <div class="text-ycbn-blue text-sm font-semibold mb-2">June 13, 2026 &bull; Call for Partners &bull; Wakiso District</div>
+                        <h3 class="text-2xl font-bold text-ycbn-dark mb-3">Hand Washing Training and Material Distribution Campaign</h3>
+                        <p class="text-gray-600 mb-4">YCBN invites government agencies, NGOs, companies, development partners, media organizations, and well-wishers to support a campaign running from <strong>June 20 to July 1, 2026</strong> across Wakiso District.</p>
+                        <p class="text-gray-600 mb-4">Under the theme, <em>"Clean Hands, Healthy Communities: WASH as the First Line of Defense Against Antimicrobial Resistance,"</em> the campaign will equip government schools, health facilities, markets, and public spaces with critical hygiene resources.</p>
+                        <div class="flex flex-wrap gap-x-5 gap-y-3">
+                            <a href="resources/Calls.jpg" target="_blank" rel="noopener" class="inline-flex items-center text-ycbn-blue font-semibold hover:text-ycbn-teal transition-colors">
+                                View Call Flyer <i class="fas fa-image ml-2"></i>
+                            </a>
+                            <a href="programs/wash/index.html" class="inline-flex items-center text-ycbn-teal font-semibold hover:text-ycbn-blue transition-colors">
+                                Explore WASH <i class="fas fa-arrow-right ml-2"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Update 15: 8th National Good Deeds Day Celebration -->
+                <div class="story-card">
+                    <img src="resources/Gogo.jpeg" alt="YCBN team at the 8th National Good Deeds Day Celebration at The Olive School, Namugongo" class="w-full h-64 object-cover">
+                    <div class="p-8">
+                        <div class="text-ycbn-teal text-sm font-semibold mb-2">April 10, 2026 &bull; Community Celebration &bull; The Olive School, Namugongo</div>
+                        <h3 class="text-2xl font-bold text-ycbn-dark mb-3">Celebrating Impact: YCBN at the 8th National Good Deeds Day</h3>
+                        <p class="text-gray-600 mb-4">YCBN joined the 8th National Good Deeds Day Celebration under the theme, <em>"The Power of Young People in Building a World of Doing Good."</em> The event featured exhibitions, performances, tree planting, and community giving, bringing together changemakers committed to uplifting communities.</p>
+                        <a href="resources/Gogo.jpeg" target="_blank" rel="noopener" class="inline-flex items-center text-ycbn-blue font-semibold hover:text-ycbn-teal transition-colors">
+                            View Celebration Photo <i class="fas fa-image ml-2"></i>
                         </a>
                     </div>
                 </div>
 
-                <!-- Story 2 -->
+                <!-- Update 14: Uganda Red Cross Society Engagement -->
                 <div class="story-card">
-                    <img src="resources/tec.jpeg" alt="Youth training" class="w-full h-64 object-cover" onerror="this.src='data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 width=%22400%22 height=%22300%22%3E%3Crect fill=%22%23f1f5f9%22 width=%22400%22 height=%22300%22/%3E%3Ctext x=%2250%25%22 y=%2250%25%22 text-anchor=%22middle%22 dy=%22.3em%22 fill=%22%2364748b%22 font-family=%22sans-serif%22 font-size=%2220%22%3EYouth Empowerment%3C/text%3E%3C/svg%3E'">
+                    <img src="resources/23.jpeg" alt="YCBN engagement with the Uganda Red Cross Society at its Rubaga head office" class="w-full h-64 object-cover">
                     <div class="p-8">
-                        <div class="text-ycbn-orange text-sm font-semibold mb-2">Youth Empowerment</div>
-                        <h3 class="text-2xl font-bold text-ycbn-dark mb-3">From Unemployed to Tech Entrepreneur</h3>
-                        <p class="text-gray-600 mb-4">After completing our digital skills training, Sarah launched her own agritech startup, now employing 5 young people and helping farmers increase yields by 40%.</p>
-                        <a href="#" class="inline-flex items-center text-ycbn-blue font-semibold hover:text-ycbn-teal transition-colors">
-                            Read Full Story <i class="fas fa-arrow-right ml-2"></i>
+                        <div class="text-ycbn-blue text-sm font-semibold mb-2">March 11, 2026 &bull; Partnership Engagement &bull; Rubaga</div>
+                        <h3 class="text-2xl font-bold text-ycbn-dark mb-3">Strategic Partnership: YCBN Engages with the Uganda Red Cross Society</h3>
+                        <p class="text-gray-600 mb-4">YCBN held a high-level, fruitful engagement with the <strong>Uganda Red Cross Society</strong> at its head office in Rubaga. The meeting explored meaningful collaboration on specific projects and ways to build strong institutional alliances for large-scale community initiatives.</p>
+                        <div class="flex flex-wrap gap-x-5 gap-y-3">
+                            <a href="resources/23.jpeg" target="_blank" rel="noopener" class="inline-flex items-center text-ycbn-blue font-semibold hover:text-ycbn-teal transition-colors">
+                                View Engagement Photo <i class="fas fa-image ml-2"></i>
+                            </a>
+                            <a href="resources/ycbn_red_cross_engagement_2026.pdf" target="_blank" rel="noopener" class="inline-flex items-center text-ycbn-teal font-semibold hover:text-ycbn-blue transition-colors">
+                                View Report <i class="fas fa-file-pdf ml-2"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Update 13: Pre-International Women's Day Celebration -->
+                <div class="story-card">
+                    <img src="resources/WEZ-4.jpeg" alt="YCBN team at the Pre-International Women's Day celebration at Princess Diana High School in Munyonyo" class="w-full h-64 object-cover">
+                    <div class="p-8">
+                        <div class="text-ycbn-pink text-sm font-semibold mb-2">March 5, 2026 &bull; Women's Day Celebration &bull; Princess Diana High School - Munyonyo</div>
+                        <h3 class="text-2xl font-bold text-ycbn-dark mb-3">Empowering the Next Generation: Pre-International Women's Day</h3>
+                        <p class="text-gray-600 mb-4">YCBN joined Wezesha Girls Network and partner networks for an inspiring celebration under the theme, <em>"Give to Gain - She Rises When We Give."</em> The event featured mentorship, community engagement, resource sharing, and direct support to empower girls to rise, lead, and shape a brighter future.</p>
+                        <a href="resources/WEZ-4.jpeg" target="_blank" rel="noopener" class="inline-flex items-center text-ycbn-blue font-semibold hover:text-ycbn-teal transition-colors">
+                            View Celebration Photo <i class="fas fa-image ml-2"></i>
                         </a>
                     </div>
                 </div>
 
-                <!-- Story 3 -->
+                <!-- Update 12: Good Deeds Day Preparations -->
                 <div class="story-card">
-                    <img src="resources/supporting.jpeg" alt="School sanitation" class="w-full h-64 object-cover" onerror="this.src='data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 width=%22400%22 height=%22300%22%3E%3Crect fill=%22%23f1f5f9%22 width=%22400%22 height=%22300%22/%3E%3Ctext x=%2250%25%22 y=%2250%25%22 text-anchor=%22middle%22 dy=%22.3em%22 fill=%22%2364748b%22 font-family=%22sans-serif%22 font-size=%2220%22%3ESchool Hygiene%3C/text%3E%3C/svg%3E'">
+                    <img src="resources/Good-Deeds-Day.jpeg" alt="Good Deeds Day preparations at Olive School-Namugongo" class="w-full h-64 object-cover">
                     <div class="p-8">
-                        <div class="text-ycbn-teal text-sm font-semibold mb-2">School Hygiene</div>
-                        <h3 class="text-2xl font-bold text-ycbn-dark mb-3">Keeping Girls in School</h3>
-                        <p class="text-gray-600 mb-4">With our menstrual hygiene management program, 500 girls now have access to dignity kits and private facilities. School attendance increased by 35% in participating schools.</p>
-                        <a href="#" class="inline-flex items-center text-ycbn-blue font-semibold hover:text-ycbn-teal transition-colors">
-                            Read Full Story <i class="fas fa-arrow-right ml-2"></i>
+                        <div class="text-ycbn-teal text-sm font-semibold mb-2">April 2026 &bull; Community Partnership &bull; Olive School-Namugongo</div>
+                        <h3 class="text-2xl font-bold text-ycbn-dark mb-3">YCBN Takes Part in Good Deeds Day Preparations</h3>
+                        <p class="text-gray-600 mb-4">YCBN Public Relations Officer <strong>Mr. Simon Peter Kigozi</strong> took part in the official preparation meeting for Good Deeds Day at Olive School-Namugongo. Guided by the motto, <em>"Think Good: Speak Good: Do Good,"</em> the April 2026 event will connect YCBN with like-minded change-makers and partner organizations for collaborative community impact.</p>
+                        <a href="resources/Good-Deeds-Day.jpeg" target="_blank" rel="noopener" class="inline-flex items-center text-ycbn-blue font-semibold hover:text-ycbn-teal transition-colors">
+                            View Event Photo <i class="fas fa-image ml-2"></i>
                         </a>
                     </div>
                 </div>
 
-                <!-- Story 4 -->
+                <!-- Update 11: Pre-International Women's Day Celebrations -->
                 <div class="story-card">
-                    <img src="resources/Innovation.jpeg" alt="Innovation hub" class="w-full h-64 object-cover" onerror="this.src='data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 width=%22400%22 height=%22300%22%3E%3Crect fill=%22%23f1f5f9%22 width=%22400%22 height=%22300%22/%3E%3Ctext x=%2250%25%22 y=%2250%25%22 text-anchor=%22middle%22 dy=%22.3em%22 fill=%22%2364748b%22 font-family=%22sans-serif%22 font-size=%2220%22%3EInnovation Hub%3C/text%3E%3C/svg%3E'">
+                    <img src="resources/PRE.jpeg" alt="Pre-International Women's Day Celebrations flyer organized by Wezesha Girls Network Uganda" class="w-full h-64 object-cover">
                     <div class="p-8">
-                        <div class="text-ycbn-blue text-sm font-semibold mb-2">Innovation Hub</div>
-                        <h3 class="text-2xl font-bold text-ycbn-dark mb-3">Community Innovation Takes Off</h3>
-                        <p class="text-gray-600 mb-4">Our first innovation hub in Wakiso has trained 150 youth in coding and AI. Three startups have already secured funding, creating local solutions for community challenges.</p>
-                        <a href="#" class="inline-flex items-center text-ycbn-blue font-semibold hover:text-ycbn-teal transition-colors">
-                            Read Full Story <i class="fas fa-arrow-right ml-2"></i>
+                        <div class="text-ycbn-pink text-sm font-semibold mb-2">March 5, 2026 &bull; Partnership Event &bull; Princess Diana High School - Munyonyo</div>
+                        <h3 class="text-2xl font-bold text-ycbn-dark mb-3">YCBN Recognized for Pre-International Women's Day Celebrations</h3>
+                        <p class="text-gray-600 mb-4">YCBN was officially recognized as part of the Pre-International Women's Day Celebrations organized by <strong>Wezesha Girls Network - Uganda</strong> under the theme, <em>"Give to Gain - She Rises When We Give."</em> The event convened youth networks, community leaders, and partner organizations to empower girls and drive inclusive community impact.</p>
+                        <div class="flex flex-wrap gap-x-5 gap-y-3">
+                            <a href="resources/PRE.jpeg" target="_blank" rel="noopener" class="inline-flex items-center text-ycbn-blue font-semibold hover:text-ycbn-teal transition-colors">
+                                View Event Flyer <i class="fas fa-image ml-2"></i>
+                            </a>
+                            <span class="inline-flex items-center text-ycbn-text font-semibold">
+                                <i class="far fa-clock mr-2"></i> 2:00 PM - 4:00 PM
+                            </span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Update 17: Child Safeguarding and Advocacy Engagement -->
+                <div class="story-card">
+                    <img src="resources/Peru.jpeg" alt="YCBN participation in a child safeguarding and advocacy stakeholder engagement at Lishi Resort Hotel in Kyanja" class="w-full h-64 object-cover">
+                    <div class="p-8">
+                        <div class="text-ycbn-blue text-sm font-semibold mb-2">Safeguarding Engagement &bull; Lishi Resort Hotel, Kyanja</div>
+                        <h3 class="text-2xl font-bold text-ycbn-dark mb-3">Strengthening Child Protection Partnerships: YCBN at the Lishi Resort Engagement</h3>
+                        <p class="text-gray-600 mb-4">YCBN participated in a high-level stakeholder engagement hosted by <strong>Transcend Africa Foundation</strong> and <strong>Brave Movement Uganda</strong>. The interactive meeting brought together community leaders, security representatives including the Uganda Police Force, and youth advocates to discuss strategies for combating Childhood Sexual Violence.</p>
+                        <p class="text-gray-600 mb-4">The engagement at Lishi Resort Hotel in Kyanja strengthened collaborative efforts to build safer, more protective environments for young people.</p>
+                        <a href="resources/Peru.jpeg" target="_blank" rel="noopener" class="inline-flex items-center text-ycbn-blue font-semibold hover:text-ycbn-teal transition-colors">
+                            View Engagement Photo <i class="fas fa-image ml-2"></i>
                         </a>
+                    </div>
+                </div>
+
+                <!-- Update 10: Transcend Africa Foundation Engagement -->
+                <div class="story-card">
+                    <img src="resources/Transcend-Africa-Foundation.jpeg" alt="YCBN team engagement with Transcend Africa Foundation CEO Mr. Bwambale Dickson" class="w-full h-64 object-cover">
+                    <div class="p-8">
+                        <div class="text-ycbn-blue text-sm font-semibold mb-2">February 14, 2026 &bull; Partnership Engagement &bull; Institutional Growth</div>
+                        <h3 class="text-2xl font-bold text-ycbn-dark mb-3">Strategic Partnership: YCBN Engages with Transcend Africa Foundation CEO</h3>
+                        <p class="text-gray-600 mb-4">YCBN held a high-level engagement with <strong>Mr. Bwambale Dickson</strong>, CEO of Transcend Africa Foundation, discussing resilience, resourcefulness, and robust internal systems that can attract sustainable funding even in challenging circumstances.</p>
+                        <p class="text-gray-600 mb-4">The engagement opened opportunities to connect with coalitions and civil society organizations for future collaborative initiatives, supporting YCBN's continued network growth and community impact.</p>
+                        <a href="resources/Transcend-Africa-Foundation.jpeg" target="_blank" rel="noopener" class="inline-flex items-center text-ycbn-blue font-semibold hover:text-ycbn-teal transition-colors">
+                            View Engagement Photo <i class="fas fa-image ml-2"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Update 9: Youth Plus Elite Club Visit -->
+                <div class="story-card">
+                    <img src="resources/Youth-Plus-3.jpeg" alt="YCBN team visit to sister organization Youth Plus Elite Club in Kitebi" class="w-full h-64 object-cover">
+                    <div class="p-8">
+                        <div class="text-ycbn-teal text-sm font-semibold mb-2">January 25, 2026 &bull; Community Outreach &amp; Partnership &bull; Kitebi</div>
+                        <h3 class="text-2xl font-bold text-ycbn-dark mb-3">Strengthening Community Ties: YCBN Visits Youth Plus Elite Club</h3>
+                        <p class="text-gray-600 mb-4">YCBN engaged with our sister organization, <strong>Youth Plus Elite Club</strong> in Kitebi, to connect, share experiences, and explore collaborative ways to further empower youth, drive community innovation, and build sustainable impact together.</p>
+                        <a href="resources/Youth-Plus-3.jpeg" target="_blank" rel="noopener" class="inline-flex items-center text-ycbn-blue font-semibold hover:text-ycbn-teal transition-colors">
+                            View Visit Photo <i class="fas fa-image ml-2"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Update 8: Small NGOs and Large Funding -->
+                <div class="story-card">
+                    <img src="resources/How-Small-NGOs-Can-Compete-for-Large-Funding-Opportunities.jpeg" alt="YCBN Continental Online Dialogue flyer on how small NGOs can compete for large funding opportunities" class="w-full h-64 object-cover">
+                    <div class="p-8">
+                        <div class="text-ycbn-blue text-sm font-semibold mb-2">August 9, 2026 &bull; Continental Dialogue &bull; Online</div>
+                        <h3 class="text-2xl font-bold text-ycbn-dark mb-3">How Small NGOs Can Compete for Large Funding Opportunities</h3>
+                        <p class="text-gray-600 mb-4">YCBN convened a continental dialogue equipping emerging organizations with practical strategies for winning major grants. Hosted and moderated by <strong>Mr. Simon Peter Kigozi</strong>, the session featured <strong>Ms. Margaret Gitau</strong> of NobleCause Consultancy Firm in Nairobi, Kenya, and explored governance, financial systems, impact evidence, digital credibility, funding diversification, the Pain-Gap-Stakes model and a 90-day action plan.</p>
+                        <div class="flex flex-wrap gap-x-5 gap-y-3">
+                            <a href="resources/How-Small-NGOs-Can-Compete-for-Large-Funding-Opportunities.pdf" target="_blank" rel="noopener" class="inline-flex items-center text-ycbn-blue font-semibold hover:text-ycbn-teal transition-colors">
+                                View Report <i class="fas fa-file-pdf ml-2"></i>
+                            </a>
+                            <a href="resources/How-Small-NGOs-Can-Compete-for-Large-Funding-Opportunities.jpeg" target="_blank" rel="noopener" class="inline-flex items-center text-ycbn-teal font-semibold hover:text-ycbn-blue transition-colors">
+                                View Flyer <i class="fas fa-image ml-2"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Update 1: Mensural Hygiene Day -->
+                <div class="story-card">
+                    <img src="resources/international-menstrual.jpeg" alt="International Menstrual Hygiene Day 2026 celebrations flyer" class="w-full h-64 object-cover">
+                    <div class="p-8">
+                        <div class="text-ycbn-blue text-sm font-semibold mb-2">May 29, 2026 &bull; Event &bull; Kira, Wakiso</div>
+                        <h3 class="text-2xl font-bold text-ycbn-dark mb-3">Post International Menstrual Health &amp; Hygiene Management Day</h3>
+                        <p class="text-gray-600 mb-4">YCBN joined youth-led and community organisations for the Post International Menstrual Health &amp; Hygiene Management Day celebrations at Kira Senior Secondary School, promoting dignity, breaking stigma and empowering girls through education and collective action.</p>
+                        <a href="resources/menstrual_hygiene_day_2026.pdf" target="_blank" rel="noopener" class="inline-flex items-center text-ycbn-blue font-semibold hover:text-ycbn-teal transition-colors">
+                            View Report <i class="fas fa-file-pdf ml-2"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Update 2: Webinar -->
+                <div class="story-card">
+                    <a href="resources/Re-inventing.jpeg" target="_blank" rel="noopener">
+                        <img src="resources/Re-inventing.jpeg" alt="Reinventing NGOs through Technology, AI and Digital Fundraising discussion flyer" class="w-full h-64 object-cover">
+                    </a>
+                    <div class="p-8">
+                        <div class="text-ycbn-orange text-sm font-semibold mb-2">May 24, 2026 &bull; Webinar</div>
+                        <h3 class="text-2xl font-bold text-ycbn-dark mb-3">Reinventing NGOs through Technology, AI &amp; Digital Fundraising</h3>
+                        <p class="text-gray-600 mb-4">YCBN and <strong>Resilient Societies of Zimbabwe</strong> hosted an international Google Meet discussion exploring innovative digital tools, artificial intelligence applications, and modern fundraising strategies for a resilient, future-ready civil society sector.</p>
+                        <p class="text-gray-600 mb-4">The session was hosted by YCBN Executive Director <strong>Mr. Frank Mwanje</strong> and featured <strong>Mr. Godfrey Madyauta</strong>, Programs Director at Resilient Societies of Zimbabwe, and <strong>Mr. Kondwani Nyirenda</strong>, Mechatronic Engineer from Zambia.</p>
+                        <a href="resources/Re-inventing.jpeg" target="_blank" rel="noopener" class="inline-flex items-center text-ycbn-blue font-semibold hover:text-ycbn-teal transition-colors">
+                            View Event Flyer <i class="fas fa-image ml-2"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Update 3: Beyond Donor Funding -->
+                <div class="story-card">
+                    <img src="resources/news-1.jpeg" alt="Beyond Donor Funding engagement session flyer" class="w-full h-64 object-cover">
+                    <div class="p-8">
+                        <div class="text-ycbn-teal text-sm font-semibold mb-2">May 2, 2026 &bull; Engagement Session</div>
+                        <h3 class="text-2xl font-bold text-ycbn-dark mb-3">Beyond Donor Funding: Sustaining Indigenous Organizations</h3>
+                        <p class="text-gray-600 mb-4">YCBN hosted an engagement session exploring how communities can sustain their own organisations through local resource mobilisation, income-generating initiatives, community ownership, partnerships and stronger governance.</p>
+                        <a href="stories.html" class="inline-flex items-center text-ycbn-blue font-semibold hover:text-ycbn-teal transition-colors">
+                            Read More <i class="fas fa-arrow-right ml-2"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Update 4: IWD -->
+                <div class="story-card">
+                    <img src="resources/supporting.jpeg" alt="International Women's Day outreach activity" class="w-full h-64 object-cover">
+                    <div class="p-8">
+                        <div class="text-ycbn-blue text-sm font-semibold mb-2">March 2026 &bull; Outreach &bull; Princess Diana High School</div>
+                        <h3 class="text-2xl font-bold text-ycbn-dark mb-3">Pre-International Women's Day Outreach</h3>
+                        <p class="text-gray-600 mb-4">As part of 2026 International Women's Day activities, YCBN carried out outreach at Princess Diana High School, including mentorship and menstrual health education. A full report is available.</p>
+                        <a href="resources/iwd_report_2026.pdf" target="_blank" rel="noopener" class="inline-flex items-center text-ycbn-blue font-semibold hover:text-ycbn-teal transition-colors">
+                            View Report <i class="fas fa-file-pdf ml-2"></i>
+                        </a>
+                    </div>
+                </div>
+<!-- Update 5: From Waste to Wealth (OUTCOME PENDING) -->
+                <div class="story-card">
+                    <img src="resources/from-waste-to-wealth.jpeg" alt="From Waste to Wealth Google Meet discussion flyer" class="w-full h-64 object-cover">
+                    <div class="p-8">
+                        <div class="text-ycbn-teal text-sm font-semibold mb-2">July 3, 2026 &bull; Google Meet Discussion</div>
+                        <h3 class="text-2xl font-bold text-ycbn-dark mb-3">From Waste to Wealth: Opportunities for Youth in Recycling Business</h3>
+                        <p class="text-gray-600 mb-4">This session explored the number of participants, key takeaways on youth recycling business opportunities, and follow-up commitments arising from the discussion.</p>
+                        <div class="flex flex-wrap gap-x-5 gap-y-3">
+                        <a href="#" title="Report to be published after the event" class="inline-flex items-center text-ycbn-blue font-semibold hover:text-ycbn-teal transition-colors">
+                            View Report <i class="fas fa-file-pdf ml-2"></i>
+                        </a>
+                        <a href="programs/environment/index.html" class="inline-flex items-center text-ycbn-teal font-semibold hover:text-ycbn-blue transition-colors">
+                            Explore the Programme <i class="fas fa-arrow-right ml-2"></i>
+                        </a>
+                    </div>
+                    </div>
+                </div>
+
+                <!-- Update 6: Achieving SDG 6 in Africa (OUTCOME PENDING) -->
+                <div class="story-card">
+                    <img src="resources/SDG6.jpeg" alt="Achieving SDG 6 in Africa Continental Dialogue flyer" class="w-full h-64 object-cover">
+                    <div class="p-8">
+                        <div class="text-ycbn-purple text-sm font-semibold mb-2">July 19, 2026 &bull; Continental Dialogue &bull; Google Meet</div>
+                        <h3 class="text-2xl font-bold text-ycbn-dark mb-3">Achieving SDG 6 in Africa</h3>
+                        <p class="text-gray-600 mb-4">This dialogue brought together young changemakers to discuss priority actions for clean water and sanitation, and commitments made by participants.</p>
+                        <div class="flex flex-wrap gap-x-5 gap-y-3">
+                        <a href="#" title="Report to be published after the event" class="inline-flex items-center text-ycbn-blue font-semibold hover:text-ycbn-teal transition-colors">
+                            View Report <i class="fas fa-file-pdf ml-2"></i>
+                        </a>
+                        <a href="programs/wash/index.html" class="inline-flex items-center text-ycbn-teal font-semibold hover:text-ycbn-blue transition-colors">
+                            Explore the WASH Programme <i class="fas fa-arrow-right ml-2"></i>
+                        </a>
+                    </div>
+                    </div>
+                </div>
+
+                <!-- Update 7: Who Pays for WASH (COMPLETED) -->
+                <div class="story-card">
+                    <img src="resources/who-pays.jpeg" alt="Who Pays for WASH Continental Dialogue flyer" class="w-full h-64 object-cover">
+                    <div class="p-8">
+                        <div class="text-ycbn-blue text-sm font-semibold mb-2">August 30, 2026 &bull; Continental Dialogue &bull; Google Meet &bull; <span class="text-ycbn-teal">Completed</span></div>
+                        <h3 class="text-2xl font-bold text-ycbn-dark mb-3">Who Pays for WASH When Crisis Becomes Prolonged?</h3>
+                        <p class="text-gray-600 mb-4">This Continental Dialogue brought together WASH practitioners and young changemakers to rethink global humanitarian financing for WASH resilience and recovery when crises become prolonged. Hosted by Frank Mwanje (Executive Director, YCBN) with guest speaker <strong>Eng. Salam Mohammad</strong> (WASH Expert &amp; Humanitarian Consultant, Palestine) and Marwa Jamal (WASH Officer, Sudan), the session explored how WASH resilience and recovery can be financed more equitably. A <strong>Certificate of Appreciation</strong> was presented to Eng. Salam Mohammad in recognition of his invaluable insights, expertise and contribution to the dialogue.</p>
+                        <!-- Report PDF link to be added here once published. -->
+                        <a href="resources/Salam-Mohammad-certificate.jpeg" target="_blank" rel="noopener" title="Open the full Certificate of Appreciation" class="block mt-6 rounded-xl overflow-hidden border border-gray-200 hover:shadow-lg transition-all">
+                            <img src="resources/Salam-Mohammad-certificate.jpeg" alt="Certificate of Appreciation presented to Eng. Salam Mohammad, WASH Expert and Humanitarian Consultant from Palestine, Guest Speaker at the YCBN Continental Dialogue on 30th August 2026" class="w-full h-auto">
+                        </a>
+                        <div class="flex flex-wrap gap-x-5 gap-y-3 mt-6">
+                            <a href="resources/Salam-Mohammad-certificate.jpeg" target="_blank" rel="noopener" class="inline-flex items-center text-ycbn-blue font-semibold hover:text-ycbn-teal transition-all">
+                                View Certificate <i class="fas fa-award ml-2"></i>
+                            </a>
+                            <a href="programs/wash/index.html" class="inline-flex items-center text-ycbn-teal font-semibold hover:text-ycbn-blue transition-all">
+                                Explore the WASH Programme <i class="fas fa-arrow-right ml-2"></i>
+                            </a>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -515,6 +863,38 @@
             </div>
 
             <div class="grid md:grid-cols-2 gap-8 max-w-5xl mx-auto">
+                <!-- PDF 0: Small NGOs and Large Funding -->
+                <div class="pdf-card bg-white rounded-2xl shadow-lg overflow-hidden border border-gray-100">
+                    <div class="p-6">
+                        <div class="flex items-start gap-4 mb-4">
+                            <div class="pdf-icon w-14 h-14 rounded-xl bg-ycbn-teal/10 flex items-center justify-center text-ycbn-teal flex-shrink-0">
+                                <i class="fas fa-file-pdf text-2xl"></i>
+                            </div>
+                            <div>
+                                <h3 class="font-bold text-ycbn-dark text-base leading-tight">Small NGOs and Large Funding</h3>
+                                <div class="flex items-center gap-3 mt-1">
+                                    <span class="inline-flex items-center text-xs text-gray-500">
+                                        <i class="far fa-calendar-alt mr-1.5"></i>
+                                        August 2026
+                                    </span>
+                                    <span class="inline-flex items-center text-xs text-gray-500">
+                                        <i class="far fa-file mr-1.5"></i>
+                                        Dialogue Report
+                                    </span>
+                                </div>
+                            </div>
+                        </div>
+                        <p class="text-gray-600 text-sm leading-relaxed mb-4 line-clamp-2">Insights and strategic recommendations on competitive positioning, the Pain-Gap-Stakes model and a 90-day action plan for emerging NGOs.</p>
+                        <div class="flex flex-col sm:flex-row gap-2.5">
+                            <a href="resources/How-Small-NGOs-Can-Compete-for-Large-Funding-Opportunities.pdf" target="_blank" rel="noopener" class="flex-1 btn-ycbn justify-center text-center rounded-lg py-2.5 px-3 text-xs">
+                                <i class="fas fa-eye mr-1.5"></i> View PDF
+                            </a>
+                            <a href="resources/How-Small-NGOs-Can-Compete-for-Large-Funding-Opportunities.pdf" download class="px-4 py-2.5 rounded-lg border-2 border-ycbn-blue text-ycbn-blue hover:bg-ycbn-blue hover:text-white transition-all font-semibold text-xs flex items-center justify-center gap-2 whitespace-nowrap">
+                                <i class="fas fa-download"></i> Download
+                            </a>
+                        </div>
+                    </div>
+                </div>
                 
                 <!-- PDF 1: Menstrual Hygiene Day -->
                 <div class="pdf-card bg-white rounded-2xl shadow-lg overflow-hidden border border-gray-100">
@@ -683,6 +1063,88 @@
             </div>
         </div>
     </section>
+<!-- Impact Stories & Media Section -->
+    <section class="py-24 bg-white">
+        <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="section-title section-title-center mb-4">Impact Stories &amp; Media</h2>
+                <p class="text-gray-600 max-w-2xl mx-auto">Explore our resources and awareness materials on waste management, clean water and sanitation - and hear directly from our Executive Director.</p>
+            </div>
+
+            <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-8">
+
+                <!-- From Waste to Wealth -->
+                <div class="story-card">
+                    <img src="resources/from-waste-to-wealth.jpeg" alt="From Waste to Wealth poster" class="rounded h-56 object-cover">
+                    <div class="p-6">
+                        <div class="flex items-center gap-3 text-sm text-ycbn-text mb-3">
+                            <span><i class="fas fa-recycle mr-1 text-ycbn-teal"></i> Environment &amp; Waste</span>
+                        </div>
+                        <h3 class="text-xl font-bold text-ycbn-dark mb-2">From Waste to Wealth</h3>
+                        <p class="text-gray-600 text-sm leading-relaxed mb-4">Turning waste into opportunity - an awareness of how communities can transform waste into valuable resources and income while protecting the environment.</p>
+                        <a href="programs/environment/index.html" class="inline-flex items-center text-ycbn-blue font-semibold hover:text-ycbn-teal transition-colors">Learn More <i class="fas fa-arrow-right ml-2"></i></a>
+                    </div>
+                </div>
+
+                <!-- Who Pays -->
+                <div class="story-card">
+                    <img src="resources/who-pays.jpeg" alt="Who pays for clean water awareness poster" class="w-full h-56 object-cover">
+                    <div class="p-6">
+                        <div class="flex items-center gap-3 text-sm text-ycbn-text mb-3">
+                            <span><i class="fas fa-hand-holding-water mr-1 text-ycbn-blue"></i> WASH Awareness</span>
+                        </div>
+                        <h3 class="text-xl font-bold text-ycbn-dark mb-2">Who Pays?</h3>
+                        <p class="text-gray-600 text-sm leading-relaxed mb-4">An important conversation about the real cost of water and sanitation - and who carries it - as YCBN works toward sustainable WASH for all.</p>
+                        <a href="programs/wash/index.html" class="inline-flex items-center text-ycbn-blue font-semibold hover:text-ycbn-teal transition-colors">Learn More <i class="fas fa-arrow-right ml-2"></i></a>
+                    </div>
+                </div>
+
+                <!-- Certificate of Appreciation: Eng. Salam Mohammad -->
+                <div class="story-card">
+                    <a href="resources/Salam-Mohammad-certificate.jpeg" target="_blank" rel="noopener" title="Open the full Certificate of Appreciation" class="block bg-white">
+                        <img src="resources/Salam-Mohammad-certificate.jpeg" alt="Certificate of Appreciation presented to Eng. Salam Mohammad for the YCBN Continental Dialogue on Who Pays for WASH" class="w-full h-56 object-contain bg-ycbn-gray p-2">
+                    </a>
+                    <div class="p-6">
+                        <div class="flex items-center gap-3 text-sm text-ycbn-text mb-3">
+                            <span><i class="fas fa-award mr-1 text-ycbn-orange"></i> Certificate of Appreciation</span>
+                        </div>
+                        <h3 class="text-xl font-bold text-ycbn-dark mb-2">YCBN Continental Dialogue: Recognizing Excellence</h3>
+                        <p class="text-gray-600 text-sm leading-relaxed mb-4">We extend our sincere gratitude to Eng. Salam Mohammad (WASH Expert &amp; Humanitarian Consultant from Palestine) for joining us as our esteemed Guest Speaker for the YCBN Continental Dialogue. Thank you for helping make our August 30, 2026 session a resounding success!</p>
+                        <a href="stories.html#recognition" class="inline-flex items-center text-ycbn-blue font-semibold hover:text-ycbn-teal transition-colors">Read More <i class="fas fa-arrow-right ml-2"></i></a>
+                    </div>
+                </div>
+
+                <!-- SDG 6 -->
+                <div class="story-card">
+                    <img src="resources/SDG6.jpeg" alt="SDG 6 Clean Water and Sanitation poster" class="w-full h-56 object-cover">
+                    <div class="p-6">
+                        <div class="flex items-center gap-3 text-sm text-ycbn-text mb-3">
+                            <span><i class="fas fa-droplet mr-1 text-ycbn-blue"></i> SDG 6</span>
+                        </div>
+                        <h3 class="text-xl font-bold text-ycbn-dark mb-2">SDG 6: Clean Water &amp; Sanitation</h3>
+                        <p class="text-gray-600 text-sm leading-relaxed mb-4">SDG 6 calls for clean water and sanitation for all. This resource shows how YCBN's WASH programme contributes to this global goal here in Uganda.</p>
+                        <a href="programs/wash/index.html" class="inline-flex items-center text-ycbn-blue font-semibold hover:text-ycbn-teal transition-colors">Learn More <i class="fas fa-arrow-right ml-2"></i></a>
+                    </div>
+                </div>
+
+                <!-- Video of the Executive Director -->
+                <div class="story-card">
+                    <video controls preload="metadata" class="w-full h-56 object-cover bg-ycbn-dark" aria-label="Video message from the Executive Director">
+                        <source src="resources/video-of-ed.mp4" type="video/mp4">
+                        Your browser does not support the video player. <a href="resources/video-of-ed.mp4" class="text-ycbn-blue underline">Download the video instead</a>.
+                    </video>
+                    <div class="p-6">
+                        <div class="flex items-center gap-3 text-sm text-ycbn-text mb-3">
+                            <span><i class="fas fa-video mr-1 text-ycbn-orange"></i> Video</span>
+                        </div>
+                        <h3 class="text-xl font-bold text-ycbn-dark mb-2">A Message from Our Executive Director</h3>
+                        <p class="text-gray-600 text-sm leading-relaxed mb-4">Hear from our Executive Director on YCBN's vision, youth-led programmes and what lies ahead for the communities we serve.</p>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
 
     <!-- Call to Action Section -->
     <section class="py-24 bg-gradient-to-r from-ycbn-blue to-ycbn-teal text-white">
@@ -732,76 +1194,102 @@
                 <div class="bg-white/5 backdrop-blur-sm p-8 rounded-2xl border border-white/10">
                     <h3 class="font-montserrat font-bold text-xl text-white mb-6">Subscribe to Our Newsletter</h3>
                     <p class="text-gray-400 text-sm mb-6">Stay updated with our latest projects, impact stories, and opportunities.</p>
-                    <form class="space-y-4">
+                    <form id="newsletterForm" class="space-y-4" novalidate>
                         <div>
-                            <input type="text" placeholder="Your Name" class="w-full px-5 py-3 rounded-lg bg-white/10 border border-white/20 text-white placeholder-gray-400 focus:outline-none focus:border-ycbn-blue transition-colors">
+                            <input type="text" id="newsletterName" name="name" placeholder="Your Name" autocomplete="name" class="w-full px-5 py-3 rounded-lg bg-white/10 border border-white/20 text-white placeholder-gray-400 focus:outline-none focus:border-ycbn-blue transition-colors">
                         </div>
                         <div>
-                            <input type="email" placeholder="Email Address" class="w-full px-5 py-3 rounded-lg bg-white/10 border border-white/20 text-white placeholder-gray-400 focus:outline-none focus:border-ycbn-blue transition-colors">
+                            <input type="email" id="newsletterEmail" name="email" placeholder="Email Address" autocomplete="email" required class="w-full px-5 py-3 rounded-lg bg-white/10 border border-white/20 text-white placeholder-gray-400 focus:outline-none focus:border-ycbn-blue transition-colors">
                         </div>
-                        <button type="submit" class="w-full btn-ycbn justify-center">
+                        <button type="submit" id="newsletterBtn" class="w-full bg-gradient-to-r from-ycbn-blue to-ycbn-teal text-white font-bold py-3 rounded-lg uppercase tracking-wider hover:shadow-lg transition-all flex items-center justify-center gap-2">
                             <span>Subscribe Now</span>
                             <i class="fas fa-paper-plane"></i>
                         </button>
+                        <p id="newsletterMsg" class="hidden text-sm text-center py-2 px-3 rounded-lg"></p>
                     </form>
                 </div>
             </div>
         </div>
     </section>
 
+    <!-- Footer -->
     <footer class="footer-main pt-20 pb-8">
         <div class="container mx-auto px-4 sm:px-6 lg:px-8">
             <div class="grid md:grid-cols-4 gap-12 mb-16">
                 <div class="md:col-span-1">
-                    <div class="w-12 h-12 rounded-lg overflow-hidden flex items-center justify-center bg-white">
-                        <img src="resources/logo.jpeg" alt="YCBN Logo" class="w-full h-full object-contain">
+                    <div class="w-12 h-12 rounded-lg overflow-hidden flex items-center justify-center bg-white mb-6">
+                        <img src="resources/logo.jpeg" alt="Youth Capacity Building Network Logo" class="w-full h-full object-contain">
                     </div>
-                    <p class="text-gray-400 text-sm leading-relaxed mb-6 mt-4">
-                        Youth-led organization delivering sustainable WASH infrastructure and digital skills training to create resilient communities in Uganda.
+                    <p class="text-gray-400 text-sm leading-relaxed mb-6">
+                        Youth Capacity Building Network (YCBN) is a youth-led organisation working with young people, communities and schools to deliver WASH, digital skills, innovation, entrepreneurship and community development programmes in Uganda.
                     </p>
                     <div class="flex gap-3">
-                        <a href="https://www.linkedin.com/company/tiny-bit-wiser/" target="_blank" class="w-9 h-9 rounded bg-white/10 flex items-center justify-center hover:bg-ycbn-blue transition-colors text-white"><i class="fab fa-linkedin-in text-sm"></i></a>
-                        <a href="https://www.facebook.com/profile.php?id=61579627535321" target="_blank" class="w-9 h-9 rounded bg-white/10 flex items-center justify-center hover:bg-ycbn-blue transition-colors text-white"><i class="fab fa-facebook-f text-sm"></i></a>
-                        <a href="https://www.tiktok.com/@youth.capacity.bu?_r=1&_t=ZS-94XlJAUNABM" target="_blank" class="w-9 h-9 rounded bg-white/10 flex items-center justify-center hover:bg-ycbn-blue transition-colors text-white"><i class="fab fa-tiktok text-sm"></i></a>
-                        <a href="https://instagram.com/" target="_blank" class="w-9 h-9 rounded bg-white/10 flex items-center justify-center hover:bg-ycbn-blue transition-colors text-white"><i class="fab fa-instagram text-sm"></i></a>
+                        <a href="https://www.facebook.com/profile.php?id=61579627535321" target="_blank" rel="noopener noreferrer" class="w-9 h-9 rounded bg-white/10 flex items-center justify-center hover:bg-ycbn-blue transition-colors text-white" aria-label="YCBN on Facebook"><i class="fab fa-facebook-f text-sm"></i></a>
+                        <a href="https://www.linkedin.com/company/tiny-bit-wiser/" target="_blank" rel="noopener noreferrer" class="w-9 h-9 rounded bg-white/10 flex items-center justify-center hover:bg-ycbn-blue transition-colors text-white" aria-label="YCBN on LinkedIn"><i class="fab fa-linkedin-in text-sm"></i></a>
+                        <a href="https://www.instagram.com/youthcapacitybuildingnetwork" target="_blank" rel="noopener noreferrer" class="w-9 h-9 rounded bg-white/10 flex items-center justify-center hover:bg-ycbn-blue transition-colors text-white" aria-label="YCBN on Instagram"><i class="fab fa-instagram text-sm"></i></a>
+                        <a href="https://x.com/YCBNetwork" target="_blank" rel="noopener noreferrer" class="w-9 h-9 rounded bg-white/10 flex items-center justify-center hover:bg-ycbn-blue transition-colors text-white" aria-label="YCBN on X"><i class="fab fa-x-twitter text-sm"></i></a>
+                        <a href="https://youtube.com/@youthcapacitybuildingnetwork" target="_blank" rel="noopener noreferrer" class="w-9 h-9 rounded bg-white/10 flex items-center justify-center hover:bg-ycbn-blue transition-colors text-white" aria-label="YCBN on YouTube"><i class="fab fa-youtube text-sm"></i></a>
+                        <a href="https://www.tiktok.com/@youth.capacity.bu" target="_blank" rel="noopener noreferrer" class="w-9 h-9 rounded bg-white/10 flex items-center justify-center hover:bg-ycbn-blue transition-colors text-white" aria-label="YCBN on TikTok"><i class="fab fa-tiktok text-sm"></i></a>
                     </div>
                 </div>
+
                 <div>
                     <h4 class="footer-heading">Quick Links</h4>
                     <nav class="flex flex-col">
-                        <a href="about.html" class="footer-link">About Us</a>
+                        <a href="index.html" class="footer-link">Home</a>
+                        <a href="about.html" class="footer-link">About YCBN</a>
                         <a href="programmes.html" class="footer-link">Our Programmes</a>
-                        <a href="work.html" class="footer-link">Impact Stories</a>
-                        <a href="stories.html" class="footer-link">News & Updates</a>
+                        <a href="work.html" class="footer-link">Our Work</a>
+                        <a href="stories.html" class="footer-link">News &amp; Updates</a>
+                        <a href="volunteer.html" class="footer-link">Volunteer</a>
+                        <a href="partnerships.html" class="footer-link">Partnerships</a>
+                        <a href="transparency.html" class="footer-link">Transparency &amp; Legal Info</a>
                         <a href="contact.html" class="footer-link">Contact</a>
                     </nav>
                 </div>
+
                 <div>
                     <h4 class="footer-heading">Programmes</h4>
                     <nav class="flex flex-col">
-                        <a href="programmes.html#wash" class="footer-link">Wash Promotional Programs</a>
-                        <a href="programmes.html#youth" class="footer-link">Youth Empowerment</a>
+                        <a href="programs/wash/index.html" class="footer-link">WASH</a>
+                        <a href="programs/youth-empowerment/index.html" class="footer-link">Youth Empowerment</a>
+                        <a href="programs/digital-skills/index.html" class="footer-link">Digital Skills</a>
+                        <a href="programs/innovation/index.html" class="footer-link">Innovation &amp; Entrepreneurship</a>
+                        <a href="programs/environment/index.html" class="footer-link">Environment &amp; Waste Management</a>
+                        <a href="donate.html" class="footer-link">Support</a>
                     </nav>
                 </div>
+
                 <div>
-                    <h4 class="footer-heading">Legal & Compliance</h4>
-                    <div class="text-sm text-gray-400 space-y-3">
-                        <p class="pt-2 text-xs">Compliant with NGO Act 2016, WASH sector standards, and child protection requirements.</p>
+                    <h4 class="footer-heading">Contact &amp; Policies</h4>
+                    <p class="text-gray-400 text-sm mb-2">P.O Box 117751, Wakiso, Uganda</p>
+                    <p class="text-gray-400 text-sm">
+                        <strong>Email:</strong><br>
+                        <a href="mailto:info@ycbn.org" class="footer-link">info@ycbn.org</a>
+                    </p>
+                    <nav class="flex flex-col mt-4 space-y-2">
+                        <a href="privacy.html" class="footer-link">Privacy Policy</a>
+                        <a href="terms.html" class="footer-link">Terms of Use</a>
+                        <a href="safeguarding.html" class="footer-link">Safeguarding</a>
+                        <a href="complaints.html" class="footer-link">Complaints &amp; Feedback</a>
+                    </nav>
+                </div>
+            </div>
+
+            <div class="border-t border-white/10 pt-8">
+                <div class="flex flex-col md:flex-row justify-between items-center gap-4">
+                    <p class="text-gray-400 text-sm">&copy; <span id="year">2026</span> Youth Capacity Building Network (YCBN). All rights reserved.</p>
+                    <div class="flex gap-4 flex-wrap justify-center">
+                        <a href="privacy.html" class="text-gray-400 hover:text-ycbn-blue text-sm transition-colors">Privacy Policy</a>
+                        <a href="terms.html" class="text-gray-400 hover:text-ycbn-blue text-sm transition-colors">Terms of Use</a>
+                        <a href="safeguarding.html" class="text-gray-400 hover:text-ycbn-blue text-sm transition-colors">Safeguarding</a>
+                        <a href="transparency.html" class="text-gray-400 hover:text-ycbn-blue text-sm transition-colors">Organization Information</a>
                     </div>
                 </div>
             </div>
-            <div class="border-t border-white/10 pt-8 flex flex-col md:flex-row justify-between items-center gap-4">
-                <p class="text-sm text-gray-500">© 2026 Youth Capacity Building Network (YCBN). All rights reserved.</p>
-                <div class="flex gap-6 text-sm text-gray-500">
-                    <a href="#" class="hover:text-white transition-colors">Privacy Policy</a>
-                    <a href="#" class="hover:text-white transition-colors">Terms of Service</a>
-                </div>
-                <button onclick="window.scrollTo({top: 0, behavior: 'smooth'})" class="w-10 h-10 rounded-full bg-white/10 flex items-center justify-center hover:bg-ycbn-blue transition-colors text-white">
-                    <i class="fas fa-chevron-up"></i>
-                </button>
-            </div>
         </div>
     </footer>
+
 
     <script>
         // Mobile menu toggle
@@ -830,38 +1318,148 @@
             }
         });
 
-        // Counter animation
-        const counters = document.querySelectorAll('.counter-number');
-        const speed = 200;
-
+        // Animated impact counters (Our Growing Impact) - same pattern as index.html
+        const counters = document.querySelectorAll('.counter-number[data-target]');
         const animateCounter = (counter) => {
-            const target = parseInt(counter.getAttribute('data-target'));
-            const increment = target / speed;
-            let current = 0;
-
-            const updateCount = () => {
-                current += increment;
-                if (current < target) {
-                    counter.innerText = Math.ceil(current);
-                    requestAnimationFrame(updateCount);
-                } else {
-                    counter.innerText = target + '+';
-                }
+            const target = parseInt(counter.getAttribute('data-target'), 10);
+            const suffix = counter.getAttribute('data-suffix') || '';
+            if (isNaN(target)) return;
+            const duration = 1600;
+            const start = performance.now();
+            const updateCount = (now) => {
+                const progress = Math.min((now - start) / duration, 1);
+                const eased = 1 - Math.pow(1 - progress, 3);
+                counter.innerText = Math.ceil(target * eased) + suffix;
+                if (progress < 1) requestAnimationFrame(updateCount);
             };
-            updateCount();
+            requestAnimationFrame(updateCount);
         };
-
-        const observerOptions = { threshold: 0.5 };
-        const observer = new IntersectionObserver((entries) => {
-            entries.forEach(entry => {
-                if (entry.isIntersecting) {
-                    animateCounter(entry.target);
-                    observer.unobserve(entry.target);
-                }
-            });
-        }, observerOptions);
-
-        counters.forEach(counter => observer.observe(counter));
+        if ('IntersectionObserver' in window && counters.length) {
+            const counterObserver = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        animateCounter(entry.target);
+                        counterObserver.unobserve(entry.target);
+                    }
+                });
+            }, { threshold: 0.5 });
+            counters.forEach(counter => counterObserver.observe(counter));
+        } else {
+            counters.forEach(animateCounter);
+        }
     </script>
+    <!-- Floating WhatsApp Button -->
+    <a href="https://wa.me/256760315494?text=Hello%20YCBN%2C%20I%20would%20like%20to%20know%20more%20about%20your%20work%20and%20how%20I%20can%20get%20involved."
+       target="_blank"
+       rel="noopener noreferrer"
+       class="whatsapp-float"
+       aria-label="Chat with us on WhatsApp">
+        <i class="fab fa-whatsapp"></i>
+        <span class="tooltip">Chat with us</span>
+    </a>
+<!-- ============================================================ -->
+    <!-- Newsletter Subscription -> Google Sheets
+         After deploying your Apps Script as a Web App, paste its
+         /exec URL into NEWSLETTER_ENDPOINT below. -->
+    <!-- ============================================================ -->
+    <script>
+        // STEP 1: Create the Google Sheet (tab named "Newsletter").
+        // STEP 2: Extensions -> Apps Script -> paste the doPost code.
+        // STEP 3: Deploy -> Web App -> "Anyone" -> copy the /exec URL below.
+        const NEWSLETTER_ENDPOINT = 'https://script.google.com/macros/s/AKfycbzJybNWMWn-R2Dkcpd9cpHGno8q3gxrXiFPl95KFOETj1hvPBBPhGQdMwZDEuXWHDKDAg/exec';
+
+        document.addEventListener('DOMContentLoaded', function () {
+            const form = document.getElementById('newsletterForm');
+            if (!form) return;
+
+            const nameEl = document.getElementById('newsletterName');
+            const emailEl = document.getElementById('newsletterEmail');
+            const btn = document.getElementById('newsletterBtn');
+            const msg = document.getElementById('newsletterMsg');
+
+            function showMsg(text, ok) {
+                msg.textContent = text;
+                msg.classList.remove('hidden');
+                msg.classList.remove('bg-emerald-500/20', 'text-emerald-300', 'bg-red-500/20', 'text-red-300');
+                msg.classList.add(ok ? 'bg-emerald-500/20 text-emerald-300' : 'bg-red-500/20 text-red-300');
+            }
+
+            form.addEventListener('submit', function (e) {
+                e.preventDefault();
+
+                const name = nameEl.value.trim();
+                const email = emailEl.value.trim();
+
+                if (!email || !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) {
+                    showMsg('Please enter a valid email address.', false);
+                    return;
+                }
+
+                if (NEWSLETTER_ENDPOINT.indexOf('PASTE_YOUR') !== -1) {
+                    showMsg('The newsletter is not connected yet - please set the Google Sheets endpoint.', false);
+                    return;
+                }
+
+                const btnLabel = btn.querySelector('span');
+                btn.disabled = true;
+                btnLabel.textContent = 'Subscribing...';
+                msg.classList.add('hidden');
+
+                // Create a hidden iframe to receive the response.
+                // Native form POSTs are NOT subject to CORS, so this works reliably
+                // from any origin (including file://) - unlike fetch + no-cors.
+                let iframe = document.getElementById('newsletterHiddenFrame');
+                if (!iframe) {
+                    iframe = document.createElement('iframe');
+                    iframe.id = 'newsletterHiddenFrame';
+                    iframe.name = 'newsletterHiddenFrame';
+                    iframe.style.display = 'none';
+                    document.body.appendChild(iframe);
+                }
+
+                // Build a temporary hidden form pointing at the Apps Script endpoint.
+                const hiddenForm = document.createElement('form');
+                hiddenForm.method = 'POST';
+                hiddenForm.action = NEWSLETTER_ENDPOINT;
+                hiddenForm.target = 'newsletterHiddenFrame';
+                hiddenForm.style.display = 'none';
+
+                const nameInput = document.createElement('input');
+                nameInput.type = 'hidden';
+                nameInput.name = 'name';
+                nameInput.value = name;
+
+                const emailInput = document.createElement('input');
+                emailInput.type = 'hidden';
+                emailInput.name = 'email';
+                emailInput.value = email;
+
+                hiddenForm.appendChild(nameInput);
+                hiddenForm.appendChild(emailInput);
+                document.body.appendChild(hiddenForm);
+
+                // When the iframe finishes loading the response, show success.
+                let done = false;
+                const finish = function () {
+                    if (done) return;
+                    done = true;
+                    if (hiddenForm.parentNode) hiddenForm.parentNode.removeChild(hiddenForm);
+                    form.reset();
+                    btnLabel.textContent = 'Subscribe Now';
+                    btn.disabled = false;
+                    showMsg('Thank you! You have been subscribed to our newsletter.', true);
+                };
+
+                iframe.addEventListener('load', finish, { once: true });
+
+                // Fallback: if the iframe load never fires (e.g. slow network),
+                // still restore the button after 10 seconds.
+                setTimeout(finish, 10000);
+
+                hiddenForm.submit();
+            });
+        });
+    </script>
+
 </body>
 </html>
