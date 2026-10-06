@@ -1776,8 +1776,8 @@ body{background:#f1f5f9}
         .team-image-wrapper img[src*="Mwanje.jpeg"] { object-position: 50% 22%; }
         .team-image-wrapper img[src*="Emmanuel-1"] { object-position: 50% 20%; }
         .team-image-wrapper img[src*="Ssengiyunva"] { object-position: 50% 12%; }
-        .team-image-wrapper img[src*="simon.jpeg"] { object-position: 50% 30%; }
-        .team-image-wrapper img[src*="KAVUMA"] { object-position: 50% 22%; }
+        .team-image-wrapper img[src*="simon.jpeg"] { object-position: 50% 0%; transform: scale(1); }
+        .team-image-wrapper img[src*="KAVUMA"] { object-position: 50% 0%; transform: scale(1); }
         .team-image-wrapper img[src*="Anyango"] { object-position: 50% 25%; }
         .team-image-wrapper img[src*="Urujurani"] { object-position: 50% 25%; }
         .team-image-wrapper img[src*="nansenja"],
