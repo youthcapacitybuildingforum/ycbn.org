@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -6,459 +6,157 @@
     <title>Our Team - YCBN | Youth Capacity Building Network</title>
     <meta name="description" content="Meet the team guiding the Youth Capacity Building Network (YCBN) - the people driving sustainable WASH and youth innovation in Uganda.">
     <link rel="canonical" href="https://ycbn.org/team.html">
+    
     <!-- Open Graph / Social Media Meta Tags -->
     <meta property="og:title" content="Our Team | Youth Capacity Building Network (YCBN)">
     <meta property="og:description" content="Meet the people behind the Youth Capacity Building Network (YCBN) driving sustainable WASH and youth innovation.">
-    <meta property="og:image" content="https://ycbn.org/resources/logo.jpeg">
+    <meta property="og:image" content="https://ycbn.org/resources/logo.webp">
     <meta property="og:url" content="https://ycbn.org/team.html">
     <meta property="og:type" content="website">
     <meta property="og:site_name" content="Youth Capacity Building Network (YCBN)">
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:title" content="Our Team | Youth Capacity Building Network (YCBN)">
     <meta name="twitter:description" content="Meet the people behind the Youth Capacity Building Network (YCBN) driving sustainable WASH and youth innovation.">
-    <meta name="twitter:image" content="https://ycbn.org/resources/logo.jpeg">
+    <meta name="twitter:image" content="https://ycbn.org/resources/logo.webp">
 
-    <link rel="icon" href="resources/logo.jpeg" type="image/jpeg">
+    <link rel="icon" href="resources/logo.webp" type="image/webp">
 
-    <!-- Tailwind CSS -->
-    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Stylesheets -->
+    <link rel="stylesheet" href="assets/css/tailwind-purged.min.css">
+    <link rel="stylesheet" href="assets/css/ycbn-utilities.css">
+    <link rel="stylesheet" href="assets/css/local-fonts.css">
+    <link rel="stylesheet" href="assets/css/all.min.css">
 
-    <!-- Google Fonts -->
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800;900&family=Open+Sans:wght@400;500;600;700&family=Poppins:wght@400;500;600;700&family=Heebo:wght@400;500" rel="stylesheet">
-
-    <!-- Font Awesome -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
-
-    <script>
-        tailwind.config = {
-            theme: {
-                extend: {
-                    colors: {
-                        'ycbn-blue': '#0ea5e9',
-                        'ycbn-blue-dark': '#0284c7',
-                        'ycbn-teal': '#14b8a6',
-                        'ycbn-teal-dark': '#0d9488',
-                        'ycbn-orange': '#f97316',
-                        'ycbn-orange-light': '#fb923c',
-                        'ycbn-dark': '#0f172a',
-                        'ycbn-gray': '#f1f5f9',
-                        'ycbn-text': '#64748b',
-                        'ycbn-red': '#9E0000',
-                        'ycbn-red-dark': '#7a170f'
-                    },
-                    fontFamily: {
-                        'montserrat': ['Montserrat', 'sans-serif'],
-                        'opensans': ['Open Sans', 'sans-serif'],
-                        'poppins': ['Poppins', 'sans-serif'],
-                        'heebo': ['Heebo', 'sans-serif']
-                    }
-                }
-            }
+    <!-- Schema.org Structured Data -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "Organization",
+        "name": "Youth Capacity Building Network",
+        "alternateName": "YCBN",
+        "url": "https://ycbn.org",
+        "logo": "https://ycbn.org/resources/logo.webp",
+        "description": "Youth Capacity Building Network (YCBN) is a youth-led organisation working with young people, communities and schools in Uganda on WASH, digital skills, innovation and entrepreneurship.",
+        "foundingDate": "2025",
+        "foundingLocation": {
+            "@type": "Place",
+            "name": "Uganda"
+        },
+        "contactPoint": {
+            "@type": "ContactPoint",
+            "telephone": "+256-760-315494",
+            "contactType": "customer service",
+            "email": "info@ycbn.org",
+            "availableLanguage": ["en"]
+        },
+        "sameAs": [
+            "https://www.facebook.com/profile.php?id=61579627535321",
+            "https://www.linkedin.com/company/tiny-bit-wiser/",
+            "https://www.instagram.com/youthcapacitybuildingnetwork",
+            "https://x.com/YCBNetwork",
+            "https://youtube.com/@youthcapacitybuildingnetwork",
+            "https://www.tiktok.com/@youth.capacity.bu"
+        ],
+        "address": {
+            "@type": "PostalAddress",
+            "streetAddress": "P.O Box 117751",
+            "addressLocality": "Wakiso",
+            "addressRegion": "Central Region",
+            "addressCountry": "UG"
         }
+    }
     </script>
 
     <style>
         * { font-family: 'Open Sans', sans-serif; }
         h1, h2, h3, h4, h5, h6 { font-family: 'Montserrat', sans-serif; }
 
-        .top-bar {
-            background: linear-gradient(90deg, #0ea5e9 0%, #14b8a6 100%);
-            color: white;
-            font-size: 13px;
-        }
-
-        .main-nav {
-            background-color: rgba(255,255,255,0.98);
-            backdrop-filter: blur(10px);
-            box-shadow: 0 2px 20px rgba(0,0,0,0.08);
-        }
-
-        .nav-link {
-            position: relative;
-            font-family: 'Montserrat', sans-serif;
-            font-weight: 600;
-            text-transform: uppercase;
-            font-size: 13px;
-            letter-spacing: 0.5px;
-            color: #0f172a;
-            transition: color 0.3s ease;
-        }
-
-        .nav-link::after {
-            content: '';
-            position: absolute;
-            bottom: -5px;
-            left: 0;
-            width: 0;
-            height: 2px;
-            background: linear-gradient(90deg, #0ea5e9, #14b8a6);
-            transition: width 0.3s ease;
-        }
-
+        .top-bar { background: linear-gradient(90deg, #0ea5e9 0%, #14b8a6 100%); color: white; font-size: 13px; }
+        .main-nav { background-color: rgba(255,255,255,0.98); backdrop-filter: blur(10px); box-shadow: 0 2px 20px rgba(0,0,0,0.08); }
+        
+        .nav-link { position: relative; font-family: 'Montserrat', sans-serif; font-weight: 600; text-transform: uppercase; font-size: 13px; letter-spacing: 0.5px; color: #0f172a; transition: color 0.3s ease; }
+        .nav-link::after { content: ''; position: absolute; bottom: -5px; left: 0; width: 0; height: 2px; background: linear-gradient(90deg, #0ea5e9, #14b8a6); transition: width 0.3s ease; }
         .nav-link:hover::after { width: 100%; }
         .nav-link:hover { color: #0ea5e9; }
 
-        .section-title {
-            font-family: 'Montserrat', sans-serif;
-            font-weight: 700;
-            font-size: 32px;
-            color: #0f172a;
-            text-transform: uppercase;
-            letter-spacing: 1px;
-            position: relative;
-            padding-bottom: 20px;
-            display: inline-block;
-        }
+        .section-title { font-family: 'Montserrat', sans-serif; font-weight: 700; font-size: 32px; color: #0f172a; text-transform: uppercase; letter-spacing: 1px; position: relative; padding-bottom: 20px; display: inline-block; }
+        .section-title::after { content: ''; position: absolute; bottom: 0; left: 0; width: 80px; height: 4px; background: linear-gradient(90deg, #0ea5e9, #14b8a6); }
+        .section-title-center::after { left: 50%; transform: translateX(-50%); }
 
-        .section-title::after {
-            content: '';
-            position: absolute;
-            bottom: 0;
-            left: 0;
-            width: 80px;
-            height: 4px;
-            background: linear-gradient(90deg, #0ea5e9, #14b8a6);
-        }
+        /* Team Member Styling */
+        .team-member { text-align: center; margin-bottom: 30px; }
+        .team-image-wrapper { position: relative; display: inline-block; border-radius: 50% 50% 50% 0%; border: 0px solid transparent; border-right: 10px solid #9E0000; border-bottom: 10px solid #9E0000; overflow: hidden; box-shadow: 0px 5px 8px 0px rgba(173, 36, 36, 0.5); transition: all 0.3s ease; aspect-ratio: 1 / 1; background: #f1f5f9; box-sizing: border-box; }
+        .team-image-wrapper img { width: 100%; height: 100%; object-fit: cover; object-position: 50% 18%; display: block; border-radius: inherit; transform: scale(1.04); }
 
-        .section-title-center::after {
-            left: 50%;
-            transform: translateX(-50%);
-        }
-
-        /* CEHURD-Style Team Member Styling */
-        .team-member {
-            text-align: center;
-            margin-bottom: 30px;
-        }
-
-        .team-image-wrapper {
-            position: relative;
-            display: inline-block;
-            border-radius: 50% 50% 50% 0%;
-            border: 0px solid transparent;
-            border-right: 10px solid #9E0000;
-            border-bottom: 10px solid #9E0000;
-            overflow: hidden;
-            box-shadow: 0px 5px 8px 0px rgba(173, 36, 36, 0.5);
-            transition: all 0.3s ease;
-            aspect-ratio: 1 / 1;
-            background: #f1f5f9;
-            box-sizing: border-box;
-        }
-
-        .team-image-wrapper img {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-            object-position: 50% 18%;
-            display: block;
-            border-radius: inherit;
-            transform: scale(1.04);
-        }
-
-        /* Fine-tune individual portraits so faces sit fully inside the shape */
-        .team-image-wrapper img[src*="Robert.jpeg"] { object-position: 50% 12%; }
+        /* Fine-tune portraits */
+        .team-image-wrapper img[src*="Robert.webp"] { object-position: 50% 12%; }
         .team-image-wrapper img[src*="magoola"] { object-position: 50% 10%; }
-        .team-image-wrapper img[src*="Mwanje.jpeg"] { object-position: 50% 22%; }
+        .team-image-wrapper img[src*="Mwanje.webp"] { object-position: 50% 22%; }
         .team-image-wrapper img[src*="Emmanuel-1"] { object-position: 50% 20%; }
         .team-image-wrapper img[src*="Ssengiyunva"] { object-position: 50% 12%; }
-        .team-image-wrapper img[src*="simon.jpeg"] { object-position: 50% 0%; transform: scale(1); }
+        .team-image-wrapper img[src*="simon.webp"] { object-position: 50% 0%; transform: scale(1); }
         .team-image-wrapper img[src*="KAVUMA"] { object-position: 50% 0%; transform: scale(1); }
         .team-image-wrapper img[src*="Anyango"] { object-position: 50% 25%; }
         .team-image-wrapper img[src*="Urujurani"] { object-position: 50% 25%; }
-        .team-image-wrapper img[src*="nansenja"],
-        .team-image-wrapper img[src*="Nansenja"] { object-position: 50% 12%; }
+        .team-image-wrapper img[src*="nansenja"], .team-image-wrapper img[src*="Nansenja"] { object-position: 50% 12%; }
         .team-image-wrapper img[src*="Bakirente"] { object-position: 50% 12%; }
         .team-image-wrapper img[src*="Namutebi"] { object-position: 50% 35%; transform: scale(1); }
 
-        .team-member:hover .team-image-wrapper {
-            transform: translateY(-5px);
-            box-shadow: 0px 8px 15px 0px rgba(173, 36, 36, 0.6);
-        }
+        .team-member:hover .team-image-wrapper { transform: translateY(-5px); box-shadow: 0px 8px 15px 0px rgba(173, 36, 36, 0.6); }
 
-        .team-name {
-            font-family: 'Poppins', sans-serif;
-            font-size: 17px;
-            font-weight: 700;
-            margin: 20px 0 5px;
-            color: #202020;
-            letter-spacing: -0.1px;
-        }
+        .team-name { font-family: 'Montserrat', sans-serif; font-size: 17px; font-weight: 700; margin: 20px 0 5px; color: #202020; letter-spacing: -0.1px; }
+        .team-name a { color: #202020; text-decoration: none; transition: color 0.3s ease; }
+        .team-name a:hover { color: #9E0000; }
+        .team-role { font-family: 'Open Sans', sans-serif; font-size: 13px; font-weight: 700; text-transform: uppercase; letter-spacing: 1px; color: #7a170f; margin: 0; }
 
-        .team-name a {
-            color: #202020;
-            text-decoration: none;
-            transition: color 0.3s ease;
-        }
+        /* Layout Sizes */
+        .ed-section .team-image-wrapper, .deputy-section .team-image-wrapper { width: 350px; height: 350px; }
+        .smt-section .team-image-wrapper { width: 280px; height: 280px; }
+        .mmt-section .team-image-wrapper, .core-section .team-image-wrapper, .project-section .team-image-wrapper, .support-section .team-image-wrapper { width: 260px; height: 260px; }
 
-        .team-name a:hover {
-            color: #9E0000;
-        }
+        /* Team Grids */
+        .team-grid { display: grid; gap: 40px 30px; padding: 40px 0; }
+        .grid-1 { grid-template-columns: 1fr; max-width: 400px; margin: 0 auto; }
+        .grid-4 { grid-template-columns: repeat(4, 1fr); }
+        .grid-2 { grid-template-columns: repeat(2, 1fr); max-width: 800px; margin: 0 auto; }
 
-        .team-role {
-            font-family: 'Heebo', sans-serif;
-            font-size: 13px;
-            font-weight: 700;
-            text-transform: uppercase;
-            letter-spacing: 1px;
-            color: #7a170f;
-            margin: 0;
-            -webkit-text-stroke-color: #000;
-        }
+        /* Sections */
+        .team-section { background: #f8fafc; padding: 60px 0; }
+        .team-section:nth-child(even) { background: #ffffff; }
+        .team-category-title { font-family: 'Montserrat', sans-serif; font-weight: 700; font-size: 24px; color: #0f172a; margin-bottom: 40px; text-align: center; text-transform: uppercase; letter-spacing: 2px; }
 
-        /* Executive Director - Large Size */
-        .ed-section .team-image-wrapper {
-            width: 350px;
-            height: 350px;
-        }
-
-        /* Deputy - Large Size */
-        .deputy-section .team-image-wrapper {
-            width: 350px;
-            height: 350px;
-        }
-
-        /* Senior Management Team - Medium Size */
-        .smt-section .team-image-wrapper {
-            width: 280px;
-            height: 280px;
-        }
-
-        /* Middle Management & Others - Standard Size */
-        .mmt-section .team-image-wrapper,
-        .core-section .team-image-wrapper,
-        .project-section .team-image-wrapper,
-        .support-section .team-image-wrapper {
-            width: 260px;
-            height: 260px;
-        }
-
-        /* Team Grid Layouts */
-        .team-grid {
-            display: grid;
-            gap: 40px 30px;
-            padding: 40px 0;
-        }
-
-        .grid-1 {
-            grid-template-columns: 1fr;
-            max-width: 400px;
-            margin: 0 auto;
-        }
-
-        .grid-4 {
-            grid-template-columns: repeat(4, 1fr);
-        }
-
-        .grid-2 {
-            grid-template-columns: repeat(2, 1fr);
-            max-width: 800px;
-            margin: 0 auto;
-        }
-
-        /* Section Spacing */
-        .team-section {
-            background: #f8fafc;
-            padding: 60px 0;
-        }
-
-        .team-section:nth-child(even) {
-            background: #ffffff;
-        }
-
-        .team-category-title {
-            font-family: 'Montserrat', sans-serif;
-            font-weight: 700;
-            font-size: 24px;
-            color: #0f172a;
-            margin-bottom: 40px;
-            text-align: center;
-            text-transform: uppercase;
-            letter-spacing: 2px;
-        }
-
-        /* Responsive */
+        /* Responsive Overrides */
         @media (max-width: 1024px) {
             .grid-4 { grid-template-columns: repeat(2, 1fr); }
-            .ed-section .team-image-wrapper,
-            .deputy-section .team-image-wrapper {
-                width: 300px;
-                height: 300px;
-            }
-            .smt-section .team-image-wrapper {
-                width: 240px;
-                height: 240px;
-            }
+            .ed-section .team-image-wrapper, .deputy-section .team-image-wrapper { width: 300px; height: 300px; }
+            .smt-section .team-image-wrapper { width: 240px; height: 240px; }
         }
-
         @media (max-width: 768px) {
-            .grid-4, .grid-2 {
-                grid-template-columns: 1fr;
-                max-width: 400px;
-                margin: 0 auto;
-            }
-            
-            .ed-section .team-image-wrapper,
-            .deputy-section .team-image-wrapper,
-            .smt-section .team-image-wrapper,
-            .mmt-section .team-image-wrapper,
-            .core-section .team-image-wrapper,
-            .project-section .team-image-wrapper,
-            .support-section .team-image-wrapper {
-                width: 280px;
-                height: 280px;
-            }
+            .grid-4, .grid-2 { grid-template-columns: 1fr; max-width: 400px; margin: 0 auto; }
+            .ed-section .team-image-wrapper, .deputy-section .team-image-wrapper, .smt-section .team-image-wrapper, .mmt-section .team-image-wrapper, .core-section .team-image-wrapper, .project-section .team-image-wrapper, .support-section .team-image-wrapper { width: 280px; height: 280px; }
         }
 
-        .dropdown-menu {
-            background-color: white;
-            border-top: 3px solid #0ea5e9;
-            box-shadow: 0 10px 40px rgba(0,0,0,0.15);
-            border-radius: 0 0 8px 8px;
-        }
+        /* Structural Styles */
+        .page-header { background: linear-gradient(135deg, #0ea5e9 0%, #14b8a6 100%); padding: 100px 0 60px; position: relative; overflow: hidden; }
+        .page-header::before { content: ''; position: absolute; top: -50%; left: -50%; width: 200%; height: 200%; background: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23ffffff' fill-opacity='0.1'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E"); opacity: 0.3; }
+        .page-title { font-family: 'Montserrat', sans-serif; font-weight: 800; font-size: 48px; color: white; text-transform: uppercase; letter-spacing: 2px; position: relative; z-index: 1; }
+        .breadcrumb { color: rgba(255,255,255,0.8); font-size: 14px; position: relative; z-index: 1; }
+        .breadcrumb a { color: white; transition: opacity 0.3s ease; }
+        .breadcrumb a:hover { opacity: 0.8; }
 
-        .dropdown-item {
-            color: #0f172a;
-            font-size: 13px;
-            font-weight: 600;
-            text-transform: uppercase;
-            letter-spacing: 0.5px;
-            padding: 14px 24px;
-            border-bottom: 1px solid rgba(0,0,0,0.05);
-            transition: all 0.2s ease;
-        }
+        .footer-main { background-color: #0f172a; background-image: radial-gradient(circle at 20% 50%, rgba(14,165,233,0.1) 0%, transparent 50%), radial-gradient(circle at 80% 80%, rgba(20,184,166,0.1) 0%, transparent 50%); color: white; }
+        .footer-heading { font-family: 'Montserrat', sans-serif; font-weight: 700; font-size: 16px; text-transform: uppercase; color: white; margin-bottom: 25px; letter-spacing: 1px; }
+        .footer-link { color: rgba(255,255,255,0.7); transition: all 0.3s ease; display: block; padding: 8px 0; font-size: 14px; }
+        .footer-link:hover { color: #0ea5e9; padding-left: 10px; }
+        .newsletter-section { background: linear-gradient(90deg, #0f172a 0%, #1e293b 100%); border-top: 1px solid rgba(255,255,255,0.1); }
+        
+        .btn-ycbn { background: linear-gradient(90deg, #0ea5e9, #14b8a6); color: white; padding: 14px 40px; font-family: 'Montserrat', sans-serif; font-weight: 700; font-size: 14px; text-transform: uppercase; letter-spacing: 1px; border: none; transition: all 0.3s ease; display: inline-flex; align-items: center; gap: 10px; position: relative; overflow: hidden; }
+        .btn-ycbn:hover { transform: translateY(-2px); box-shadow: 0 10px 30px rgba(14,165,233,0.3); }
 
-        .dropdown-item:hover {
-            color: #0ea5e9;
-            background-color: #f8fafc;
-            padding-left: 30px;
-        }
-
-        .mobile-menu {
-            background-color: #0f172a;
-        }
-
-        .sticky-header {
-            position: sticky;
-            top: 0;
-            z-index: 1000;
-            transition: all 0.3s ease;
-        }
-
-        .sticky-header.scrolled {
-            box-shadow: 0 4px 30px rgba(0,0,0,0.15);
-        }
-
-        .page-header {
-            background: linear-gradient(135deg, #0ea5e9 0%, #14b8a6 100%);
-            padding: 100px 0 60px;
-            position: relative;
-            overflow: hidden;
-        }
-
-        .page-header::before {
-            content: '';
-            position: absolute;
-            top: -50%;
-            left: -50%;
-            width: 200%;
-            height: 200%;
-            background: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23ffffff' fill-opacity='0.1'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
-            opacity: 0.3;
-        }
-
-        .page-title {
-            font-family: 'Montserrat', sans-serif;
-            font-weight: 800;
-            font-size: 48px;
-            color: white;
-            text-transform: uppercase;
-            letter-spacing: 2px;
-            position: relative;
-            z-index: 1;
-        }
-
-        .breadcrumb {
-            color: rgba(255,255,255,0.8);
-            font-size: 14px;
-            position: relative;
-            z-index: 1;
-        }
-
-        .breadcrumb a {
-            color: white;
-            transition: opacity 0.3s ease;
-        }
-
-        .breadcrumb a:hover {
-            opacity: 0.8;
-        }
-
-        .footer-main {
-            background-color: #0f172a;
-            background-image: 
-                radial-gradient(circle at 20% 50%, rgba(14,165,233,0.1) 0%, transparent 50%),
-                radial-gradient(circle at 80% 80%, rgba(20,184,166,0.1) 0%, transparent 50%);
-            color: white;
-        }
-
-        .footer-heading {
-            font-family: 'Montserrat', sans-serif;
-            font-weight: 700;
-            font-size: 16px;
-            text-transform: uppercase;
-            color: white;
-            margin-bottom: 25px;
-            letter-spacing: 1px;
-        }
-
-        .footer-link {
-            color: rgba(255,255,255,0.7);
-            transition: all 0.3s ease;
-            display: block;
-            padding: 8px 0;
-            font-size: 14px;
-        }
-
-        .footer-link:hover {
-            color: #0ea5e9;
-            padding-left: 10px;
-        }
-
-        .newsletter-section {
-            background: linear-gradient(90deg, #0f172a 0%, #1e293b 100%);
-            border-top: 1px solid rgba(255,255,255,0.1);
-        }
-
-        .btn-ycbn {
-            background: linear-gradient(90deg, #0ea5e9, #14b8a6);
-            color: white;
-            padding: 14px 40px;
-            font-family: 'Montserrat', sans-serif;
-            font-weight: 700;
-            font-size: 14px;
-            text-transform: uppercase;
-            letter-spacing: 1px;
-            border: none;
-            transition: all 0.3s ease;
-            display: inline-flex;
-            align-items: center;
-            gap: 10px;
-            position: relative;
-            overflow: hidden;
-        }
-
-        .btn-ycbn:hover {
-            transform: translateY(-2px);
-            box-shadow: 0 10px 30px rgba(14,165,233,0.3);
-        }
-
-        html {
-            scroll-behavior: smooth;
-        }
+        html { scroll-behavior: smooth; }
     </style>
-    <link rel="stylesheet" href="resources/css/ycbn.css">
-    <!-- SCHEMA.ORG STRUCTURED DATA - BREADCRUMB -->
+
+    <!-- Schema.org Breadcrumb -->
     <script type="application/ld+json">
     {
         "@context": "https://schema.org",
@@ -469,31 +167,28 @@
         ]
     }
     </script>
-
 </head>
 <body class="bg-ycbn-gray antialiased">
-<!-- Top Bar -->
+    <!-- Top Bar -->
     <div class="top-bar py-3">
         <div class="container mx-auto px-4 sm:px-6 lg:px-8">
             <div class="flex flex-col md:flex-row justify-between items-center gap-2">
                 <div class="flex items-center gap-6">
                     <span class="flex items-center gap-2 font-semibold">
-                        <i class="fas fa-hand-holding-water"></i>
-                        Sustainable WASH for All
+                        <i class="fas fa-hand-holding-water"></i> Sustainable WASH for All
                     </span>
                     <a href="mailto:info@ycbn.org" class="flex items-center gap-2 hover:text-ycbn-orange transition-colors">
-                        <i class="fas fa-envelope"></i>
-                        info@ycbn.org
+                        <i class="fas fa-envelope"></i> info@ycbn.org
                     </a>
                 </div>
                 <div class="flex items-center gap-4">
                     <div class="flex gap-3">
-                        <a href="https://www.facebook.com/profile.php?id=61579627535321" target="_blank" rel="noopener noreferrer" class="w-8 h-8 rounded-full bg-white/20 flex items-center justify-center hover:bg-ycbn-orange transition-colors" aria-label="YCBN on Facebook"><i class="fab fa-facebook-f text-sm"></i></a>
-                        <a href="https://www.linkedin.com/company/tiny-bit-wiser/" target="_blank" rel="noopener noreferrer" class="w-8 h-8 rounded-full bg-white/20 flex items-center justify-center hover:bg-ycbn-orange transition-colors" aria-label="YCBN on LinkedIn"><i class="fab fa-linkedin-in text-sm"></i></a>
-                        <a href="https://www.instagram.com/youthcapacitybuildingnetwork" target="_blank" rel="noopener noreferrer" class="w-8 h-8 rounded-full bg-white/20 flex items-center justify-center hover:bg-ycbn-orange transition-colors" aria-label="YCBN on Instagram"><i class="fab fa-instagram text-sm"></i></a>
-                        <a href="https://x.com/YCBNetwork" target="_blank" rel="noopener noreferrer" class="w-8 h-8 rounded-full bg-white/20 flex items-center justify-center hover:bg-ycbn-orange transition-colors" aria-label="YCBN on X"><i class="fab fa-x-twitter text-sm"></i></a>
-                        <a href="https://youtube.com/@youthcapacitybuildingnetwork" target="_blank" rel="noopener noreferrer" class="w-8 h-8 rounded-full bg-white/20 flex items-center justify-center hover:bg-ycbn-orange transition-colors" aria-label="YCBN on YouTube"><i class="fab fa-youtube text-sm"></i></a>
-                        <a href="https://www.tiktok.com/@youth.capacity.bu" target="_blank" rel="noopener noreferrer" class="w-8 h-8 rounded-full bg-white/20 flex items-center justify-center hover:bg-ycbn-orange transition-colors" aria-label="YCBN on TikTok"><i class="fab fa-tiktok text-sm"></i></a>
+                        <a href="https://www.facebook.com/profile.php?id=61579627535321" target="_blank" rel="noopener noreferrer" class="w-8 h-8 rounded-full bg-white/20 flex items-center justify-center hover:bg-ycbn-orange transition-colors" aria-label="Facebook"><i class="fab fa-facebook-f text-sm"></i></a>
+                        <a href="https://www.linkedin.com/company/tiny-bit-wiser/" target="_blank" rel="noopener noreferrer" class="w-8 h-8 rounded-full bg-white/20 flex items-center justify-center hover:bg-ycbn-orange transition-colors" aria-label="LinkedIn"><i class="fab fa-linkedin-in text-sm"></i></a>
+                        <a href="https://www.instagram.com/youthcapacitybuildingnetwork" target="_blank" rel="noopener noreferrer" class="w-8 h-8 rounded-full bg-white/20 flex items-center justify-center hover:bg-ycbn-orange transition-colors" aria-label="Instagram"><i class="fab fa-instagram text-sm"></i></a>
+                        <a href="https://x.com/YCBNetwork" target="_blank" rel="noopener noreferrer" class="w-8 h-8 rounded-full bg-white/20 flex items-center justify-center hover:bg-ycbn-orange transition-colors" aria-label="X"><i class="fab fa-twitter text-sm"></i></a>
+                        <a href="https://youtube.com/@youthcapacitybuildingnetwork" target="_blank" rel="noopener noreferrer" class="w-8 h-8 rounded-full bg-white/20 flex items-center justify-center hover:bg-ycbn-orange transition-colors" aria-label="YouTube"><i class="fab fa-youtube text-sm"></i></a>
+                        <a href="https://www.tiktok.com/@youth.capacity.bu" target="_blank" rel="noopener noreferrer" class="w-8 h-8 rounded-full bg-white/20 flex items-center justify-center hover:bg-ycbn-orange transition-colors" aria-label="TikTok"><i class="fab fa-tiktok text-sm"></i></a>
                     </div>
                 </div>
             </div>
@@ -506,7 +201,7 @@
             <div class="flex items-center justify-between h-24">
                 <a href="index.html" class="flex-shrink-0 flex items-center gap-3">
                     <div class="w-12 h-12 rounded-lg overflow-hidden flex items-center justify-center bg-white">
-                        <img src="resources/logo.jpeg" alt="Youth Capacity Building Network Logo" class="w-full h-full object-contain">
+                        <img src="resources/logo.webp" alt="YCBN Logo" class="w-full h-full object-contain" loading="lazy" decoding="async">
                     </div>
                     <div>
                         <div class="font-montserrat font-bold text-lg text-ycbn-dark leading-tight">Youth Capacity<br>Building Network</div>
@@ -515,12 +210,12 @@
 
                 <div class="hidden xl:flex items-center gap-5 2xl:gap-8">
                     <a href="index.html" class="nav-link">Home</a>
-                    <div class="relative group">
-                        <a href="about.html" class="nav-link flex items-center gap-1 text-ycbn-blue">
-                            Who We Are
-                            <i class="fas fa-chevron-down text-xs"></i>
+                    
+                    <div class="relative group dropdown-container">
+                        <a href="about.html" class="nav-link dropdown-toggle flex items-center gap-1 text-ycbn-blue">
+                            Who We Are <i class="fas fa-chevron-down text-xs"></i>
                         </a>
-                        <div class="dropdown-menu absolute top-full left-0 w-64 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 pt-4">
+                        <div class="dropdown-menu absolute top-full left-0 w-64 pt-4">
                             <div class="py-2">
                                 <a href="about.html" class="dropdown-item block">Vision &amp; Mission</a>
                                 <a href="about.html#values" class="dropdown-item block">Core Values</a>
@@ -529,12 +224,12 @@
                             </div>
                         </div>
                     </div>
-                    <div class="relative group">
-                        <a href="programmes.html" class="nav-link flex items-center gap-1">
-                            What We Do
-                            <i class="fas fa-chevron-down text-xs"></i>
+
+                    <div class="relative group dropdown-container">
+                        <a href="programmes.html" class="nav-link dropdown-toggle flex items-center gap-1">
+                            What We Do <i class="fas fa-chevron-down text-xs"></i>
                         </a>
-                        <div class="dropdown-menu absolute top-full left-0 w-72 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 pt-4">
+                        <div class="dropdown-menu absolute top-full left-0 w-72 pt-4">
                             <div class="py-2">
                                 <a href="programs/wash/index.html" class="dropdown-item block">WASH</a>
                                 <a href="programs/digital-skills/index.html" class="dropdown-item block">Digital Skills</a>
@@ -545,32 +240,56 @@
                             </div>
                         </div>
                     </div>
+                    
                     <a href="work.html" class="nav-link">Our Work</a>
                     <a href="stories.html" class="nav-link">News</a>
                     <a href="volunteer.html" class="nav-link">Volunteer</a>
                     <a href="partnerships.html" class="nav-link">Partners</a>
-                    <a href="donate.html" class="nav-link">Support</a>
                     <a href="contact.html" class="nav-link">Contact</a>
                 </div>
 
-                <a href="contact.html" class="hidden xl:inline-flex btn-ycbn">
-                    <span>Get Involved</span>
-                    <i class="fas fa-arrow-right"></i>
+                <a href="donate.html" class="hidden xl:inline-flex btn-ycbn">
+                    <span>Donate Now</span> <i class="fas fa-heart ml-1"></i>
                 </a>
 
-                <button id="mobileMenuBtn" class="xl:hidden text-2xl text-ycbn-dark p-2">
+                <button id="mobileMenuBtn" class="xl:hidden text-2xl text-ycbn-dark p-2" aria-label="Open Menu">
                     <i class="fas fa-bars"></i>
                 </button>
             </div>
         </div>
 
-        <div id="mobileMenu" class="mobile-menu hidden xl:hidden absolute top-full left-0 w-full">
+        <!-- Mobile Menu -->
+        <div id="mobileMenu" class="mobile-menu hidden xl:hidden absolute top-full left-0 w-full shadow-xl">
             <div class="container mx-auto px-4 py-6">
                 <a href="index.html" class="block py-3 text-white border-b border-gray-700 font-semibold">Home</a>
-                <a href="about.html" class="block py-3 text-white border-b border-gray-700 font-semibold">Who We Are</a>
-                <a href="programmes.html" class="block py-3 text-white border-b border-gray-700 font-semibold">What We Do</a>
+                
+                <div class="mobile-dropdown">
+                    <button class="mobile-dropdown-toggle w-full text-left py-3 text-white border-b border-gray-700 font-semibold flex justify-between items-center">
+                        Who We Are <i class="fas fa-chevron-down text-xs"></i>
+                    </button>
+                    <div class="mobile-dropdown-content hidden">
+                        <a href="about.html" class="block py-2 text-white/80 pl-4 border-b border-gray-700">Vision &amp; Mission</a>
+                        <a href="about.html#values" class="block py-2 text-white/80 pl-4 border-b border-gray-700">Core Values</a>
+                        <a href="about.html#objectives" class="block py-2 text-white/80 pl-4 border-b border-gray-700">Objectives</a>
+                        <a href="team.html" class="block py-2 text-white/80 pl-4 border-b border-gray-700">Our Team</a>
+                    </div>
+                </div>
+                
+                <div class="mobile-dropdown">
+                    <button class="mobile-dropdown-toggle w-full text-left py-3 text-white border-b border-gray-700 font-semibold flex justify-between items-center">
+                        What We Do <i class="fas fa-chevron-down text-xs"></i>
+                    </button>
+                    <div class="mobile-dropdown-content hidden">
+                        <a href="programs/wash/index.html" class="block py-2 text-white/80 pl-4 border-b border-gray-700">WASH</a>
+                        <a href="programs/digital-skills/index.html" class="block py-2 text-white/80 pl-4 border-b border-gray-700">Digital Skills</a>
+                        <a href="programs/innovation/index.html" class="block py-2 text-white/80 pl-4 border-b border-gray-700">Innovation &amp; Entrepreneurship</a>
+                        <a href="programs/environment/index.html" class="block py-2 text-white/80 pl-4 border-b border-gray-700">Environment &amp; Waste</a>
+                        <a href="programs/youth-empowerment/index.html" class="block py-2 text-white/80 pl-4 border-b border-gray-700">Youth Empowerment</a>
+                        <a href="programs/student-career-leadership-academy/index.html" class="block py-2 text-white/80 pl-4 border-b border-gray-700">Career &amp; Leadership Academy</a>
+                    </div>
+                </div>
+                
                 <a href="work.html" class="block py-3 text-white border-b border-gray-700 font-semibold">Our Work</a>
-                <a href="team.html" class="block py-3 text-white border-b border-gray-700 font-semibold">Our Team</a>
                 <a href="stories.html" class="block py-3 text-white border-b border-gray-700 font-semibold">News</a>
                 <a href="volunteer.html" class="block py-3 text-white border-b border-gray-700 font-semibold">Volunteer</a>
                 <a href="partnerships.html" class="block py-3 text-white border-b border-gray-700 font-semibold">Partnerships</a>
@@ -579,7 +298,7 @@
             </div>
         </div>
     </nav>
-
+    <main>
 
     <!-- Page Header -->
     <section class="page-header">
@@ -591,146 +310,43 @@
         </div>
     </section>
 
-    <!-- Executive Director -->
+    <!-- Board of Directors -->
     <section class="team-section bg-white">
         <div class="container mx-auto px-4 sm:px-6 lg:px-8">
             <h2 class="team-category-title">Board of Directors</h2>
             <div class="team-grid grid-1 ed-section">
                 <div class="team-member">
                     <div class="team-image-wrapper">
-                        <img src="resources/Bakirente jabel.jpeg" alt="Chairperson">
+                        <img loading="lazy" decoding="async" src="resources/Bakirente jabel.webp" alt="Bakirente Jabel - Chairperson">
                     </div>
-                    <h3 class="team-name"><a href="#">Bakirente Jabel</a></h3>
+                    <h3 class="team-name"><a href="contact.html">Bakirente Jabel</a></h3>
                     <p class="team-role">Chairperson</p>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Deputy Executive Director -->
+    <!-- Vice Chairperson & Secretary -->
     <section class="team-section">
         <div class="container mx-auto px-4 sm:px-6 lg:px-8">
-            <!-- <h2 class="team-category-title">Vice Chairperson</h2> -->
             <div class="team-grid grid-2 deputy-section">
                 <div class="team-member">
                     <div class="team-image-wrapper">
-                        <img src="resources/Robert.jpeg" alt="Vice Chairperson">
+                        <img loading="lazy" decoding="async" src="resources/Robert.webp" alt="Mulwanyi Robert - Vice Chairperson">
                     </div>
-                    <h3 class="team-name"><a href="#">Mulwanyi Robert</a></h3>
+                    <h3 class="team-name"><a href="contact.html">Mulwanyi Robert</a></h3>
                     <p class="team-role">Vice Chairperson</p>
                 </div>
                 <div class="team-member">
                     <div class="team-image-wrapper">
-                        <img src="resources/magoola bayan.jpeg" alt="Secretary">
+                        <img loading="lazy" decoding="async" src="resources/magoola bayan.webp" alt="Magoola Bayan Juma - Secretary">
                     </div>
-                    <h3 class="team-name"><a href="#">Magoola Bayan Juma</a></h3>
+                    <h3 class="team-name"><a href="contact.html">Magoola Bayan Juma</a></h3>
                     <p class="team-role">Secretary</p>
                 </div>
             </div>
         </div>
     </section>
-
-    <!-- Senior Management Team -->
-    <!-- <section class="team-section bg-white">
-        <div class="container mx-auto px-4 sm:px-6 lg:px-8">
-            <h2 class="team-category-title">Senior Management Team</h2>
-            <div class="team-grid grid-4 smt-section">
-                <div class="team-member">
-                    <div class="team-image-wrapper">
-                        <img src="resources/" alt="Director of Programmes">
-                    </div>
-                    <h3 class="team-name"><a href="#">David Okello</a></h3>
-                    <p class="team-role">Director of Programmes</p>
-                </div>
-                <div class="team-member">
-                    <div class="team-image-wrapper">
-                        <img src="resources/" alt="Director Finance">
-                    </div>
-                    <h3 class="team-name"><a href="#">Grace Auma</a></h3>
-                    <p class="team-role">Director Finance & Admin</p>
-                </div>
-                <div class="team-member">
-                    <div class="team-image-wrapper">
-                        <img src="resources/" alt="Head Human Resource">
-                    </div>
-                    <h3 class="team-name"><a href="#">Patricia Nakato</a></h3>
-                    <p class="team-role">Head Human Resource & Admin</p>
-                </div>
-                <div class="team-member">
-                    <div class="team-image-wrapper">
-                        <img src="resources/" alt="Executive Assistant">
-                    </div>
-                    <h3 class="team-name"><a href="#">Michael Kizito</a></h3>
-                    <p class="team-role">Executive Assistant</p>
-                </div>
-            </div>
-        </div>
-    </section> -->
-
-    <!-- Middle Management Team -->
-    <!-- <section class="team-section">
-        <div class="container mx-auto px-4 sm:px-6 lg:px-8">
-            <h2 class="team-category-title">Middle Management Team</h2>
-            <div class="team-grid grid-4 mmt-section">
-                <div class="team-member">
-                    <div class="team-image-wrapper">
-                        <img src="resources/" alt="Head Advocacy">
-                    </div>
-                    <h3 class="team-name"><a href="#">Rachel Nantale</a></h3>
-                    <p class="team-role">Head Advocacy</p>
-                </div>
-                <div class="team-member">
-                    <div class="team-image-wrapper">
-                        <img src="resources/" alt="Head Community Empowerment">
-                    </div>
-                    <h3 class="team-name"><a href="#">Robert Ssempala</a></h3>
-                    <p class="team-role">Head Community Empowerment</p>
-                </div>
-                <div class="team-member">
-                    <div class="team-image-wrapper">
-                        <img src="resources/" alt="Head Strategic Litigation">
-                    </div>
-                    <h3 class="team-name"><a href="#">Diana Komugisha</a></h3>
-                    <p class="team-role">Head Strategic Litigation</p>
-                </div>
-                <div class="team-member">
-                    <div class="team-image-wrapper">
-                        <img src="resources/" alt="Head MERL">
-                    </div>
-                    <h3 class="team-name"><a href="#">Brian Ochwo</a></h3>
-                    <p class="team-role">Head MERL</p>
-                </div>
-                <div class="team-member">
-                    <div class="team-image-wrapper">
-                        <img src="resources/" alt="Head Finance">
-                    </div>
-                    <h3 class="team-name"><a href="#">Emmanuel Tumusiime</a></h3>
-                    <p class="team-role">Head Finance</p>
-                </div>
-                <div class="team-member">
-                    <div class="team-image-wrapper">
-                        <img src="resources/" alt="Communications Coordinator">
-                    </div>
-                    <h3 class="team-name"><a href="#">Daniel Musoke</a></h3>
-                    <p class="team-role">Communications Coordinator</p>
-                </div>
-                <div class="team-member">
-                    <div class="team-image-wrapper">
-                        <img src="resources/" alt="Head Grants">
-                    </div>
-                    <h3 class="team-name"><a href="#">Faith Nakato</a></h3>
-                    <p class="team-role">Head Grants</p>
-                </div>
-                <div class="team-member">
-                    <div class="team-image-wrapper">
-                        <img src="resources/Emma.jpeg" alt="IT Expert">
-                    </div>
-                    <h3 class="team-name"><a href="#">Emmanuel Niringiyimaana</a></h3>
-                    <p class="team-role">IT Expert</p>
-                </div>
-            </div>
-        </div>
-    </section> -->
 
     <!-- Core Staff -->
     <section class="team-section bg-white">
@@ -739,193 +355,70 @@
             <div class="team-grid grid-4 core-section">
                 <div class="team-member">
                     <div class="team-image-wrapper">
-                        <img src="resources/Mwanje.jpeg" alt="Programme Manager">
+                        <img loading="lazy" decoding="async" src="resources/Mwanje.webp" alt="Frank Mwanje - Executive Director">
                     </div>
-                    <h3 class="team-name"><a href="#">Frank Mwanje</a></h3>
+                    <h3 class="team-name"><a href="contact.html">Frank Mwanje</a></h3>
                     <p class="team-role">Executive Director</p>
                 </div>
-                <!-- <div class="team-member">
-                    <div class="team-image-wrapper">
-                        <img src="resources/Robert.jpeg" alt="Vice Chairman">
-                    </div>
-                    <h3 class="team-name"><a href="#">Mulwanyi Robert</a></h3>
-                    <p class="team-role">Vice Chairman</p>
-                </div> -->
                 <div class="team-member">
                     <div class="team-image-wrapper">
-                        <img src="resources/Namutebi cathy.projects manager.jpeg" alt="Projects Manager">
+                        <img loading="lazy" decoding="async" src="resources/Namutebi cathy.projects manager.webp" alt="Namutebi Cathy - Projects Manager">
                     </div>
-                    <h3 class="team-name"><a href="#">Namutebi Cathy</a></h3>
+                    <h3 class="team-name"><a href="contact.html">Namutebi Cathy</a></h3>
                     <p class="team-role">Projects Manager</p>
                 </div>
                 <div class="team-member">
                     <div class="team-image-wrapper">
-                        <img src="resources/Emmanuel-1.JPG" alt="IT Officer">
+                        <img loading="lazy" decoding="async" src="resources/Emmanuel-1.webp" alt="Emmanuel Niringiyimaana - IT Officer">
                     </div>
-                    <h3 class="team-name"><a href="#">Emmanuel Niringiyimaana</a></h3>
+                    <h3 class="team-name"><a href="contact.html">Emmanuel Niringiyimaana</a></h3>
                     <p class="team-role">IT Officer</p>
                 </div>
                 <div class="team-member">
                     <div class="team-image-wrapper">
-                        <img src="resources/Ssengiyunva Ronald.jpeg" alt="Grants Manager">
+                        <img loading="lazy" decoding="async" src="resources/Ssengiyunva Ronald.webp" alt="Ssengiyunva Ronald - Grants Manager">
                     </div>
-                    <h3 class="team-name"><a href="#">Ssengiyunva Ronald</a></h3>
+                    <h3 class="team-name"><a href="contact.html">Ssengiyunva Ronald</a></h3>
                     <p class="team-role">Grants Manager</p>
                 </div>
                 <div class="team-member">
                     <div class="team-image-wrapper">
-                        <img src="resources/simon.jpeg" alt="Public relations officer">
+                        <img loading="lazy" decoding="async" src="resources/simon.webp" alt="Kigozi Simon Peter - Public Relations Officer">
                     </div>
-                    <h3 class="team-name"><a href="#">Kigozi Simon Peter</a></h3>
+                    <h3 class="team-name"><a href="contact.html">Kigozi Simon Peter</a></h3>
                     <p class="team-role">Public Relations Officer</p>
                 </div>
                 <div class="team-member">
                     <div class="team-image-wrapper">
-                        <img src="resources/KAVUMA JOSEPH .FINANCE OFFICER.jpeg" alt="Head of finance">
+                        <img loading="lazy" decoding="async" src="resources/KAVUMA JOSEPH .FINANCE OFFICER.webp" alt="Kavuma Joseph - Head of Finance">
                     </div>
-                    <h3 class="team-name"><a href="#">Kavuma Joseph</a></h3>
+                    <h3 class="team-name"><a href="contact.html">Kavuma Joseph</a></h3>
                     <p class="team-role">Head of Finance</p>
                 </div>
                 <div class="team-member">
                     <div class="team-image-wrapper">
-                        <img src="resources/Anyango barbra.jpeg" alt="Communications coordinator">
+                        <img loading="lazy" decoding="async" src="resources/Anyango barbra.webp" alt="Anyango Barbra - Communications Coordinator">
                     </div>
-                    <h3 class="team-name"><a href="#">Anyango Barbra</a></h3>
+                    <h3 class="team-name"><a href="contact.html">Anyango Barbra</a></h3>
                     <p class="team-role">Communications Coordinator</p>
                 </div>
                 <div class="team-member">
                     <div class="team-image-wrapper">
-                        <img src="resources/Urujurani Alphashiru.jpeg" alt="Programme Manager">
+                        <img loading="lazy" decoding="async" src="resources/Urujurani Alphashiru.webp" alt="Urujurani Alphashiru - Programme Manager">
                     </div>
-                    <h3 class="team-name"><a href="#">Urujurani Alphashiru</a></h3>
+                    <h3 class="team-name"><a href="contact.html">Urujurani Alphashiru</a></h3>
                     <p class="team-role">Programme Manager</p>
                 </div>
                 <div class="team-member">
                     <div class="team-image-wrapper">
-                        <img src="resources/nansenja winnie.jpeg" alt="Head of health programs">
+                        <img loading="lazy" decoding="async" src="resources/nansenja winnie.webp" alt="Nansenja Winnie - Head of Health Programs">
                     </div>
-                    <h3 class="team-name"><a href="#">Nansenja Winnie</a></h3>
+                    <h3 class="team-name"><a href="contact.html">Nansenja Winnie</a></h3>
                     <p class="team-role">Head of Health Programs</p>
                 </div>
-                <!-- <div class="team-member">
-                    <div class="team-image-wrapper">
-                        <img src="resources/" alt="Finance Assistant">
-                    </div>
-                    <h3 class="team-name"><a href="#">James Mukasa</a></h3>
-                    <p class="team-role">Finance Assistant</p>
-                </div>  -->
             </div>
         </div>
     </section>
-
-    <!-- Project Staff -->
-    <!-- <section class="team-section">
-        <div class="container mx-auto px-4 sm:px-6 lg:px-8">
-            <h2 class="team-category-title">Project Staff</h2>
-            <div class="team-grid grid-4 project-section">
-                <div class="team-member">
-                    <div class="team-image-wrapper">
-                        <img src="resources/" alt="Project Coordinator">
-                    </div>
-                    <h3 class="team-name"><a href="#">Linda Nabitaka</a></h3>
-                    <p class="team-role">Project Coordinator</p>
-                </div>
-                <div class="team-member">
-                    <div class="team-image-wrapper">
-                        <img src="resources/" alt="Project Advocacy Officer">
-                    </div>
-                    <h3 class="team-name"><a href="#">Timothy Kalyango</a></h3>
-                    <p class="team-role">Project Advocacy Officer</p>
-                </div>
-                <div class="team-member">
-                    <div class="team-image-wrapper">
-                        <img src="resources/" alt="Legal Clerk">
-                    </div>
-                    <h3 class="team-name"><a href="#">Edgar Buregeya</a></h3>
-                    <p class="team-role">Legal Clerk</p>
-                </div>
-                <div class="team-member">
-                    <div class="team-image-wrapper">
-                        <img src="resources/" alt="Finance Officer">
-                    </div>
-                    <h3 class="team-name"><a href="#">Isaac Mwaka</a></h3>
-                    <p class="team-role">Finance Officer</p>
-                </div>
-                <div class="team-member">
-                    <div class="team-image-wrapper">
-                        <img src="resources/" alt="CLM Officer">
-                    </div>
-                    <h3 class="team-name"><a href="#">Jemmimah Adipa</a></h3>
-                    <p class="team-role">Community Led Monitoring Officer</p>
-                </div>
-                <div class="team-member">
-                    <div class="team-image-wrapper">
-                        <img src="resources/" alt="Data Clerk">
-                    </div>
-                    <h3 class="team-name"><a href="#">Ivan Okello</a></h3>
-                    <p class="team-role">Data Clerk</p>
-                </div>
-                <div class="team-member">
-                    <div class="team-image-wrapper">
-                        <img src="resources/" alt="TB Contact Tracing Officer">
-                    </div>
-                    <h3 class="team-name"><a href="#">Robert Ndungu</a></h3>
-                    <p class="team-role">TB Contact Tracing Officer</p>
-                </div>
-                <div class="team-member">
-                    <div class="team-image-wrapper">
-                        <img src="resources/" alt="TB Contact Tracing Officer">
-                    </div>
-                    <h3 class="team-name"><a href="#">Paska Akumu</a></h3>
-                    <p class="team-role">TB Contact Tracing Officer</p>
-                </div>
-            </div>
-        </div>
-    </section> -->
-
-    <!-- Support Staff -->
-    <!-- <section class="team-section bg-white">
-        <div class="container mx-auto px-4 sm:px-6 lg:px-8">
-            <h2 class="team-category-title">Support Staff</h2>
-            <div class="team-grid grid-4 support-section">
-                <div class="team-member">
-                    <div class="team-image-wrapper">
-                        <img src="resources/" alt="Office Assistant">
-                    </div>
-                    <h3 class="team-name"><a href="#">Noeline Nansubuga</a></h3>
-                    <p class="team-role">Office Assistant</p>
-                </div>
-                <div class="team-member">
-                    <div class="team-image-wrapper">
-                        <img src="resources/" alt="Office Assistant">
-                    </div>
-                    <h3 class="team-name"><a href="#">Zaid Mbazira</a></h3>
-                    <p class="team-role">Office Assistant</p>
-                </div>
-                <div class="team-member">
-                    <div class="team-image-wrapper">
-                        <img src="resources/" alt="Office Assistant">
-                    </div>
-                    <h3 class="team-name"><a href="#">Ali Kigundu</a></h3>
-                    <p class="team-role">Office Assistant</p>
-                </div>
-                <div class="team-member">
-                    <div class="team-image-wrapper">
-                        <img src="resources/" alt="Driver">
-                    </div>
-                    <h3 class="team-name"><a href="#">George William Kibuuka</a></h3>
-                    <p class="team-role">Driver</p>
-                </div>
-                <div class="team-member">
-                    <div class="team-image-wrapper">
-                        <img src="resources/" alt="Driver">
-                    </div>
-                    <h3 class="team-name"><a href="#">John Nantajja</a></h3>
-                    <p class="team-role">Driver</p>
-                </div>
-            </div>
-        </div>
-    </section> -->
 
     <!-- Join Us CTA -->
     <section class="py-24 bg-gradient-to-r from-ycbn-blue to-ycbn-teal relative overflow-hidden">
@@ -940,7 +433,7 @@
         <div class="container mx-auto px-4 sm:px-6 lg:px-8 text-center relative z-10">
             <h2 class="font-montserrat font-bold text-3xl text-white mb-6">Join Our Team</h2>
             <p class="text-white/90 max-w-2xl mx-auto mb-8">Passionate about WASH, youth empowerment, and community development? We're always looking for dedicated individuals to join our growing team.</p>
-            <a href="index.html#contact" class="inline-flex items-center gap-3 bg-white text-ycbn-dark px-8 py-4 rounded-lg font-montserrat font-bold uppercase tracking-wider hover:bg-ycbn-orange transition-colors">
+            <a href="contact.html" class="inline-flex items-center gap-3 bg-white text-ycbn-dark px-8 py-4 rounded-lg font-montserrat font-bold uppercase tracking-wider hover:bg-ycbn-orange transition-colors">
                 <span>View Opportunities</span>
                 <i class="fas fa-arrow-right"></i>
             </a>
@@ -954,7 +447,6 @@
                 <div>
                     <h2 class="font-montserrat font-bold text-3xl text-white mb-6">Get In Touch</h2>
                     <p class="text-gray-400 mb-8">Ready to partner with us or want to learn more about our work? Reach out today.</p>
-
                     <div class="space-y-6">
                         <div class="flex items-start gap-4">
                             <div class="w-12 h-12 rounded-full bg-white/10 flex items-center justify-center text-ycbn-blue flex-shrink-0"><i class="fas fa-location-dot"></i></div>
@@ -976,7 +468,6 @@
                 <div class="bg-white/5 backdrop-blur-sm p-8 rounded-2xl border border-white/10">
                     <h3 class="font-montserrat font-bold text-xl text-white mb-6">Subscribe to Our Newsletter</h3>
                     <p class="text-gray-400 text-sm mb-6">Stay updated with our latest projects, impact stories, and opportunities.</p>
-
                     <form id="newsletterForm" class="space-y-4" novalidate>
                         <div>
                             <input type="text" id="newsletterName" name="name" placeholder="Your Name" autocomplete="name" class="w-full px-5 py-3 rounded-lg bg-white/10 border border-white/20 text-white placeholder-gray-400 focus:outline-none focus:border-ycbn-blue transition-colors">
@@ -995,29 +486,30 @@
         </div>
     </section>
 
+    </main>
     <!-- Footer -->
     <footer class="footer-main pt-20 pb-8">
         <div class="container mx-auto px-4 sm:px-6 lg:px-8">
             <div class="grid md:grid-cols-4 gap-12 mb-16">
                 <div class="md:col-span-1">
                     <div class="w-12 h-12 rounded-lg overflow-hidden flex items-center justify-center bg-white mb-6">
-                        <img src="resources/logo.jpeg" alt="Youth Capacity Building Network Logo" class="w-full h-full object-contain">
+                        <img src="resources/logo.webp" alt="YCBN Logo" class="w-full h-full object-contain" loading="lazy" decoding="async">
                     </div>
                     <p class="text-gray-400 text-sm leading-relaxed mb-6">
                         Youth Capacity Building Network (YCBN) is a youth-led organisation working with young people, communities and schools to deliver WASH, digital skills, innovation, entrepreneurship and community development programmes in Uganda.
                     </p>
                     <div class="flex gap-3">
-                        <a href="https://www.facebook.com/profile.php?id=61579627535321" target="_blank" rel="noopener noreferrer" class="w-9 h-9 rounded bg-white/10 flex items-center justify-center hover:bg-ycbn-blue transition-colors text-white" aria-label="YCBN on Facebook"><i class="fab fa-facebook-f text-sm"></i></a>
-                        <a href="https://www.linkedin.com/company/tiny-bit-wiser/" target="_blank" rel="noopener noreferrer" class="w-9 h-9 rounded bg-white/10 flex items-center justify-center hover:bg-ycbn-blue transition-colors text-white" aria-label="YCBN on LinkedIn"><i class="fab fa-linkedin-in text-sm"></i></a>
-                        <a href="https://www.instagram.com/youthcapacitybuildingnetwork" target="_blank" rel="noopener noreferrer" class="w-9 h-9 rounded bg-white/10 flex items-center justify-center hover:bg-ycbn-blue transition-colors text-white" aria-label="YCBN on Instagram"><i class="fab fa-instagram text-sm"></i></a>
-                        <a href="https://x.com/YCBNetwork" target="_blank" rel="noopener noreferrer" class="w-9 h-9 rounded bg-white/10 flex items-center justify-center hover:bg-ycbn-blue transition-colors text-white" aria-label="YCBN on X"><i class="fab fa-x-twitter text-sm"></i></a>
-                        <a href="https://youtube.com/@youthcapacitybuildingnetwork" target="_blank" rel="noopener noreferrer" class="w-9 h-9 rounded bg-white/10 flex items-center justify-center hover:bg-ycbn-blue transition-colors text-white" aria-label="YCBN on YouTube"><i class="fab fa-youtube text-sm"></i></a>
-                        <a href="https://www.tiktok.com/@youth.capacity.bu" target="_blank" rel="noopener noreferrer" class="w-9 h-9 rounded bg-white/10 flex items-center justify-center hover:bg-ycbn-blue transition-colors text-white" aria-label="YCBN on TikTok"><i class="fab fa-tiktok text-sm"></i></a>
+                        <a href="https://www.facebook.com/profile.php?id=61579627535321" target="_blank" rel="noopener noreferrer" class="w-9 h-9 rounded bg-white/10 flex items-center justify-center hover:bg-ycbn-blue transition-colors text-white"><i class="fab fa-facebook-f text-sm"></i></a>
+                        <a href="https://www.linkedin.com/company/tiny-bit-wiser/" target="_blank" rel="noopener noreferrer" class="w-9 h-9 rounded bg-white/10 flex items-center justify-center hover:bg-ycbn-blue transition-colors text-white"><i class="fab fa-linkedin-in text-sm"></i></a>
+                        <a href="https://www.instagram.com/youthcapacitybuildingnetwork" target="_blank" rel="noopener noreferrer" class="w-9 h-9 rounded bg-white/10 flex items-center justify-center hover:bg-ycbn-blue transition-colors text-white"><i class="fab fa-instagram text-sm"></i></a>
+                        <a href="https://x.com/YCBNetwork" target="_blank" rel="noopener noreferrer" class="w-9 h-9 rounded bg-white/10 flex items-center justify-center hover:bg-ycbn-blue transition-colors text-white"><i class="fab fa-twitter text-sm"></i></a>
+                        <a href="https://youtube.com/@youthcapacitybuildingnetwork" target="_blank" rel="noopener noreferrer" class="w-9 h-9 rounded bg-white/10 flex items-center justify-center hover:bg-ycbn-blue transition-colors text-white"><i class="fab fa-youtube text-sm"></i></a>
+                        <a href="https://www.tiktok.com/@youth.capacity.bu" target="_blank" rel="noopener noreferrer" class="w-9 h-9 rounded bg-white/10 flex items-center justify-center hover:bg-ycbn-blue transition-colors text-white"><i class="fab fa-tiktok text-sm"></i></a>
                     </div>
                 </div>
 
                 <div>
-                    <h4 class="footer-heading">Quick Links</h4>
+                    <div class="footer-heading">Quick Links</div>
                     <nav class="flex flex-col">
                         <a href="index.html" class="footer-link">Home</a>
                         <a href="about.html" class="footer-link">About YCBN</a>
@@ -1032,7 +524,7 @@
                 </div>
 
                 <div>
-                    <h4 class="footer-heading">Programmes</h4>
+                    <div class="footer-heading">Programmes</div>
                     <nav class="flex flex-col">
                         <a href="programs/wash/index.html" class="footer-link">WASH</a>
                         <a href="programs/youth-empowerment/index.html" class="footer-link">Youth Empowerment</a>
@@ -1045,13 +537,13 @@
                 </div>
 
                 <div>
-                    <h4 class="footer-heading">Contact &amp; Policies</h4>
+                    <div class="footer-heading">Contact &amp; Policies</div>
                     <p class="text-gray-400 text-sm mb-2">P.O Box 117751, Wakiso, Uganda</p>
-                    <p class="text-gray-400 text-sm">
+                    <p class="text-gray-400 text-sm mb-4">
                         <strong>Email:</strong><br>
                         <a href="mailto:info@ycbn.org" class="footer-link">info@ycbn.org</a>
                     </p>
-                    <nav class="flex flex-col mt-4 space-y-2">
+                    <nav class="flex flex-col space-y-2">
                         <a href="privacy.html" class="footer-link">Privacy Policy</a>
                         <a href="terms.html" class="footer-link">Terms of Use</a>
                         <a href="safeguarding.html" class="footer-link">Safeguarding</a>
@@ -1074,15 +566,32 @@
         </div>
     </footer>
 
+    <!-- Floating WhatsApp Button -->
+    <a href="https://wa.me/256760315494?text=Hello%20YCBN%2C%20I%20would%20like%20to%20know%20more%20about%20your%20work." target="_blank" rel="noopener noreferrer" class="whatsapp-float" aria-label="Chat on WhatsApp">
+        <i class="fab fa-whatsapp"></i>
+        <span class="tooltip">Chat with us</span>
+    </a>
+
+    <!-- Scripts -->
+    <script src="assets/js/dropdown-toggle.js" defer></script>
 
     <script>
         // Mobile menu toggle
         const mobileMenuBtn = document.getElementById('mobileMenuBtn');
         const mobileMenu = document.getElementById('mobileMenu');
-
-        mobileMenuBtn.addEventListener('click', () => {
-            mobileMenu.classList.toggle('hidden');
-        });
+        if (mobileMenuBtn && mobileMenu) {
+            mobileMenuBtn.addEventListener('click', () => {
+                mobileMenu.classList.toggle('hidden');
+                const icon = mobileMenuBtn.querySelector('i');
+                if (mobileMenu.classList.contains('hidden')) {
+                    icon.classList.remove('fa-times');
+                    icon.classList.add('fa-bars');
+                } else {
+                    icon.classList.remove('fa-bars');
+                    icon.classList.add('fa-times');
+                }
+            });
+        }
 
         // Sticky header
         const mainNav = document.getElementById('mainNav');
@@ -1098,30 +607,13 @@
         const yearEl = document.getElementById('year');
         if (yearEl) yearEl.textContent = new Date().getFullYear();
     </script>
-    <!-- Floating WhatsApp Button -->
-    <a href="https://wa.me/256760315494?text=Hello%20YCBN%2C%20I%20would%20like%20to%20know%20more%20about%20your%20work%20and%20how%20I%20can%20get%20involved."
-       target="_blank"
-       rel="noopener noreferrer"
-       class="whatsapp-float"
-       aria-label="Chat with us on WhatsApp">
-        <i class="fab fa-whatsapp"></i>
-        <span class="tooltip">Chat with us</span>
-    </a>
-<!-- ============================================================ -->
-    <!-- Newsletter Subscription -> Google Sheets
-         After deploying your Apps Script as a Web App, paste its
-         /exec URL into NEWSLETTER_ENDPOINT below. -->
-    <!-- ============================================================ -->
-    <script>
-        // STEP 1: Create the Google Sheet (tab named "Newsletter").
-        // STEP 2: Extensions -> Apps Script -> paste the doPost code.
-        // STEP 3: Deploy -> Web App -> "Anyone" -> copy the /exec URL below.
-        const NEWSLETTER_ENDPOINT = 'https://script.google.com/macros/s/AKfycbzJybNWMWn-R2Dkcpd9cpHGno8q3gxrXiFPl95KFOETj1hvPBBPhGQdMwZDEuXWHDKDAg/exec';
 
+    <!-- Newsletter Script -->
+    <script>
+        const NEWSLETTER_ENDPOINT = 'https://script.google.com/macros/s/AKfycbzJybNWMWn-R2Dkcpd9cpHGno8q3gxrXiFPl95KFOETj1hvPBBPhGQdMwZDEuXWHDKDAg/exec';
         document.addEventListener('DOMContentLoaded', function () {
             const form = document.getElementById('newsletterForm');
             if (!form) return;
-
             const nameEl = document.getElementById('newsletterName');
             const emailEl = document.getElementById('newsletterEmail');
             const btn = document.getElementById('newsletterBtn');
@@ -1129,35 +621,23 @@
 
             function showMsg(text, ok) {
                 msg.textContent = text;
-                msg.classList.remove('hidden');
-                msg.classList.remove('bg-emerald-500/20', 'text-emerald-300', 'bg-red-500/20', 'text-red-300');
+                msg.classList.remove('hidden', 'bg-emerald-500/20', 'text-emerald-300', 'bg-red-500/20', 'text-red-300');
                 msg.classList.add(ok ? 'bg-emerald-500/20 text-emerald-300' : 'bg-red-500/20 text-red-300');
             }
 
             form.addEventListener('submit', function (e) {
                 e.preventDefault();
-
                 const name = nameEl.value.trim();
                 const email = emailEl.value.trim();
-
                 if (!email || !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) {
                     showMsg('Please enter a valid email address.', false);
                     return;
                 }
-
-                if (NEWSLETTER_ENDPOINT.indexOf('PASTE_YOUR') !== -1) {
-                    showMsg('The newsletter is not connected yet - please set the Google Sheets endpoint.', false);
-                    return;
-                }
-
                 const btnLabel = btn.querySelector('span');
                 btn.disabled = true;
                 btnLabel.textContent = 'Subscribing...';
                 msg.classList.add('hidden');
 
-                // Create a hidden iframe to receive the response.
-                // Native form POSTs are NOT subject to CORS, so this works reliably
-                // from any origin (including file://) - unlike fetch + no-cors.
                 let iframe = document.getElementById('newsletterHiddenFrame');
                 if (!iframe) {
                     iframe = document.createElement('iframe');
@@ -1166,29 +646,18 @@
                     iframe.style.display = 'none';
                     document.body.appendChild(iframe);
                 }
-
-                // Build a temporary hidden form pointing at the Apps Script endpoint.
                 const hiddenForm = document.createElement('form');
                 hiddenForm.method = 'POST';
                 hiddenForm.action = NEWSLETTER_ENDPOINT;
                 hiddenForm.target = 'newsletterHiddenFrame';
                 hiddenForm.style.display = 'none';
-
                 const nameInput = document.createElement('input');
-                nameInput.type = 'hidden';
-                nameInput.name = 'name';
-                nameInput.value = name;
-
+                nameInput.type = 'hidden'; nameInput.name = 'name'; nameInput.value = name;
                 const emailInput = document.createElement('input');
-                emailInput.type = 'hidden';
-                emailInput.name = 'email';
-                emailInput.value = email;
-
-                hiddenForm.appendChild(nameInput);
-                hiddenForm.appendChild(emailInput);
+                emailInput.type = 'hidden'; emailInput.name = 'email'; emailInput.value = email;
+                hiddenForm.appendChild(nameInput); hiddenForm.appendChild(emailInput);
                 document.body.appendChild(hiddenForm);
 
-                // When the iframe finishes loading the response, show success.
                 let done = false;
                 const finish = function () {
                     if (done) return;
@@ -1199,17 +668,12 @@
                     btn.disabled = false;
                     showMsg('Thank you! You have been subscribed to our newsletter.', true);
                 };
-
                 iframe.addEventListener('load', finish, { once: true });
-
-                // Fallback: if the iframe load never fires (e.g. slow network),
-                // still restore the button after 10 seconds.
                 setTimeout(finish, 10000);
-
                 hiddenForm.submit();
             });
         });
     </script>
-
 </body>
 </html>
+
