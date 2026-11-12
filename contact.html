@@ -313,7 +313,7 @@
                             <textarea id="message" name="message" rows="5" required class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:border-ycbn-blue resize-none" placeholder="Tell us how we can help..."></textarea>
                         </div>
                         <p class="text-xs text-gray-500 leading-relaxed">
-                            By submitting this form you agree to our <a href="privacy.html" class="text-ycbn-blue underline">Privacy Policy</a>. We reply within 24 hours on Mon鈥揊ri. Prefer email? Write to <a href="mailto:info@ycbn.org" class="text-ycbn-blue underline">info@ycbn.org</a> or WhatsApp <a href="https://wa.me/256760315494" target="_blank" rel="noopener" class="text-ycbn-blue underline">+256 760 315 494</a>.
+                            By submitting this form you agree to our <a href="privacy.html" class="text-ycbn-blue underline">Privacy Policy</a>. We reply within 24 hours on Mon–Fri. Prefer email? Write to <a href="mailto:info@ycbn.org" class="text-ycbn-blue underline">info@ycbn.org</a> or WhatsApp <a href="https://wa.me/256760315494" target="_blank" rel="noopener" class="text-ycbn-blue underline">+256 760 315 494</a>.
                         </p>
                         <button type="submit" id="contactBtn" class="btn-ycbn w-full justify-center py-4">
                             <i class="fas fa-paper-plane mr-2"></i>
@@ -448,7 +448,7 @@
                     <nav class="flex flex-col">
                         <a href="programs/wash/index.html" class="footer-link">WASH</a>
                         <a href="programs/youth-empowerment/index.html" class="footer-link">Youth Empowerment</a>
-                        <a href="programs/student-career-leadership-academy/index.html" class="footer-link">Student Career &amp; Leadership Academy</a>
+                        <a href="programs/student-career-leadership-academy/index.html" class="footer-link">Career &amp; Leadership Academy</a>
                         <a href="programs/digital-skills/index.html" class="footer-link">Digital Skills</a>
                         <a href="programs/innovation/index.html" class="footer-link">Innovation &amp; Entrepreneurship</a>
                         <a href="programs/environment/index.html" class="footer-link">Environment &amp; Waste Management</a>
@@ -535,7 +535,8 @@
         function showFormStatus(text, ok) {
             formStatus.textContent = text;
             formStatus.classList.remove('hidden', 'bg-emerald-500/20', 'text-emerald-300', 'bg-red-500/20', 'text-red-300');
-            formStatus.classList.add(ok ? 'bg-emerald-500/20 text-emerald-300' : 'bg-red-500/20 text-red-300');
+            formStatus.classList.remove('form-status--error', 'form-status--success');
+            formStatus.classList.add(ok ? 'form-status--success' : 'form-status--error');
         }
 
         contactForm.addEventListener('submit', (e) => {
@@ -621,7 +622,8 @@
             function showMsg(text, ok) {
                 msg.textContent = text;
                 msg.classList.remove('hidden', 'bg-emerald-500/20', 'text-emerald-300', 'bg-red-500/20', 'text-red-300');
-                msg.classList.add(ok ? 'bg-emerald-500/20 text-emerald-300' : 'bg-red-500/20 text-red-300');
+                msg.classList.remove('form-status--error', 'form-status--success');
+                msg.classList.add(ok ? 'form-status--success' : 'form-status--error');
             }
 
             form.addEventListener('submit', function (e) {

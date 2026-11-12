@@ -2729,8 +2729,11 @@ body{background:#f1f5f9}
     margin-left: 0.25rem;
 }
 
-/* Fix the "Get Involved" button to not shrink or wrap */
-.btn-ycbn {
+/* Fix the "Donate Now" button in the NAV only.
+   This used to be a bare `.btn-ycbn` selector, which forced nowrap + 14px/20px
+   padding on EVERY button on the site and clipped long labels such as
+   "View Small NGOs Report" inside content cards at tablet widths. */
+.main-nav .btn-ycbn {
     white-space: nowrap !important;
     flex-shrink: 0 !important;
     padding: 14px 20px !important; /* Slightly reduce padding to fit better at 1280px */
@@ -2855,5 +2858,114 @@ body{background:#f1f5f9}
     0%   { transform: scale(1); }
     70%  { transform: scale(1.05); }
     100% { transform: scale(1); }
+}
+
+/* ============================================================
+   MOBILE MONEY (AIRTEL MONEY PAY) DONATION CARD
+   Scoped component styles so they do not depend on the purged
+   Tailwind build (red accent utilities are not in that build).
+   ============================================================ */
+.mm-card {
+    background: #fff7f7;
+    border: 1px solid #fecaca;
+    border-radius: 1rem;
+}
+.mm-accent { color: #c1121f; }
+.mm-badge {
+    display: inline-block;
+    background: #fee2e2;
+    color: #991b1b;
+    font-size: .7rem;
+    font-weight: 700;
+    letter-spacing: .05em;
+    text-transform: uppercase;
+    padding: .25rem .65rem;
+    border-radius: 9999px;
+}
+.mm-label {
+    font-size: .7rem;
+    letter-spacing: .08em;
+    text-transform: uppercase;
+    color: #6b7280;
+    margin-bottom: .35rem;
+}
+.mm-value-box {
+    background: #ffffff;
+    border: 1px solid #fecaca;
+    border-radius: .75rem;
+    padding: 1rem 1.25rem;
+}
+.mm-value {
+    font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+    font-size: 2rem;
+    line-height: 1.15;
+    font-weight: 800;
+    letter-spacing: .06em;
+    color: #b91c1c;
+    word-break: break-word;
+}
+.mm-steps {
+    list-style: decimal;
+    padding-left: 1.4rem;
+    margin: 0;
+}
+.mm-steps li { margin-bottom: .4rem; }
+.mm-photo {
+    display: block;
+    width: 100%;
+    height: auto;
+    border-radius: .75rem;
+    border: 1px solid #e5e7eb;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, .08);
+}
+@media (max-width: 640px) {
+    .mm-value { font-size: 1.65rem; }
+}
+
+/* ============================================================
+   UTILITIES REFERENCED IN HTML BUT ABSENT FROM THE PURGED TAILWIND
+   Found during the small/medium/large responsive audit.
+   The Tailwind file is a fixed pre-built purge, so new HTML classes
+   must be defined here or they silently render with no styling.
+   ============================================================ */
+
+/* Used by report/action buttons on work.html and transparency.html.
+   Without it those links had zero vertical padding (20px tall on mobile). */
+.py-2\.5 {
+    padding-top: 0.625rem;
+    padding-bottom: 0.625rem;
+}
+
+/* Used by the three video players on stories.html. Without it the portrait
+   source videos rendered at their intrinsic 9:16 size (up to 1280px tall
+   on tablet), pushing the rest of the page far below the fold. */
+.aspect-video {
+    aspect-ratio: 16 / 9;
+}
+/* Keep the whole portrait frame visible instead of cropping it to a
+   horizontal slice inside the 16:9 box. */
+video.aspect-video {
+    object-fit: contain;
+}
+
+/* Hover states used by the outlined "Download" buttons on work.html. */
+.hover\:bg-ycbn-blue:hover { background-color: #0284c7; }
+.hover\:text-white:hover   { color: #ffffff; }
+
+/* ============================================================
+   FORM / NEWSLETTER STATUS MESSAGES
+   Replaces the old `bg-*-500/20 text-*-300` classes, which were
+   partly missing from the purged Tailwind build and were too light
+   to read on the site's white backgrounds.
+   ============================================================ */
+.form-status--error {
+    background-color: #fef2f2;
+    color: #991b1b;
+    border: 1px solid #fecaca;
+}
+.form-status--success {
+    background-color: #ecfdf5;
+    color: #065f46;
+    border: 1px solid #a7f3d0;
 }
 

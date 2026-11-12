@@ -70,7 +70,9 @@
             "addressLocality": "Wakiso",
             "addressRegion": "Central Region",
             "addressCountry": "UG"
-        }
+        },
+        "nonprofitStatus": "Nonprofit501c3",
+        "taxID": "NGO Bureau Reg. No. 100355-0-26"
     }
     </script>
 </head>
@@ -326,7 +328,7 @@
                     <nav class="flex flex-col">
                         <a href="programs/wash/index.html" class="footer-link">WASH</a>
                         <a href="programs/youth-empowerment/index.html" class="footer-link">Youth Empowerment</a>
-                        <a href="programs/student-career-leadership-academy/index.html" class="footer-link">Student Career &amp; Leadership Academy</a>
+                        <a href="programs/student-career-leadership-academy/index.html" class="footer-link">Career &amp; Leadership Academy</a>
                         <a href="programs/digital-skills/index.html" class="footer-link">Digital Skills</a>
                         <a href="programs/innovation/index.html" class="footer-link">Innovation &amp; Entrepreneurship</a>
                         <a href="programs/environment/index.html" class="footer-link">Environment &amp; Waste Management</a>
@@ -467,7 +469,8 @@
                 msg.textContent = text;
                 msg.classList.remove('hidden');
                 msg.classList.remove('bg-emerald-500/20', 'text-emerald-300', 'bg-red-500/20', 'text-red-300');
-                msg.classList.add(ok ? 'bg-emerald-500/20 text-emerald-300' : 'bg-red-500/20 text-red-300');
+                msg.classList.remove('form-status--error', 'form-status--success');
+                msg.classList.add(ok ? 'form-status--success' : 'form-status--error');
             }
 
             form.addEventListener('submit', function (e) {

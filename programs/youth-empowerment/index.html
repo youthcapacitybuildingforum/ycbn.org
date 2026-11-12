@@ -187,7 +187,7 @@
                     Uganda has one of the youngest populations in the world. While this presents an incredible opportunity for economic growth and innovation, it also comes with significant challenges. Young people in Uganda face high unemployment, limited skills development opportunities, and weak access to institutions that can help them build sustainable livelihoods. Many finish school without the practical life skills, leadership experience, or professional networks needed to navigate the transition to adulthood and work.
                 </p>
                 <p class="mb-8">
-                    At YCBN, we believe that young people are not just the leaders of tomorrow鈥攖hey are the leaders of today. Our Youth Empowerment programme strengthens the personal, social, and professional skills of young people so they can participate confidently in their communities and pursue their own development goals. We focus on building resilience, fostering leadership, and preparing youth for the world of work.
+                    At YCBN, we believe that young people are not just the leaders of tomorrow—hey are the leaders of today. Our Youth Empowerment programme strengthens the personal, social, and professional skills of young people so they can participate confidently in their communities and pursue their own development goals. We focus on building resilience, fostering leadership, and preparing youth for the world of work.
                 </p>
 
                 <div class="bg-slate-50 p-8 rounded-xl border-l-4 border-ycbn-blue mb-10">
@@ -236,7 +236,7 @@
 
                 <h2 class="text-3xl font-bold text-gray-900 mb-6 font-montserrat">Our Impact &amp; Evidence</h2>
                 <p class="mb-6">
-                    As a youth-led organisation, we are actively building our youth empowerment activities. We have successfully hosted youth-focused engagement sessions, including the <em>"Beyond Donor Funding"</em> session in 2026. While we are in the early stages of this specific programme, we are committed to rigorous monitoring and evaluation. Verified project data and impact reports will be published on our <a href="../../work.html" class="text-ycbn-blue font-semibold underline">Our Work page</a> as they become available.
+                    As a youth-led organisation, we are actively building our youth empowerment activities, and we have already delivered them. Recent activity includes the <em>"Beyond Donor Funding"</em> session in 2026, <strong>Nurturing Generational Leaders</strong> — our leadership ethics outreach with student leaders at St. Charles Lwanga Secondary School — <strong>Unite for Girls</strong>, our community empowerment work ahead of the International Day of the Girl Child, and <strong>Advancing Girls' Rights through SRHR Advocacy and Storytelling</strong>. Verified project data, dated success stories and impact reports are published on our <a href="../../work.html" class="text-ycbn-blue font-semibold underline">Our Work page</a>, with downloadable reports on the <a href="../../transparency.html" class="text-ycbn-blue font-semibold underline">Organization &amp; Legal Information page</a>.
                 </p>
             </div>
 
@@ -323,7 +323,7 @@
                 <nav class="flex flex-col">
                     <a href="../../programs/wash/index.html" class="footer-link">WASH</a>
                     <a href="../../programs/youth-empowerment/index.html" class="footer-link">Youth Empowerment</a>
-                    <a href="../../programs/student-career-leadership-academy/index.html" class="footer-link">Student Career &amp; Leadership Academy</a>
+                    <a href="../../programs/student-career-leadership-academy/index.html" class="footer-link">Career &amp; Leadership Academy</a>
                     <a href="../../programs/digital-skills/index.html" class="footer-link">Digital Skills</a>
                     <a href="../../programs/innovation/index.html" class="footer-link">Innovation &amp; Entrepreneurship</a>
                     <a href="../../programs/environment/index.html" class="footer-link">Environment &amp; Waste Management</a>
@@ -429,7 +429,8 @@
         function showMsg(text, ok) {
             msg.textContent = text;
             msg.classList.remove('hidden', 'bg-emerald-500/20', 'text-emerald-300', 'bg-red-500/20', 'text-red-300');
-            msg.classList.add(ok ? 'bg-emerald-500/20 text-emerald-300' : 'bg-red-500/20 text-red-300');
+            msg.classList.remove('form-status--error', 'form-status--success');
+            msg.classList.add(ok ? 'form-status--success' : 'form-status--error');
         }
 
         form.addEventListener('submit', function (e) {

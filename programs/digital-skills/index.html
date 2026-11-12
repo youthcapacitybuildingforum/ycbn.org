@@ -184,7 +184,7 @@
             <div class="prose prose-lg text-gray-700 max-w-none">
                 <h2 class="text-3xl font-bold text-gray-900 mb-6 font-montserrat">Bridging the Digital Divide in Uganda</h2>
                 <p class="mb-6">
-                    In today's rapidly changing world, access to technology and the ability to use it confidently are no longer optional鈥攖hey are fundamental to education, employment, and civic participation. However, for many young people in Uganda, the digital divide remains a significant barrier. A lack of access to computers, affordable internet, and guided training limits their ability to learn, work, and compete in the modern economy.
+                    In today's rapidly changing world, access to technology and the ability to use it confidently are no longer optional—hey are fundamental to education, employment, and civic participation. However, for many young people in Uganda, the digital divide remains a significant barrier. A lack of access to computers, affordable internet, and guided training limits their ability to learn, work, and compete in the modern economy.
                 </p>
                 <p class="mb-8">
                     YCBN's Digital Skills programme is designed to change this narrative. We provide practical, hands-on learning that helps young people use computers, the internet, and digital tools safely and productively. Whether it's mastering basic software, learning to navigate the web for research, or understanding the fundamentals of online communication, we are preparing youth for a digital future.
@@ -321,7 +321,7 @@
                 <nav class="flex flex-col">
                     <a href="../../programs/wash/index.html" class="footer-link">WASH</a>
                     <a href="../../programs/youth-empowerment/index.html" class="footer-link">Youth Empowerment</a>
-                    <a href="../../programs/student-career-leadership-academy/index.html" class="footer-link">Student Career &amp; Leadership Academy</a>
+                    <a href="../../programs/student-career-leadership-academy/index.html" class="footer-link">Career &amp; Leadership Academy</a>
                     <a href="../../programs/digital-skills/index.html" class="footer-link">Digital Skills</a>
                     <a href="../../programs/innovation/index.html" class="footer-link">Innovation &amp; Entrepreneurship</a>
                     <a href="../../programs/environment/index.html" class="footer-link">Environment &amp; Waste Management</a>
@@ -427,7 +427,8 @@
         function showMsg(text, ok) {
             msg.textContent = text;
             msg.classList.remove('hidden', 'bg-emerald-500/20', 'text-emerald-300', 'bg-red-500/20', 'text-red-300');
-            msg.classList.add(ok ? 'bg-emerald-500/20 text-emerald-300' : 'bg-red-500/20 text-red-300');
+            msg.classList.remove('form-status--error', 'form-status--success');
+            msg.classList.add(ok ? 'form-status--success' : 'form-status--error');
         }
 
         form.addEventListener('submit', function (e) {

@@ -217,16 +217,103 @@
 
     <!-- Partnership Inquiry -->
     <section class="py-16 bg-gray-50">
-        <div class="max-w-3xl mx-auto px-4 text-center">
-            <h2 class="text-2xl font-bold text-gray-900 mb-3">Partnership inquiry</h2>
-            <p class="text-gray-600 mb-6">We are building our partnerships programme and welcome expressions of interest from credible organisations. Please introduce your organisation and proposed collaboration:</p>
-            <a class="btn-ycbn" href="mailto:info@ycbn.org?subject=Partnership%20Inquiry%20-%20YCBN">
-                <i class="fas fa-paper-plane"></i>Email: info@ycbn.org
-            </a>
-            <p class="text-sm text-gray-500 mt-4">Please include your organisation name, country, focus areas, and how you would like to collaborate with YCBN. We respond to genuine partnership inquiries.</p>
-            
-            <div class="mt-8 p-4 bg-yellow-50 border-l-4 border-yellow-500 text-sm text-yellow-800 text-left">
-                <strong>Note:</strong> We only display organisations as partners on this website once a formal relationship exists and consent to be named has been given. No partner logos are currently listed because no such relationship has yet been authorised for public listing.
+        <div class="max-w-3xl mx-auto px-4">
+            <h2 class="text-2xl font-bold text-gray-900 mb-3 text-center">Partnership inquiry</h2>
+            <p class="text-gray-600 mb-8 text-center">We welcome expressions of interest from credible organisations. Introduce your organisation and the collaboration you have in mind, and our team responds within 5 working days.</p>
+
+            <div class="rounded-2xl border border-gray-200 bg-white p-6 sm:p-8 shadow-sm">
+                <form id="partnershipForm" class="space-y-5" novalidate>
+                    <div class="grid sm:grid-cols-2 gap-5">
+                        <div>
+                            <label for="partnerOrg" class="block text-gray-700 font-medium mb-2">Organisation Name *</label>
+                            <input type="text" id="partnerOrg" name="partnerOrg" data-field="organisation" autocomplete="organization" required class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:border-ycbn-blue transition-colors">
+                        </div>
+                        <div>
+                            <label for="partnerContact" class="block text-gray-700 font-medium mb-2">Contact Person</label>
+                            <input type="text" id="partnerContact" name="partnerContact" data-field="contact_person" autocomplete="name" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:border-ycbn-blue transition-colors">
+                        </div>
+                    </div>
+                    <div class="grid sm:grid-cols-2 gap-5">
+                        <div>
+                            <label for="partnerEmail" class="block text-gray-700 font-medium mb-2">Email Address *</label>
+                            <input type="email" id="partnerEmail" name="partnerEmail" data-field="email" autocomplete="email" required class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:border-ycbn-blue transition-colors">
+                        </div>
+                        <div>
+                            <label for="partnerCountry" class="block text-gray-700 font-medium mb-2">Country *</label>
+                            <input type="text" id="partnerCountry" name="partnerCountry" data-field="country" autocomplete="country-name" placeholder="e.g. Uganda" required class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:border-ycbn-blue transition-colors">
+                        </div>
+                    </div>
+                    <div>
+                        <label for="partnerFocus" class="block text-gray-700 font-medium mb-2">Focus Areas</label>
+                        <input type="text" id="partnerFocus" name="partnerFocus" data-field="focus_areas" placeholder="e.g. WASH, youth skills, gender advocacy" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:border-ycbn-blue transition-colors">
+                    </div>
+                    <div>
+                        <label for="partnerMessage" class="block text-gray-700 font-medium mb-2">Proposed Collaboration *</label>
+                        <textarea id="partnerMessage" name="partnerMessage" data-field="message" rows="5" required class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:border-ycbn-blue resize-none" placeholder="Tell us about your organisation, the areas you work in, and how you would like to collaborate with YCBN."></textarea>
+                    </div>
+                    <p class="text-xs text-gray-500 leading-relaxed">By submitting this form you agree to our <a href="privacy.html" class="text-blue-600 underline">Privacy Policy</a>. We use your details only to respond to your inquiry.</p>
+                    <button type="submit" id="partnershipBtn" class="btn-ycbn w-full justify-center py-4">
+                        <i class="fas fa-paper-plane mr-2"></i>
+                        <span>Send Partnership Inquiry</span>
+                    </button>
+                    <p id="partnershipStatus" class="hidden text-sm text-center py-2 px-3 rounded-lg"></p>
+                </form>
+            </div>
+
+            <div class="text-center mt-6">
+                <p class="text-sm text-gray-500">Prefer to email? Write to <a href="mailto:info@ycbn.org" class="text-blue-600 underline">info@ycbn.org</a>.</p>
+            </div>
+
+            <div class="mt-10 text-left">
+                <h3 class="text-xl font-bold text-gray-900 mb-2">Organisations we have engaged with</h3>
+                <p class="text-gray-600 text-sm mb-5">YCBN works alongside government, civil society and community partners. Where a partner has agreed to be named publicly, we list the engagement here together with the report documenting it. The reports are published and downloadable, so you can read exactly what the engagement involved.</p>
+
+                <div class="grid sm:grid-cols-2 gap-4 mb-6">
+                    <div class="rounded-xl border border-gray-200 bg-white p-5">
+                        <div class="flex items-start gap-3">
+                            <i class="fas fa-landmark text-xl text-ycbn-blue mt-1"></i>
+                            <div>
+                                <h4 class="font-bold text-gray-900 mb-1">NGO Bureau, Ministry of Gender, Labour and Social Development</h4>
+                                <p class="text-sm text-gray-600 mb-2">Courtesy visit to the Deputy Executive Director on youth-led development and organisational growth.</p>
+                                <a href="resources/ycbn_cehurd_engagement_2026.pdf" target="_blank" rel="noopener" class="text-ycbn-blue font-semibold text-sm underline">Read the engagement report <i class="fas fa-file-pdf ml-1"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="rounded-xl border border-gray-200 bg-white p-5">
+                        <div class="flex items-start gap-3">
+                            <i class="fas fa-hand-holding-heart text-xl text-ycbn-blue mt-1"></i>
+                            <div>
+                                <h4 class="font-bold text-gray-900 mb-1">Uganda Red Cross Society</h4>
+                                <p class="text-sm text-gray-600 mb-2">Strategic partnership engagement on community WASH coordination and shared hygiene promotion.</p>
+                                <a href="resources/ycbn_red_cross_engagement_2026.pdf" target="_blank" rel="noopener" class="text-ycbn-blue font-semibold text-sm underline">Read the engagement report <i class="fas fa-file-pdf ml-1"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="rounded-xl border border-gray-200 bg-white p-5">
+                        <div class="flex items-start gap-3">
+                            <i class="fas fa-school text-xl text-ycbn-blue mt-1"></i>
+                            <div>
+                                <h4 class="font-bold text-gray-900 mb-1">Kasengejje Primary School &amp; St. Charles Lwanga Secondary School</h4>
+                                <p class="text-sm text-gray-600 mb-2">Host schools for our handwashing facility donation, hygiene training and youth leadership outreach.</p>
+                                <a href="work.html" class="text-ycbn-blue font-semibold text-sm underline">See the activities <i class="fas fa-arrow-right ml-1"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="rounded-xl border border-gray-200 bg-white p-5">
+                        <div class="flex items-start gap-3">
+                            <i class="fas fa-users text-xl text-ycbn-blue mt-1"></i>
+                            <div>
+                                <h4 class="font-bold text-gray-900 mb-1">MUG Foundation, Wezesha Girls Network and CEHURD</h4>
+                                <p class="text-sm text-gray-600 mb-2">Collaborative partners on the WASH for Infection Prevention and AMR Action Initiative, and on girls' rights advocacy.</p>
+                                <a href="work.html" class="text-ycbn-blue font-semibold text-sm underline">See the activities <i class="fas fa-arrow-right ml-1"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="p-4 bg-yellow-50 border-l-4 border-yellow-500 text-sm text-yellow-800">
+                    <strong>Note on logos:</strong> We list an organisation here once a formal relationship exists and consent to be named has been given. Where an organisation has not yet authorised the use of its logo on this website, we publish the engagement report instead so that the work remains verifiable.
+                </div>
             </div>
         </div>
     </section>
@@ -301,7 +388,7 @@
                 <nav class="flex flex-col">
                     <a href="programs/wash/index.html" class="footer-link">WASH</a>
                     <a href="programs/youth-empowerment/index.html" class="footer-link">Youth Empowerment</a>
-                    <a href="programs/student-career-leadership-academy/index.html" class="footer-link">Student Career &amp; Leadership Academy</a>
+                    <a href="programs/student-career-leadership-academy/index.html" class="footer-link">Career &amp; Leadership Academy</a>
                     <a href="programs/digital-skills/index.html" class="footer-link">Digital Skills</a>
                     <a href="programs/innovation/index.html" class="footer-link">Innovation &amp; Entrepreneurship</a>
                     <a href="programs/environment/index.html" class="footer-link">Environment &amp; Waste Management</a>
@@ -407,7 +494,8 @@
         function showMsg(text, ok) {
             msg.textContent = text;
             msg.classList.remove('hidden', 'bg-emerald-500/20', 'text-emerald-300', 'bg-red-500/20', 'text-red-300');
-            msg.classList.add(ok ? 'bg-emerald-500/20 text-emerald-300' : 'bg-red-500/20 text-red-300');
+            msg.classList.remove('form-status--error', 'form-status--success');
+            msg.classList.add(ok ? 'form-status--success' : 'form-status--error');
         }
 
         form.addEventListener('submit', function (e) {
@@ -459,5 +547,6 @@
         });
     });
 </script>
+<script src="assets/js/forms.js" defer></script>
 </body>
 </html>

@@ -235,13 +235,73 @@
 
     <!-- How to Apply -->
     <section class="py-16 bg-gray-50">
-        <div class="max-w-5xl mx-auto px-4 text-center">
-            <h2 class="text-2xl font-bold text-gray-900 mb-3">How to apply</h2>
-            <p class="text-gray-600 mb-6">As the volunteer programme is being structured, please express your interest by contacting us:</p>
-            <a class="btn-ycbn" href="mailto:info@ycbn.org?subject=Volunteer%20Application%20-%20YCBN">
-                <i class="fas fa-paper-plane"></i>Email: info@ycbn.org
-            </a>
-            <p class="text-sm text-gray-500 mt-4">Please include your name, location, skills/areas of interest, availability and any relevant experience. We will respond as soon as volunteer positions are confirmed.</p>
+        <div class="max-w-3xl mx-auto px-4">
+            <h2 class="text-2xl font-bold text-gray-900 mb-3 text-center">How to apply</h2>
+            <p class="text-gray-600 mb-8 text-center">Tell us who you are, what you are good at and when you are available. Our team reviews every application and responds within 5 working days.</p>
+
+            <div class="rounded-2xl border border-gray-200 bg-white p-6 sm:p-8 shadow-sm">
+                <form id="volunteerForm" class="space-y-5" novalidate>
+                    <div class="grid sm:grid-cols-2 gap-5">
+                        <div>
+                            <label for="volName" class="block text-gray-700 font-medium mb-2">Full Name *</label>
+                            <input type="text" id="volName" name="volName" data-field="name" autocomplete="name" required class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:border-ycbn-blue transition-colors">
+                        </div>
+                        <div>
+                            <label for="volEmail" class="block text-gray-700 font-medium mb-2">Email Address *</label>
+                            <input type="email" id="volEmail" name="volEmail" data-field="email" autocomplete="email" required class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:border-ycbn-blue transition-colors">
+                        </div>
+                    </div>
+                    <div class="grid sm:grid-cols-2 gap-5">
+                        <div>
+                            <label for="volPhone" class="block text-gray-700 font-medium mb-2">Phone Number</label>
+                            <input type="tel" id="volPhone" name="volPhone" data-field="phone" autocomplete="tel" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:border-ycbn-blue transition-colors">
+                        </div>
+                        <div>
+                            <label for="volLocation" class="block text-gray-700 font-medium mb-2">Location *</label>
+                            <input type="text" id="volLocation" name="volLocation" data-field="location" placeholder="e.g. Wakiso, Uganda" required class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:border-ycbn-blue transition-colors">
+                        </div>
+                    </div>
+                    <div class="grid sm:grid-cols-2 gap-5">
+                        <div>
+                            <label for="volInterest" class="block text-gray-700 font-medium mb-2">Area of Interest *</label>
+                            <select id="volInterest" name="volInterest" data-field="area_of_interest" required class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:border-ycbn-blue transition-colors">
+                                <option value="">Select an area...</option>
+                                <option value="WASH &amp; Hygiene">WASH &amp; Hygiene</option>
+                                <option value="Menstrual Health Education">Menstrual Health Education</option>
+                                <option value="Digital Skills &amp; Training">Digital Skills &amp; Training</option>
+                                <option value="Youth Mentorship &amp; Leadership">Youth Mentorship &amp; Leadership</option>
+                                <option value="Environment &amp; Waste Management">Environment &amp; Waste Management</option>
+                                <option value="Communications &amp; Design">Communications &amp; Design</option>
+                                <option value="Monitoring &amp; Evaluation">Monitoring &amp; Evaluation</option>
+                            </select>
+                        </div>
+                        <div>
+                            <label for="volAvailability" class="block text-gray-700 font-medium mb-2">Availability</label>
+                            <select id="volAvailability" name="volAvailability" data-field="availability" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:border-ycbn-blue transition-colors">
+                                <option value="Weekdays">Weekdays</option>
+                                <option value="Weekends">Weekends</option>
+                                <option value="Both weekdays and weekends">Both weekdays and weekends</option>
+                                <option value="Remote / online">Remote / online</option>
+                                <option value="To be discussed">To be discussed</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div>
+                        <label for="volSkills" class="block text-gray-700 font-medium mb-2">Skills and relevant experience</label>
+                        <textarea id="volSkills" name="volSkills" data-field="skills" rows="4" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:border-ycbn-blue resize-none" placeholder="Tell us what you can offer &mdash; professional skills, lived experience, languages, certifications..."></textarea>
+                    </div>
+                    <p class="text-xs text-gray-500 leading-relaxed">By submitting this form you agree to our <a href="privacy.html" class="text-blue-600 underline">Privacy Policy</a> and our <a href="safeguarding.html" class="text-blue-600 underline">Safeguarding Policy</a>. Volunteers working with children and vulnerable people may be asked to provide references or police clearance where required by law.</p>
+                    <button type="submit" id="volunteerBtn" class="btn-ycbn w-full justify-center py-4">
+                        <i class="fas fa-paper-plane mr-2"></i>
+                        <span>Submit Application</span>
+                    </button>
+                    <p id="volunteerStatus" class="hidden text-sm text-center py-2 px-3 rounded-lg"></p>
+                </form>
+            </div>
+
+            <div class="text-center mt-6">
+                <p class="text-sm text-gray-500">Prefer to email? Write to <a href="mailto:info@ycbn.org" class="text-blue-600 underline">info@ycbn.org</a> or message us on WhatsApp <a href="https://wa.me/256760315494" target="_blank" rel="noopener" class="text-blue-600 underline">+256 760 315 494</a>.</p>
+            </div>
         </div>
     </section>
 </main>
@@ -315,7 +375,7 @@
                 <nav class="flex flex-col">
                     <a href="programs/wash/index.html" class="footer-link">WASH</a>
                     <a href="programs/youth-empowerment/index.html" class="footer-link">Youth Empowerment</a>
-                    <a href="programs/student-career-leadership-academy/index.html" class="footer-link">Student Career &amp; Leadership Academy</a>
+                    <a href="programs/student-career-leadership-academy/index.html" class="footer-link">Career &amp; Leadership Academy</a>
                     <a href="programs/digital-skills/index.html" class="footer-link">Digital Skills</a>
                     <a href="programs/innovation/index.html" class="footer-link">Innovation &amp; Entrepreneurship</a>
                     <a href="programs/environment/index.html" class="footer-link">Environment &amp; Waste Management</a>
@@ -421,7 +481,8 @@
         function showMsg(text, ok) {
             msg.textContent = text;
             msg.classList.remove('hidden', 'bg-emerald-500/20', 'text-emerald-300', 'bg-red-500/20', 'text-red-300');
-            msg.classList.add(ok ? 'bg-emerald-500/20 text-emerald-300' : 'bg-red-500/20 text-red-300');
+            msg.classList.remove('form-status--error', 'form-status--success');
+            msg.classList.add(ok ? 'form-status--success' : 'form-status--error');
         }
 
         form.addEventListener('submit', function (e) {
@@ -473,5 +534,6 @@
         });
     });
 </script>
+<script src="assets/js/forms.js" defer></script>
 </body>
 </html>
