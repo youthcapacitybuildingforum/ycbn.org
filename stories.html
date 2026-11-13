@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -22,10 +22,10 @@
     <link rel="icon" href="resources/logo.webp" type="image/webp">
 
     <!-- Stylesheets -->
-    <link rel="stylesheet" href="assets/css/tailwind-purged.min.css">
-    <link rel="stylesheet" href="assets/css/ycbn-utilities.css">
+    <link rel="stylesheet" href="assets/css/ycbn-main.min.css">
     <link rel="stylesheet" href="assets/css/local-fonts.css">
-    <link rel="stylesheet" href="assets/css/all.min.css">
+    <link rel="stylesheet" href="assets/css/all.min.css" media="print" onload="this.media='all'">
+    <noscript><link rel="stylesheet" href="assets/css/all.min.css"></noscript>
 
     <!-- Schema.org Structured Data -->
     <script type="application/ld+json">
@@ -146,7 +146,7 @@
             <div class="flex items-center justify-between h-24">
                 <a href="index.html" class="flex-shrink-0 flex items-center gap-3">
                     <div class="w-12 h-12 rounded-lg overflow-hidden flex items-center justify-center bg-white">
-                        <img src="resources/logo.webp" alt="YCBN Logo" class="w-full h-full object-contain" loading="lazy" decoding="async">
+                        <img src="resources/logo.webp" alt="YCBN Logo" class="w-full h-full object-contain" width="48" height="48" loading="lazy" decoding="async">
                     </div>
                     <div>
                         <div class="font-montserrat font-bold text-lg text-ycbn-dark leading-tight">Youth Capacity<br>Building Network</div>
@@ -1288,8 +1288,6 @@
                     <img loading="lazy" decoding="async" src="resources/20.webp" alt="Youth leadership" class="w-full h-64 object-cover">
                     <div class="photo-overlay"><p class="text-white text-sm font-semibold">Youth leadership event</p></div>
                 </div>
-                
-                <!-- Hand Washing Facility Donation - Kasengejje Primary School -->
                 <div class="photo-item">
                     <a href="resources/pad-0.webp" target="_blank" rel="noopener">
                         <img loading="lazy" decoding="async" src="resources/pad-0.webp" alt="YCBN hand washing facility donation at Kasengejje Primary School" class="w-full h-64 object-cover">
@@ -1471,14 +1469,14 @@
                         <div class="flex items-start gap-4">
                             <div class="w-12 h-12 rounded-full bg-white/10 flex items-center justify-center text-ycbn-blue flex-shrink-0"><i class="fas fa-location-dot"></i></div>
                             <div>
-                                <h4 class="font-bold text-white mb-1">Address</h4>
+                                <h3 class="font-bold text-white mb-1">Address</h3>
                                 <p class="text-gray-400 text-sm">P.O Box 117751, Wakiso, Uganda</p>
                             </div>
                         </div>
                         <div class="flex items-start gap-4">
                             <div class="w-12 h-12 rounded-full bg-white/10 flex items-center justify-center text-ycbn-teal flex-shrink-0"><i class="fas fa-envelope"></i></div>
                             <div>
-                                <h4 class="font-bold text-white mb-1">Email</h4>
+                                <h3 class="font-bold text-white mb-1">Email</h3>
                                 <p class="text-gray-400 text-sm">info@ycbn.org</p>
                             </div>
                         </div>
@@ -1512,18 +1510,18 @@
             <div class="grid md:grid-cols-4 gap-12 mb-16">
                 <div class="md:col-span-1">
                     <div class="w-12 h-12 rounded-lg overflow-hidden flex items-center justify-center bg-white mb-6">
-                        <img src="resources/logo.webp" alt="YCBN Logo" class="w-full h-full object-contain" loading="lazy" decoding="async">
+                        <img src="resources/logo.webp" alt="YCBN Logo" class="w-full h-full object-contain" width="48" height="48" loading="lazy" decoding="async">
                     </div>
                     <p class="text-gray-400 text-sm leading-relaxed mb-6">
                         Youth Capacity Building Network (YCBN) is a youth-led organisation working with young people, communities and schools to deliver WASH, digital skills, innovation, entrepreneurship and community development programmes in Uganda.
                     </p>
                     <div class="flex gap-3">
-                        <a href="https://www.facebook.com/profile.php?id=61579627535321" target="_blank" rel="noopener noreferrer" class="w-9 h-9 rounded bg-white/10 flex items-center justify-center hover:bg-ycbn-blue transition-colors text-white"><i class="fab fa-facebook-f text-sm"></i></a>
-                        <a href="https://www.linkedin.com/company/tiny-bit-wiser/" target="_blank" rel="noopener noreferrer" class="w-9 h-9 rounded bg-white/10 flex items-center justify-center hover:bg-ycbn-blue transition-colors text-white"><i class="fab fa-linkedin-in text-sm"></i></a>
-                        <a href="https://www.instagram.com/youthcapacitybuildingnetwork" target="_blank" rel="noopener noreferrer" class="w-9 h-9 rounded bg-white/10 flex items-center justify-center hover:bg-ycbn-blue transition-colors text-white"><i class="fab fa-instagram text-sm"></i></a>
-                        <a href="https://x.com/YCBNetwork" target="_blank" rel="noopener noreferrer" class="w-9 h-9 rounded bg-white/10 flex items-center justify-center hover:bg-ycbn-blue transition-colors text-white"><i class="fab fa-twitter text-sm"></i></a>
-                        <a href="https://youtube.com/@youthcapacitybuildingnetwork" target="_blank" rel="noopener noreferrer" class="w-9 h-9 rounded bg-white/10 flex items-center justify-center hover:bg-ycbn-blue transition-colors text-white"><i class="fab fa-youtube text-sm"></i></a>
-                        <a href="https://www.tiktok.com/@youth.capacity.bu" target="_blank" rel="noopener noreferrer" class="w-9 h-9 rounded bg-white/10 flex items-center justify-center hover:bg-ycbn-blue transition-colors text-white"><i class="fab fa-tiktok text-sm"></i></a>
+                        <a aria-label="Facebook" href="https://www.facebook.com/profile.php?id=61579627535321" target="_blank" rel="noopener noreferrer" class="w-9 h-9 rounded bg-white/10 flex items-center justify-center hover:bg-ycbn-blue transition-colors text-white"><i class="fab fa-facebook-f text-sm"></i></a>
+                        <a aria-label="LinkedIn" href="https://www.linkedin.com/company/tiny-bit-wiser/" target="_blank" rel="noopener noreferrer" class="w-9 h-9 rounded bg-white/10 flex items-center justify-center hover:bg-ycbn-blue transition-colors text-white"><i class="fab fa-linkedin-in text-sm"></i></a>
+                        <a aria-label="Instagram" href="https://www.instagram.com/youthcapacitybuildingnetwork" target="_blank" rel="noopener noreferrer" class="w-9 h-9 rounded bg-white/10 flex items-center justify-center hover:bg-ycbn-blue transition-colors text-white"><i class="fab fa-instagram text-sm"></i></a>
+                        <a aria-label="X (formerly Twitter)" href="https://x.com/YCBNetwork" target="_blank" rel="noopener noreferrer" class="w-9 h-9 rounded bg-white/10 flex items-center justify-center hover:bg-ycbn-blue transition-colors text-white"><i class="fab fa-twitter text-sm"></i></a>
+                        <a aria-label="YouTube" href="https://youtube.com/@youthcapacitybuildingnetwork" target="_blank" rel="noopener noreferrer" class="w-9 h-9 rounded bg-white/10 flex items-center justify-center hover:bg-ycbn-blue transition-colors text-white"><i class="fab fa-youtube text-sm"></i></a>
+                        <a aria-label="TikTok" href="https://www.tiktok.com/@youth.capacity.bu" target="_blank" rel="noopener noreferrer" class="w-9 h-9 rounded bg-white/10 flex items-center justify-center hover:bg-ycbn-blue transition-colors text-white"><i class="fab fa-tiktok text-sm"></i></a>
                     </div>
                 </div>
 

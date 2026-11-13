@@ -86,7 +86,8 @@ section nav[aria-label="On this page"]{background:#fff}
 .value-card:hover{border-color:#0ea5e9;transform:translateY(-5px)}
 .value-icon{width:60px;height:60px;background:linear-gradient(135deg,#0ea5e9,#14b8a6)}
 .hero-swiper{position:relative;width:100%;height:600px;overflow:hidden}
-.hero-swiper .swiper-slide{display:flex;align-items:center;justify-content:center;text-align:center;padding:40px 20px}
+.hero-swiper .swiper-wrapper{height:100%;display:flex;align-items:stretch}
+.hero-swiper .swiper-slide{display:flex;align-items:center;justify-content:center;text-align:center;padding:40px 20px;height:100%;box-sizing:border-box;flex-shrink:0}
 .slide-title{font-family:Montserrat,sans-serif;font-weight:800;font-size:48px;color:#fff;line-height:1.2;margin-bottom:20px;text-transform:uppercase}
 
 /* Responsive overrides from legacy ycbn.css */
@@ -2836,21 +2837,47 @@ body{background:#f1f5f9}
    GOOGLE AD GRANTS & ACCESSIBILITY FINAL FIXES
    ============================================================ */
 
-/* 1. Accessibility Contrast Fixes (Fixes Google's 89 score) */
-.text-ycbn-blue { color: #0284c7 !important; }
-.nav-link.text-ycbn-blue { color: #0284c7 !important; }
-.btn-outline { color: #0284c7 !important; border-color: #0284c7 !important; }
-.btn-outline:hover { background-color: #0284c7 !important; color: #ffffff !important; }
+/* 1. Accessibility Contrast Fixes (Fixes Google's 89 score)
+      #0284c7 on #ffffff = 4.10:1 (fails WCAG AA 4.5).
+      #0369a1 on #ffffff = 5.93:1 (passes AA). Visually near-identical. */
+.text-ycbn-blue { color: #0369a1 !important; }
+.nav-link.text-ycbn-blue { color: #0369a1 !important; }
+.btn-outline { color: #0369a1 !important; border-color: #0369a1 !important; }
+.btn-outline:hover { background-color: #0369a1 !important; color: #ffffff !important; }
+/* Light variant for btn-outline on dark/hero backgrounds: #7dd3fc on
+   #080e20 ≈ 8.3:1 (passes AA). Used on academy hero & CTA sections. */
+.btn-outline.btn-outline-light { color: #7dd3fc !important; border-color: #7dd3fc !important; }
+.btn-outline.btn-outline-light:hover { background-color: #7dd3fc !important; color: #0f172a !important; }
 .text-gray-400 { color: #64748b !important; }
 
-/* 2. Mobile Touch Target Fix (Swiper dots - needs to be 44x44) */
+/* 2. Mobile Touch Target Fix (Swiper dots - needs to be 24x24 minimum)
+      Also reserves hero height to prevent CLS when async Swiper CSS/JS
+      loads late. These classes are added by Swiper JS at runtime, so
+      PurgeCSS cannot detect them — keep them here. */
+.hero-swiper .swiper-pagination {
+    position: absolute !important;
+    bottom: 10px !important;
+    left: 0 !important;
+    right: 0 !important;
+    min-height: 44px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 10;
+}
 .hero-swiper .swiper-pagination-bullet {
-    width: 14px !important;
-    height: 14px !important;
-    padding: 15px !important;
-    margin: 0 6px !important;
+    width: 12px !important;
+    height: 12px !important;
+    padding: 16px !important;
+    margin: 0 4px !important;
     background-clip: content-box !important;
     box-sizing: content-box !important;
+    background: #ffffff !important;
+    opacity: 0.5;
+}
+.hero-swiper .swiper-pagination-bullet-active {
+    opacity: 1 !important;
+    background: #0ea5e9 !important;
 }
 
 /* 3. Animation Performance Fix (Removes non-composited warning) */
